@@ -57,7 +57,7 @@ Seked distingue seis tipos de elementos que puedes almacenar en la base de preci
 </Steps>
 
 <Tip>
-  Establece desde el principio una convención de nombres y códigos coherente para toda la empresa. Por ejemplo, usa prefijos por tipo (`MAT-`, `MO-`, `MAQ-`, `PA-`) y agrupa por familia o capítulo. Una biblioteca bien organizada se busca en segundos; una desordenada se convierte en un problema que crece con el tiempo.
+  Cuantos más datos incluya la documentación que subas (ubicación, proveedor, fecha, referencia, unidades, etc.), mejor será la asociación de partidas y más precisos los datos que Seked pueda generar automáticamente.
 </Tip>
 
 ## Editar un elemento existente
@@ -81,48 +81,25 @@ Seked distingue seis tipos de elementos que puedes almacenar en la base de preci
   Los cambios de precio no se aplican retroactivamente a proyectos cerrados o archivados; solo a los que están en estado _Activo_ o _En revisión_.
 </Note>
 
-## Desactivar un elemento
+## Organizar elementos en la base de precios
 
-Cuando un elemento queda obsoleto pero no quieres eliminarlo para conservar el historial, puedes desactivarlo:
+La base de precios se estructura en tres bloques principales:
 
-<Steps>
-  <Step title="Abre la ficha del elemento">
-    Localiza el elemento y haz clic en su nombre para ver el detalle.
-  </Step>
-  <Step title="Selecciona 'Desactivar'">
-    En el menú de opciones (icono `···`), selecciona **Desactivar elemento**. Confirma la acción en el diálogo que aparece.
-  </Step>
-  <Step title="Resultado">
-    El elemento desaparecerá de los resultados de búsqueda por defecto. Para verlo, activa el filtro **Mostrar inactivos**. Los proyectos que ya lo usaban no se ven afectados.
-  </Step>
-</Steps>
-
-<Warning>
-  Desactivar un elemento no lo elimina de los presupuestos en los que ya está incluido. Si necesitas reemplazarlo, hazlo manualmente en cada proyecto afectado.
-</Warning>
-
-## Organizar elementos por categoría, familia y oficio
-
-Seked te permite estructurar la base de precios en tres niveles de clasificación:
-
-- **Categoría** — el nivel más alto (p. ej., _Estructura_, _Instalaciones_, _Acabados_).
-- **Familia** — una subdivisión de la categoría (p. ej., _Hormigón armado_, _Fontanería_, _Revestimientos_).
-- **Oficio** — el gremio o especialidad responsable (p. ej., _Ferrallista_, _Fontanero_, _Pintor_).
-
-Para gestionar la estructura de categorías ve a **Base de precios → Ajustes de catálogo → Categorías** y añade, edita o reorganiza los niveles según las necesidades de tu empresa.
+- **Partidas** — organizadas por **capítulo** (p. ej., _Estructura_, _Instalaciones_, _Acabados_). Cada partida puede tener asociadas varias **evidencias** (PDF, facturas, albaranes) y **precios** históricos, y se compone del sumatorio de la **mano de obra** y los **materiales** que la forman.
+- **Mano de obra** — contiene todos los **oficios** (oficial, peón, encargado, ferrallista, fontanero, pintor, etc.) con su tarifa correspondiente.
+- **Materiales** — catálogo de productos y suministros con precio unitario, unidad de medida y proveedor habitual.
 
 ## Buscar y filtrar elementos
 
 Desde el panel principal de la base de precios dispones de varias herramientas de búsqueda:
 
 - **Buscador de texto libre** — busca por nombre, código o cualquier palabra en la descripción.
-- **Filtro por tipo** — filtra solo materiales, partidas, mano de obra, etc.
-- **Filtro por categoría / familia / oficio** — navega por la jerarquía de clasificación.
+- **Filtro por tipo** — filtra solo materiales, partidas o mano de obra.
+- **Filtro por capítulo (partidas), oficio (mano de obra) o categoría (materiales)** — navega por la jerarquía de clasificación del bloque correspondiente.
 - **Filtro por etiqueta** — encuentra todos los elementos con una misma etiqueta.
-- **Filtro por estado** — muestra solo activos, solo inactivos o ambos.
 
 <Tip>
-  Combina el filtro de categoría con el buscador de texto para encontrar un elemento concreto dentro de un capítulo extenso. Por ejemplo, filtra por _Instalaciones \> Fontanería_ y busca «tubo cobre» para ver solo las referencias de ese material en ese oficio.
+  Combina el filtro de capítulo con el buscador de texto para encontrar un elemento concreto dentro de un capítulo extenso. Por ejemplo, filtra por _Instalaciones \> Fontanería_ y busca «tubo cobre» para ver solo las referencias de ese material en ese oficio.
 </Tip>
 
 ---
