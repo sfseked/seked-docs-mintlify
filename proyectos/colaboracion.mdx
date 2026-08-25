@@ -4,26 +4,28 @@ sidebarTitle: "Colaboración"
 description: "Añade miembros a un proyecto, asigna roles específicos, deja comentarios, consulta el historial de cambios y gestiona las notificaciones de actividad."
 ---
 
-Seked está diseñado para que varios profesionales trabajen sobre un mismo proyecto de forma simultánea y coordinada. Cada persona puede tener un rol diferente dentro del proyecto —independientemente de su rol en la organización—, lo que te da la flexibilidad de adaptar los permisos a las necesidades concretas de cada encargo. En esta guía aprenderás a incorporar a tu equipo, organizar la comunicación y mantener el control de todos los cambios.
+Seked está diseñado para que varios profesionales trabajen sobre un mismo proyecto de forma simultánea y coordinada. En esta guía aprenderás a incorporar a tu equipo, organizar la comunicación y mantener el control de todos los cambios.
 
 ## Roles en un proyecto
 
-Los roles de proyecto funcionan de manera independiente a los roles de la organización. Esto significa que un usuario con acceso limitado a nivel global puede tener permisos completos dentro de un proyecto concreto, y viceversa.
+Los roles dentro de un proyecto son los mismos que a nivel de organización: **Administrador**, **Editor** y **Lector**. Consulta la referencia completa en [Permisos](/equipo/permisos).
 
 <CardGroup cols={3}>
+  <Card title="Administrador" icon="user-shield">
+    Acceso completo a todos los proyectos de la organización. No es necesario añadirlo manualmente a cada proyecto y puede gestionar miembros y permisos.
+  </Card>
+
   <Card title="Editor" icon="pen-to-square">
-    Puede crear, editar y eliminar partidas, subir documentos, gestionar mediciones y modificar costes. Es el rol habitual para técnicos de ofertas y jefes de estimación.
+    Trabaja en el proyecto: crea y edita partidas, sube documentos, gestiona mediciones y costes, y puede asignar personas y tareas dentro del proyecto. Es el rol habitual para técnicos de estudios, presupuestadores y jefes de proyecto.
   </Card>
-  <Card title="Revisor" icon="eye">
-    Puede consultar todo el contenido del proyecto y dejar comentarios, pero no puede modificar partidas ni documentos. Ideal para directores técnicos o de negocio que supervisan sin editar.
-  </Card>
+
   <Card title="Lector" icon="book-open">
-    Solo puede visualizar el proyecto, sin opción de comentar ni editar. Útil para clientes internos o stakeholders que necesitan consultar el estado sin intervenir.
+    Solo consulta la información del proyecto. Puede ver partidas, documentos y estado, pero no editar. Ideal para compras, jefes de obra o cualquier stakeholder que necesita seguir el proyecto sin intervenir.
   </Card>
 </CardGroup>
 
 <Note>
-  Los administradores de la organización siempre tienen acceso completo a todos los proyectos, independientemente del rol asignado a nivel de proyecto. Consulta la sección de [permisos](/equipo/permisos) para entender cómo interactúan los roles globales y los de proyecto.
+  Solo un **Administrador** puede añadir o retirar miembros de un proyecto y cambiar los roles de la organización.
 </Note>
 
 ## Añadir miembros al proyecto
@@ -32,25 +34,22 @@ Los roles de proyecto funcionan de manera independiente a los roles de la organi
   <Step title="Accede a la pestaña Equipo del proyecto">
     Abre el proyecto desde el listado y haz clic en la pestaña **Equipo** en el menú superior del panel de detalle.
   </Step>
-
   <Step title="Invita a un miembro">
     Haz clic en el botón **Añadir miembro**. Se abrirá un buscador donde puedes introducir el nombre o el correo electrónico del usuario que deseas añadir. Solo aparecerán usuarios que ya formen parte de tu organización en Seked.
 
     <Tip>
-      Si el usuario al que quieres dar acceso todavía no tiene cuenta en Seked, primero deberás invitarlo a la organización desde **Equipo > Usuarios y roles**. Una vez que haya aceptado la invitación, podrás añadirlo al proyecto.
+      Si el usuario al que quieres dar acceso todavía no tiene cuenta en Seked, primero deberás invitarlo a la organización desde **Equipo \> Usuarios y roles**. Una vez que haya aceptado la invitación, podrás añadirlo al proyecto.
     </Tip>
   </Step>
-
   <Step title="Asigna el rol en el proyecto">
-    Junto al nombre del usuario, selecciona el rol que tendrá dentro del proyecto: **Editor**, **Revisor** o **Lector**. Puedes asignar roles diferentes a cada miembro en función de su responsabilidad en el encargo.
+    Junto al nombre del usuario, selecciona el rol que tendrá dentro del proyecto: **Editor** o **Lector**. Puedes asignar roles diferentes a cada miembro en función de su responsabilidad en el encargo.
   </Step>
-
   <Step title="Confirma la incorporación">
     Haz clic en **Añadir al proyecto**. El usuario recibirá una notificación por correo electrónico y en la campana de notificaciones de Seked informándole de que ha sido incorporado al proyecto.
   </Step>
-
   <Step title="Gestiona los miembros existentes">
     En la lista de miembros del proyecto puedes:
+
     - **Cambiar el rol** de un miembro haciendo clic en su rol actual y seleccionando uno nuevo.
     - **Eliminar a un miembro** del proyecto pulsando el icono de papelera junto a su nombre. Esto no elimina al usuario de la organización, solo le retira el acceso a ese proyecto concreto.
   </Step>
@@ -70,7 +69,7 @@ Los comentarios permiten mantener conversaciones contextuales directamente sobre
     En el panel lateral derecho, selecciona la pestaña **Comentarios**. Escribe tu mensaje en el campo de texto. Puedes mencionar a un compañero escribiendo `@` seguido de su nombre para que reciba una notificación directa.
   </Step>
   <Step title="Envía y consulta respuestas">
-    Pulsa **Enviar**. Los comentarios se muestran en orden cronológico y cualquier miembro con rol **Editor** o **Revisor** puede responder. Los comentarios resueltos pueden marcarse como **Cerrado** para limpiar la vista.
+    Pulsa **Enviar**. Los comentarios se muestran en orden cronológico y cualquier miembro con acceso al proyecto puede responder. Los comentarios resueltos pueden marcarse como **Cerrado** para limpiar la vista.
   </Step>
 </Steps>
 
@@ -98,7 +97,7 @@ Puedes filtrar el registro por **tipo de acción**, **usuario** o **rango de fec
 Seked te notifica de los cambios relevantes que ocurren en los proyectos en los que participas, para que siempre estés al día sin necesidad de revisar manualmente cada proyecto.
 
 <Note>
-  Puedes personalizar qué notificaciones recibes desde **Equipo > Configuración de cuenta**, en la sección **Notificaciones**. Puedes activar o desactivar notificaciones por tipo de evento (menciones, cambios en partidas, nuevos documentos, cambios de estado) y elegir si las recibes solo en la aplicación o también por correo electrónico.
+  Puedes personalizar qué notificaciones recibes desde **Equipo \> Configuración de cuenta**, en la sección **Notificaciones**. Puedes activar o desactivar notificaciones por tipo de evento (menciones, cambios en partidas, nuevos documentos, cambios de estado) y elegir si las recibes solo en la aplicación o también por correo electrónico.
 </Note>
 
 Los eventos que generan notificación son:
@@ -112,7 +111,7 @@ Los eventos que generan notificación son:
 </Accordion>
 
 <Accordion title="Nuevos documentos subidos">
-  Cuando se sube un nuevo archivo al proyecto, los miembros con rol Editor y Revisor reciben una notificación con el nombre del archivo y la carpeta de destino.
+  Cuando se sube un nuevo archivo al proyecto, los miembros del proyecto reciben una notificación con el nombre del archivo y la carpeta de destino.
 </Accordion>
 
 <Accordion title="Cambios de estado del proyecto">
@@ -125,12 +124,15 @@ Los eventos que generan notificación son:
   <Card title="Usuarios y roles de la organización" icon="shield-halved" href="/equipo/usuarios-y-roles">
     Configura los roles globales de los miembros de tu empresa en Seked.
   </Card>
+
   <Card title="Permisos" icon="lock" href="/equipo/permisos">
     Entiende cómo funcionan los permisos y qué puede hacer cada rol.
   </Card>
+
   <Card title="Invitar a tu equipo" icon="user-plus" href="/primeros-pasos/invitar-equipo">
     Añade nuevos usuarios a tu organización en Seked.
   </Card>
+
   <Card title="Gestionar proyectos" icon="folder-open" href="/proyectos/gestionar-proyectos">
     Consulta, edita y organiza todos los proyectos de tu cartera.
   </Card>

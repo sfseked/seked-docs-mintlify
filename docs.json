@@ -7,7 +7,7 @@
     "light": "#eec9bc",
     "dark": "#4fa1ab"
   },
-  "favicon": "/favicon.svg",
+  "favicon": "/logo/dark.svg",
   "navigation": {
     "tabs": [
       {
@@ -102,13 +102,13 @@
     "links": [
       {
         "label": "Soporte",
-        "href": "mailto:soporte@seked.io"
+        "href": "mailto:info@seked.co"
       }
     ],
     "primary": {
       "type": "button",
       "label": "Acceder a Seked",
-      "href": "https://app.seked.io"
+      "href": "https://seked.co"
     }
   },
   "footer": {
@@ -132,5 +132,9 @@
       "destination": "/base-de-precios/importar-exportar",
       "permanent": true
     }
-  ]
+  ],
+  "logo": {
+    "light": "/logo/dark.svg",
+    "dark": "/logo/dark.svg"
+  }
 }
