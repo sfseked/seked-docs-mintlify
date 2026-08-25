@@ -1,0 +1,152 @@
+---
+title: "Importar y exportar la base de conocimiento en Seked"
+sidebarTitle: "Importar / Exportar"
+description: "Aprende a importar catálogos desde Excel, BEDEC o PREOC y a exportar tu base de conocimiento para compartirla o hacer copias de seguridad."
+---
+
+Mantener una base de conocimiento completa y actualizada no significa tener que introducir cada elemento a mano. Seked te permite importar catálogos desde hojas de cálculo Excel, bases de datos de precios sectoriales como BEDEC o PREOC, y archivos en formato estándar BC3, además de exportar toda tu biblioteca en cualquier momento. En esta guía aprenderás a hacer cada una de estas operaciones de forma segura y eficiente.
+
+## Importar desde Excel
+
+### Plantilla de importación
+
+Antes de cargar tu fichero, descarga la plantilla oficial de Seked para asegurarte de que las columnas tienen el formato correcto.
+
+| Columna | Obligatoria | Descripción |
+|---|---|---|
+| `codigo` | ✅ | Código único del elemento (texto, sin espacios). |
+| `nombre` | ✅ | Nombre descriptivo del elemento. |
+| `tipo` | ✅ | `partida`, `material`, `mano_obra`, `maquinaria` o `recurso_compuesto`. |
+| `unidad` | ✅ | Unidad de medida (`m`, `m²`, `ud`, `h`, `kg`, etc.). |
+| `coste_unitario` | ✅ | Precio unitario sin impuestos (número decimal, separador de coma o punto). |
+| `categoria` | ❌ | Nombre de la categoría. Se crea automáticamente si no existe. |
+| `familia` | ❌ | Sub-categoría dentro de la categoría. |
+| `descripcion` | ❌ | Texto técnico o comercial del elemento. |
+| `etiquetas` | ❌ | Etiquetas separadas por punto y coma (`;`). |
+| `activo` | ❌ | `1` para activo (por defecto), `0` para importar como inactivo. |
+
+<Steps>
+  <Step title="Descarga la plantilla Excel">
+    Ve a **Base de conocimiento → Importar → Desde Excel** y haz clic en **Descargar plantilla**. Abre el fichero en Excel o Google Sheets.
+  </Step>
+  <Step title="Rellena los datos">
+    Completa las filas con tus elementos respetando el formato de cada columna. No elimines ni renombres las cabeceras. Puedes añadir tantas filas como necesites.
+  </Step>
+  <Step title="Guarda el fichero en formato .xlsx o .csv">
+    Asegúrate de que el fichero está en formato `.xlsx` (Excel) o `.csv` con separador de punto y coma. Seked no acepta formatos `.xls` (Excel 97-2003).
+  </Step>
+  <Step title="Sube el fichero a Seked">
+    Vuelve a **Base de conocimiento → Importar → Desde Excel**, arrastra el fichero al área de carga o haz clic en **Seleccionar archivo**.
+  </Step>
+  <Step title="Revisa la vista previa">
+    Seked mostrará una vista previa con el número de elementos encontrados, los errores de validación (filas marcadas en rojo) y las columnas reconocidas. Corrige los errores si los hay antes de continuar.
+  </Step>
+  <Step title="Elige el comportamiento ante duplicados">
+    Selecciona qué debe hacer Seked cuando encuentre un código que ya existe en la base de conocimiento:
+    - **Omitir** — conserva el elemento existente y no importa la fila duplicada.
+    - **Actualizar** — sobreescribe el elemento existente con los datos del fichero.
+    - **Crear nuevo** — importa el elemento con un sufijo añadido al código (`-v2`, etc.).
+  </Step>
+  <Step title="Confirma la importación">
+    Haz clic en **Importar elementos**. Cuando el proceso finalice verás un resumen: elementos creados, actualizados, omitidos y errores.
+  </Step>
+</Steps>
+
+<Warning>
+  Si seleccionas la opción **Actualizar** ante duplicados, los precios y descripciones existentes serán sobreescritos sin posibilidad de deshacer la acción. Haz una exportación de seguridad antes de importar si tienes dudas sobre el contenido del fichero.
+</Warning>
+
+## Importar desde BEDEC, PREOC u otras bases de precios
+
+Seked es compatible con bases de datos de precios en formato **BC3** (estándar FIEBDC) y con exportaciones **CSV** de BEDEC, PREOC y otras plataformas sectoriales.
+
+<Steps>
+  <Step title="Exporta el fichero desde la base de datos de origen">
+    En BEDEC, PREOC o la herramienta que uses, selecciona los capítulos o partidas que quieres importar y expórtalos en formato **BC3** (`.bc3`) o **CSV** según las opciones disponibles.
+  </Step>
+  <Step title="Accede a la importación en Seked">
+    Ve a **Base de conocimiento → Importar → Desde base de precios (BC3 / CSV)**.
+  </Step>
+  <Step title="Sube el fichero">
+    Arrastra el fichero `.bc3` o `.csv` al área de carga. Seked detectará automáticamente el formato.
+  </Step>
+  <Step title="Selecciona los elementos a importar">
+    Seked mostrará la jerarquía de capítulos y partidas del fichero. Marca los que quieres incorporar a tu base de conocimiento. Puedes seleccionar capítulos completos o elementos individuales.
+  </Step>
+  <Step title="Asigna categorías">
+    Mapea los capítulos del fichero a las categorías de tu base de conocimiento. Puedes crear nuevas categorías en este paso o asignar a categorías existentes.
+  </Step>
+  <Step title="Elige el comportamiento ante duplicados y confirma">
+    Al igual que en la importación desde Excel, selecciona si quieres omitir, actualizar o crear nuevos elementos ante duplicados. Haz clic en **Importar** para finalizar.
+  </Step>
+</Steps>
+
+<Note>
+  Las bases de datos como BEDEC y PREOC publican actualizaciones de precios periódicamente. Repite este proceso cuando aparezcan nuevas ediciones para mantener tus costes de referencia al día.
+</Note>
+
+## Exportar la base de conocimiento a Excel
+
+Puedes exportar todos los elementos de tu base de conocimiento en cualquier momento, ya sea para compartirlos, revisarlos fuera de Seked o hacer una copia de seguridad.
+
+<Steps>
+  <Step title="Accede a la exportación">
+    Ve a **Base de conocimiento → Exportar → A Excel**.
+  </Step>
+  <Step title="Aplica filtros opcionales">
+    Si no quieres exportar todo el catálogo, filtra por tipo de elemento, categoría, familia o estado (activos / inactivos / todos) antes de exportar.
+  </Step>
+  <Step title="Descarga el fichero">
+    Haz clic en **Exportar**. Seked generará un fichero `.xlsx` con todas las columnas del catálogo y lo descargará automáticamente en tu equipo.
+  </Step>
+</Steps>
+
+<Tip>
+  Programa una exportación mensual como copia de seguridad del catálogo. Guarda los ficheros en una carpeta compartida de tu empresa con la fecha en el nombre (p. ej., `base-conocimiento-2025-06.xlsx`) para poder recuperar versiones anteriores si es necesario.
+</Tip>
+
+## Sincronizar la base de conocimiento con proyectos activos
+
+Cuando actualizas el precio de un elemento en la base de conocimiento, Seked puede propagar ese cambio a los presupuestos de los proyectos activos que usen ese mismo elemento.
+
+<Steps>
+  <Step title="Actualiza el precio en la base de conocimiento">
+    Edita el elemento y guarda el nuevo coste unitario. Al guardar, Seked detectará automáticamente qué proyectos activos contienen ese elemento.
+  </Step>
+  <Step title="Revisa los proyectos afectados">
+    Aparecerá un panel con la lista de proyectos en los que se usa el elemento, el precio actual en cada proyecto y el nuevo precio de la base de conocimiento.
+  </Step>
+  <Step title="Selecciona los proyectos a actualizar">
+    Marca los proyectos en los que quieres aplicar el nuevo precio. Puedes seleccionarlos todos o solo algunos.
+  </Step>
+  <Step title="Confirma la sincronización">
+    Haz clic en **Actualizar proyectos seleccionados**. Seked actualizará el coste unitario del elemento en cada presupuesto seleccionado y recalculará los totales afectados.
+  </Step>
+</Steps>
+
+<Tip>
+  Mantén los precios de la base de conocimiento alineados con los precios reales de mercado. Revísalos al inicio de cada trimestre o después de negociaciones con proveedores. Un catálogo con precios obsoletos puede llevarte a presentar ofertas alejadas del coste real y comprometer la rentabilidad de tus proyectos.
+</Tip>
+
+<Warning>
+  La sincronización modifica los costes unitarios en los presupuestos activos seleccionados. Asegúrate de que los responsables del proyecto están informados antes de aplicar cambios masivos de precio, especialmente si las ofertas ya han sido enviadas al cliente.
+</Warning>
+
+---
+
+<CardGroup cols={2}>
+  <Card
+    title="Gestionar elementos"
+    icon="layer-group"
+    href="/base-de-conocimiento/gestionar-elementos"
+  >
+    Aprende a crear y organizar partidas, materiales y recursos en la biblioteca.
+  </Card>
+  <Card
+    title="Costes y precios"
+    icon="coins"
+    href="/presupuestacion/costes-y-precios"
+  >
+    Descubre cómo aplicar los elementos de la base de conocimiento en tus presupuestos.
+  </Card>
+</CardGroup>

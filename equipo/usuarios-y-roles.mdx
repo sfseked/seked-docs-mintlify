@@ -1,0 +1,110 @@
+---
+title: "Gestionar usuarios y roles del equipo en Seked"
+sidebarTitle: "Usuarios y Roles"
+description: "Conoce los tres roles de Seked, cómo ver tu equipo actual, cambiar el rol de un usuario y eliminar miembros de la organización."
+---
+
+Seked utiliza un sistema de roles para controlar qué puede hacer cada persona dentro de la plataforma. Asignar el rol correcto a cada miembro del equipo es clave para mantener la seguridad de la información y garantizar que cada persona accede solo a lo que necesita. En esta guía encontrarás todo lo que necesitas saber para gestionar tu equipo de forma eficiente.
+
+<Note>
+  Solo los usuarios con el rol **Administrador** pueden ver la lista completa del equipo, cambiar roles y eliminar usuarios.
+</Note>
+
+## Los tres roles de Seked
+
+Cada miembro de tu organización tiene asignado uno de estos tres roles:
+
+<CardGroup cols={3}>
+  <Card title="Administrador" icon="shield-halved" href="/equipo/permisos">
+    Acceso completo a la plataforma. Puede gestionar el equipo, la facturación, todos los proyectos y la configuración de empresa.
+  </Card>
+  <Card title="Presupuestador" icon="calculator" href="/equipo/permisos">
+    Puede crear y editar proyectos y presupuestos, gestionar proveedores y enviar solicitudes de oferta. No tiene acceso a facturación ni a la configuración de empresa.
+  </Card>
+  <Card title="Visualizador" icon="eye" href="/equipo/permisos">
+    Acceso de solo lectura a los proyectos que le han sido asignados. Puede consultar presupuestos y documentación, pero no puede crear ni modificar nada.
+  </Card>
+</CardGroup>
+
+## Tabla de permisos por rol
+
+| Acción | Administrador | Presupuestador | Visualizador |
+|---|:---:|:---:|:---:|
+| Ver proyectos asignados | ✅ | ✅ | ✅ |
+| Crear proyectos | ✅ | ✅ | ❌ |
+| Editar presupuestos | ✅ | ✅ | ❌ |
+| Gestionar proveedores | ✅ | ✅ | ❌ |
+| Enviar solicitudes de oferta | ✅ | ✅ | ❌ |
+| Usar funciones de IA | ✅ | ✅ | ❌ |
+| Invitar usuarios | ✅ | ❌ | ❌ |
+| Cambiar roles de usuario | ✅ | ❌ | ❌ |
+| Eliminar usuarios | ✅ | ❌ | ❌ |
+| Ver y gestionar facturación | ✅ | ❌ | ❌ |
+| Editar configuración de empresa | ✅ | ❌ | ❌ |
+| Acceder a todos los proyectos | ✅ | ❌ | ❌ |
+
+## Ver el equipo actual
+
+Para consultar quién forma parte de tu organización y qué rol tiene asignado cada persona:
+
+1. Haz clic en el icono de engranaje en la barra lateral o en tu nombre de empresa.
+2. Selecciona **Configuración de empresa** → **Equipo**.
+3. Verás una tabla con el nombre, correo electrónico, rol actual y fecha de incorporación de cada miembro.
+
+Desde esta misma pantalla puedes filtrar por rol o buscar un usuario concreto por nombre o correo electrónico.
+
+## Cambiar el rol de un usuario
+
+<Steps>
+  <Step title="Accede a la sección Equipo">
+    Ve a **Configuración de empresa** → **Equipo** y localiza al usuario cuyo rol deseas modificar.
+  </Step>
+  <Step title="Abre las opciones del usuario">
+    Haz clic en los tres puntos (⋯) situados al final de la fila del usuario. Se desplegará un menú contextual.
+  </Step>
+  <Step title="Selecciona Cambiar rol">
+    Haz clic en **Cambiar rol**. Aparecerá un diálogo con los tres roles disponibles.
+  </Step>
+  <Step title="Elige el nuevo rol">
+    Selecciona el rol que deseas asignar: **Administrador**, **Presupuestador** o **Visualizador**.
+  </Step>
+  <Step title="Confirma el cambio">
+    Haz clic en **Confirmar**. El cambio es inmediato: la próxima vez que el usuario acceda a Seked, verá las opciones correspondientes a su nuevo rol.
+  </Step>
+</Steps>
+
+<Warning>
+  Si cambias el rol de un **Administrador** a **Presupuestador** o **Visualizador**, ese usuario perderá inmediatamente el acceso a la facturación y a la configuración de empresa. Asegúrate de que siempre haya al menos un Administrador activo en tu organización.
+</Warning>
+
+## Eliminar un usuario
+
+Cuando un miembro deja de formar parte de tu organización, puedes retirarle el acceso a Seked de forma segura:
+
+<Steps>
+  <Step title="Localiza al usuario en la sección Equipo">
+    Ve a **Configuración de empresa** → **Equipo** y busca al usuario que deseas eliminar.
+  </Step>
+  <Step title="Abre el menú contextual">
+    Haz clic en los tres puntos (⋯) al final de la fila del usuario.
+  </Step>
+  <Step title="Selecciona Eliminar usuario">
+    Haz clic en **Eliminar usuario**. Aparecerá una ventana de confirmación indicando que el usuario perderá el acceso a todos los proyectos de la organización.
+  </Step>
+  <Step title="Confirma la eliminación">
+    Haz clic en **Sí, eliminar** para completar la acción. El usuario recibirá una notificación por correo electrónico informándole de que su acceso ha sido revocado.
+  </Step>
+</Steps>
+
+<Info>
+  Al eliminar un usuario, todo el trabajo que haya realizado (presupuestos, comentarios, anotaciones) **se conserva** en los proyectos. Solo se elimina su acceso a la plataforma; los datos no se borran.
+</Info>
+
+<CardGroup cols={2}>
+  <Card title="Permisos detallados" icon="lock" href="/equipo/permisos">
+    Consulta la matriz completa de permisos por rol y por proyecto.
+  </Card>
+  <Card title="Invitar a tu equipo" icon="user-plus" href="/primeros-pasos/invitar-equipo">
+    Aprende a invitar nuevos miembros a tu organización en Seked.
+  </Card>
+</CardGroup>

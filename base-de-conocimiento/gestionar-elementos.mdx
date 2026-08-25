@@ -1,0 +1,149 @@
+---
+title: "Cómo gestionar elementos en la base de conocimiento"
+sidebarTitle: "Gestionar Elementos"
+description: "Crea, edita, organiza y busca partidas, materiales, mano de obra y maquinaria en la biblioteca compartida de tu empresa en Seked."
+---
+
+La base de conocimiento de Seked está compuesta por elementos de distintos tipos que, combinados, te permiten construir presupuestos completos y coherentes. Saber crear, mantener y organizar bien esos elementos es la clave para que todo el equipo gane velocidad y precise menos correcciones. En esta guía encontrarás todo lo que necesitas para gestionar el catálogo de tu empresa.
+
+## Tipos de elementos
+
+Seked distingue cinco tipos de elementos que puedes almacenar en la base de conocimiento:
+
+<CardGroup cols={2}>
+  <Card title="Partidas" icon="list-check">
+    Unidades de trabajo completas: incluyen descripción técnica, criterio de medición, unidad y descomposición de costes (materiales, mano de obra, maquinaria).
+  </Card>
+  <Card title="Materiales" icon="boxes-stacked">
+    Productos y suministros con referencia, unidad de medida, precio unitario y proveedor habitual. Son la base de la descomposición de cualquier partida.
+  </Card>
+  <Card title="Mano de obra" icon="helmet-safety">
+    Categorías laborales (oficial, peón, encargado, etc.) con tarifa horaria o por rendimiento, incluyendo cargas sociales si procede.
+  </Card>
+  <Card title="Maquinaria" icon="truck-monster">
+    Equipos y vehículos con coste de uso por hora o por jornada, factor de amortización y rendimiento estándar.
+  </Card>
+  <Card title="Recursos compuestos" icon="cubes">
+    Agrupaciones de materiales, mano de obra y maquinaria que forman una unidad de rendimiento reutilizable (p. ej., un equipo de hormigonado o un módulo de encofrado).
+  </Card>
+</CardGroup>
+
+## Crear un nuevo elemento
+
+<Steps>
+  <Step title="Accede a la base de conocimiento">
+    En el menú lateral, haz clic en **Base de conocimiento**. Verás el listado general de todos los elementos del catálogo de tu empresa.
+  </Step>
+  <Step title="Selecciona el tipo de elemento">
+    Haz clic en **+ Nuevo elemento** y elige el tipo en el desplegable: *Partida*, *Material*, *Mano de obra*, *Maquinaria* o *Recurso compuesto*.
+  </Step>
+  <Step title="Completa los campos obligatorios">
+    Rellena los campos del formulario:
+
+    | Campo | Descripción |
+    |---|---|
+    | **Código** | Identificador único (p. ej., `MAT-0042` o `PA-ESC-001`). |
+    | **Nombre** | Denominación clara y reconocible del elemento. |
+    | **Descripción** | Texto técnico o comercial que aparecerá en el presupuesto. |
+    | **Unidad** | Unidad de medida (`m`, `m²`, `m³`, `ud`, `h`, `kg`, etc.). |
+    | **Coste unitario** | Precio de referencia sin impuestos. |
+    | **Categoría** | Familia o capítulo al que pertenece el elemento. |
+    | **Etiquetas** | Palabras clave para facilitar la búsqueda (opcional pero recomendado). |
+  </Step>
+  <Step title="Añade la descomposición (partidas y recursos compuestos)">
+    Si estás creando una partida o un recurso compuesto, puedes añadir su descomposición en sub-elementos haciendo clic en **+ Añadir componente** y buscando materiales, mano de obra o maquinaria ya existentes en la base de conocimiento.
+  </Step>
+  <Step title="Guarda el elemento">
+    Haz clic en **Guardar**. El elemento quedará disponible de inmediato para todo el equipo con acceso a la base de conocimiento.
+  </Step>
+</Steps>
+
+<Tip>
+  Establece desde el principio una convención de nombres y códigos coherente para toda la empresa. Por ejemplo, usa prefijos por tipo (`MAT-`, `MO-`, `MAQ-`, `PA-`) y agrupa por familia o capítulo. Una biblioteca bien organizada se busca en segundos; una desordenada se convierte en un problema que crece con el tiempo.
+</Tip>
+
+## Editar un elemento existente
+
+<Steps>
+  <Step title="Localiza el elemento">
+    Usa el buscador o los filtros de categoría para encontrar el elemento que quieres modificar.
+  </Step>
+  <Step title="Abre el detalle">
+    Haz clic sobre el nombre del elemento para abrir su ficha completa.
+  </Step>
+  <Step title="Edita los campos necesarios">
+    Haz clic en **Editar** (icono de lápiz) en la parte superior derecha de la ficha. Modifica los campos que necesites.
+  </Step>
+  <Step title="Guarda los cambios">
+    Haz clic en **Guardar cambios**. Seked te preguntará si deseas propagar la actualización de precio a los proyectos activos que usen este elemento.
+  </Step>
+</Steps>
+
+<Note>
+  Los cambios de precio no se aplican retroactivamente a proyectos cerrados o archivados; solo a los que están en estado *Activo* o *En revisión*.
+</Note>
+
+## Desactivar un elemento
+
+Cuando un elemento queda obsoleto pero no quieres eliminarlo para conservar el historial, puedes desactivarlo:
+
+<Steps>
+  <Step title="Abre la ficha del elemento">
+    Localiza el elemento y haz clic en su nombre para ver el detalle.
+  </Step>
+  <Step title="Selecciona 'Desactivar'">
+    En el menú de opciones (icono `···`), selecciona **Desactivar elemento**. Confirma la acción en el diálogo que aparece.
+  </Step>
+  <Step title="Resultado">
+    El elemento desaparecerá de los resultados de búsqueda por defecto. Para verlo, activa el filtro **Mostrar inactivos**. Los proyectos que ya lo usaban no se ven afectados.
+  </Step>
+</Steps>
+
+<Warning>
+  Desactivar un elemento no lo elimina de los presupuestos en los que ya está incluido. Si necesitas reemplazarlo, hazlo manualmente en cada proyecto afectado.
+</Warning>
+
+## Organizar elementos por categoría, familia y oficio
+
+Seked te permite estructurar la base de conocimiento en tres niveles de clasificación:
+
+- **Categoría** — el nivel más alto (p. ej., *Estructura*, *Instalaciones*, *Acabados*).
+- **Familia** — una subdivisión de la categoría (p. ej., *Hormigón armado*, *Fontanería*, *Revestimientos*).
+- **Oficio** — el gremio o especialidad responsable (p. ej., *Ferrallista*, *Fontanero*, *Pintor*).
+
+Para gestionar la estructura de categorías ve a **Base de conocimiento → Ajustes de catálogo → Categorías** y añade, edita o reorganiza los niveles según las necesidades de tu empresa.
+
+## Buscar y filtrar elementos
+
+Desde el panel principal de la base de conocimiento dispones de varias herramientas de búsqueda:
+
+- **Buscador de texto libre** — busca por nombre, código o cualquier palabra en la descripción.
+- **Filtro por tipo** — filtra solo materiales, partidas, mano de obra, etc.
+- **Filtro por categoría / familia / oficio** — navega por la jerarquía de clasificación.
+- **Filtro por etiqueta** — encuentra todos los elementos con una misma etiqueta.
+- **Filtro por estado** — muestra solo activos, solo inactivos o ambos.
+
+<Tip>
+  Combina el filtro de categoría con el buscador de texto para encontrar un elemento concreto dentro de un capítulo extenso. Por ejemplo, filtra por *Instalaciones > Fontanería* y busca «tubo cobre» para ver solo las referencias de ese material en ese oficio.
+</Tip>
+
+---
+
+¿Quieres llevar tu catálogo al siguiente nivel? Aprende a importar y exportar elementos en la siguiente guía.
+
+<CardGroup cols={2}>
+  <Card
+    title="Importar y exportar"
+    icon="arrow-right-arrow-left"
+    href="/base-de-conocimiento/importar-exportar"
+  >
+    Carga catálogos desde Excel, BEDEC o PREOC y exporta tu base de conocimiento completa.
+  </Card>
+  <Card
+    title="Introducción a la base de conocimiento"
+    icon="book-open"
+    href="/base-de-conocimiento/introduccion"
+  >
+    Vuelve a la visión general para entender cómo encaja la biblioteca en tu flujo de trabajo.
+  </Card>
+</CardGroup>

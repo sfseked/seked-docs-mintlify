@@ -1,0 +1,132 @@
+---
+title: "Guía completa de permisos en Seked por rol y proyecto"
+sidebarTitle: "Permisos"
+description: "Entiende cómo funcionan los permisos a nivel de organización y de proyecto, qué ocurre al eliminar usuarios y cómo configurar equipos grandes."
+---
+
+Seked dispone de dos capas de permisos que trabajan conjuntamente: los permisos a **nivel de organización**, que determinan qué puede hacer un usuario en toda la plataforma, y los permisos a **nivel de proyecto**, que permiten otorgar o restringir el acceso a un proyecto concreto con independencia del rol global del usuario. Comprender cómo interactúan estas dos capas te ayudará a estructurar equipos de trabajo seguros y eficientes.
+
+## Permisos a nivel de organización
+
+Los permisos de organización se derivan directamente del **rol** asignado a cada usuario. Hay tres roles disponibles: Administrador, Presupuestador y Visualizador.
+
+<Accordion title="Administrador — Acceso completo">
+  El Administrador tiene control total sobre la organización en Seked. Sus permisos incluyen:
+
+  - **Gestión del equipo:** invitar, eliminar y cambiar el rol de cualquier usuario.
+  - **Configuración de empresa:** editar nombre, CIF, logotipo, dirección, moneda y unidades de medida.
+  - **Facturación:** consultar facturas, cambiar el plan, adquirir créditos adicionales y actualizar el método de pago.
+  - **Proyectos:** crear, editar, archivar y eliminar cualquier proyecto de la organización, independientemente de si está asignado a él.
+  - **Base de conocimiento:** añadir, editar e importar elementos de la base de conocimiento corporativa.
+  - **Proveedores:** gestionar el directorio completo de proveedores de la organización.
+  - **IA:** usar todas las funciones de inteligencia artificial consumiendo créditos de la organización.
+
+  Se recomienda que haya **al menos dos Administradores** en cada organización para evitar bloqueos en caso de que uno de ellos abandone la empresa.
+</Accordion>
+
+<Accordion title="Presupuestador — Acceso operativo">
+  El Presupuestador puede realizar todas las tareas del día a día de estimación y presupuestación. Sus permisos incluyen:
+
+  - **Proyectos:** crear proyectos nuevos, editar los proyectos a los que tiene acceso y gestionar sus presupuestos y partidas.
+  - **Proveedores:** añadir proveedores, solicitar ofertas y comparar respuestas en los proyectos asignados.
+  - **Base de conocimiento:** consultar y usar elementos en presupuestos; puede añadir elementos si el Administrador lo permite.
+  - **IA:** usar las funciones de análisis de documentos y estimación automática.
+
+  El Presupuestador **no puede** gestionar el equipo, acceder a la facturación ni modificar la configuración de empresa.
+</Accordion>
+
+<Accordion title="Visualizador — Acceso de solo lectura">
+  El Visualizador puede consultar la información de los proyectos a los que ha sido asignado, pero no puede realizar ninguna modificación. Sus permisos incluyen:
+
+  - **Proyectos asignados:** ver presupuestos, partidas, mediciones y documentación adjunta.
+  - **Comentarios:** leer los comentarios del equipo (no puede añadir comentarios salvo que se le otorgue permiso específico en el proyecto).
+  - **Exportación:** descargar presupuestos en PDF u otros formatos exportables.
+
+  El Visualizador **no puede** crear proyectos, editar datos, gestionar proveedores ni usar funciones de IA.
+
+  Este rol es ideal para **consultores externos**, **clientes** o **auditores** que necesitan acceder a la información sin riesgo de modificarla.
+</Accordion>
+
+## Permisos a nivel de proyecto
+
+Además del rol global, Seked permite establecer un nivel de acceso diferente para cada usuario en un proyecto concreto. Esto significa que un Presupuestador puede tener acceso de **solo lectura** a un proyecto específico aunque su rol global le permita editar.
+
+Los niveles de acceso por proyecto son:
+
+| Nivel de proyecto | Descripción |
+|---|---|
+| **Propietario** | Puede editar el proyecto, gestionar los accesos y eliminarlo. Solo el creador del proyecto o un Administrador pueden ser propietarios. |
+| **Editor** | Puede editar presupuestos, partidas, mediciones y documentos del proyecto. Equivale al acceso estándar del Presupuestador. |
+| **Comentarista** | Puede ver el contenido del proyecto y añadir comentarios, pero no puede modificar datos. |
+| **Lector** | Acceso de solo lectura. No puede comentar ni modificar nada. |
+
+<Info>
+  El nivel de acceso por proyecto **nunca puede superar** el rol global del usuario. Por ejemplo, no puedes dar acceso de Editor a un Visualizador: su rol global lo impide. Sin embargo, sí puedes restringir a un Presupuestador a modo Lector en un proyecto concreto.
+</Info>
+
+### Cómo gestionar el acceso por proyecto
+
+1. Abre el proyecto en cuestión y haz clic en el icono de **personas** o en **Compartir** en la barra superior.
+2. Busca al usuario por nombre o correo electrónico.
+3. Despliega el selector de nivel de acceso junto a su nombre y elige el nivel deseado.
+4. Haz clic en **Guardar** para confirmar los cambios.
+
+## Qué ocurre al eliminar el acceso
+
+Existen dos situaciones distintas que conviene distinguir:
+
+<Accordion title="Eliminar a un usuario de un proyecto">
+  Cuando eliminas a un usuario de un proyecto concreto:
+
+  - Pierde el acceso únicamente a ese proyecto.
+  - Sigue siendo miembro activo de la organización con su rol global.
+  - Puede seguir accediendo al resto de proyectos a los que esté asignado.
+  - Todo su trabajo en ese proyecto (comentarios, cambios) **se conserva**.
+</Accordion>
+
+<Accordion title="Eliminar a un usuario de la organización">
+  Cuando eliminas a un usuario de la organización:
+
+  - Pierde el acceso a **todos** los proyectos y a toda la plataforma de forma inmediata.
+  - Su cuenta queda desactivada y no puede iniciar sesión.
+  - Todo el contenido que generó (presupuestos, partidas, comentarios) **se conserva** en los proyectos.
+  - Si el usuario tenía proyectos como único propietario, la propiedad se transfiere automáticamente al Administrador que realizó la eliminación.
+  - El usuario recibirá un correo electrónico notificándole la revocación de acceso.
+</Accordion>
+
+## Buenas prácticas para equipos grandes
+
+Cuando trabajas con equipos numerosos o con colaboradores externos, sigue estas recomendaciones para mantener la seguridad y el orden:
+
+<Accordion title="Consultores y asesores externos">
+  Asigna el rol **Visualizador** a cualquier persona ajena a tu empresa que necesite acceder a Seked. De este modo podrán consultar la información que les corresponda sin riesgo de modificar datos accidentalmente.
+
+  Además, añádelos únicamente a los proyectos relevantes para su trabajo y revisa periódicamente si siguen necesitando acceso.
+</Accordion>
+
+<Accordion title="Equipos de gran tamaño">
+  Cuando tienes muchos Presupuestadores, organiza el acceso por proyectos en lugar de dar acceso global a todo. Usa el nivel **Editor** solo para las personas que realmente trabajen en el presupuesto activo de cada proyecto, y reduce a **Lector** o **Comentarista** a quienes solo necesiten estar informados.
+</Accordion>
+
+<Accordion title="Revisión periódica de accesos">
+  Establece una rutina de revisión trimestral de los usuarios activos. Elimina o ajusta los accesos de personas que ya no trabajen en un proyecto o que hayan cambiado de función. Esto reduce el riesgo de accesos no autorizados y mantiene la lista de usuarios limpia.
+</Accordion>
+
+<Accordion title="Principio de mínimo privilegio">
+  Asigna siempre el rol o nivel de acceso **más restrictivo** que permita a la persona hacer su trabajo. Si alguien solo necesita revisar un presupuesto para aprobarlo, el rol Visualizador o el nivel Lector es suficiente. No es necesario otorgar permisos de edición a todo el mundo.
+</Accordion>
+
+<CardGroup cols={2}>
+  <Card title="Usuarios y roles" icon="users" href="/equipo/usuarios-y-roles">
+    Aprende a cambiar roles y gestionar los miembros de tu equipo.
+  </Card>
+  <Card title="Colaboración en proyectos" icon="people-group" href="/proyectos/colaboracion">
+    Descubre cómo trabajar en equipo dentro de un proyecto.
+  </Card>
+  <Card title="Invitar al equipo" icon="user-plus" href="/primeros-pasos/invitar-equipo">
+    Añade nuevos miembros a tu organización paso a paso.
+  </Card>
+  <Card title="Configuración de empresa" icon="building" href="/equipo/gestionar-empresa">
+    Administra los datos y preferencias globales de tu organización.
+  </Card>
+</CardGroup>

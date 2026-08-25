@@ -1,13 +1,11 @@
 {
-  "$schema": "https://mintlify.com/docs.json",
+  "projectType": "saas",
+  "projectName": "Seked",
+  "projectDescription": "Seked es una plataforma SaaS para empresas de construcción e industria que automatiza y optimiza el proceso de presupuestación, licitaciones y estimación de costes.",
   "theme": "almond",
-  "name": "Seked",
-  "colors": {
-    "primary": "#ef7025",
-    "light": "#eec9bc",
-    "dark": "#4fa1ab"
-  },
-  "favicon": "/favicon.svg",
+  "primaryColor": "#ef7025",
+  "lightColor": "#eec9bc",
+  "darkColor": "#4fa1ab",
   "navigation": {
     "tabs": [
       {
@@ -98,22 +96,17 @@
       }
     ]
   },
-  "navbar": {
-    "links": [
-      {
-        "label": "Soporte",
-        "href": "mailto:soporte@seked.io"
-      }
-    ],
-    "primary": {
-      "type": "button",
-      "label": "Acceder a Seked",
-      "href": "https://app.seked.io"
-    }
-  },
-  "footer": {
-    "socials": {
-      "linkedin": "https://linkedin.com/company/seked"
-    }
-  }
+  "keyFeatures": [
+    "Estimación automática de presupuestos mediante IA",
+    "Gestión de proyectos de construcción e industria",
+    "Organización de documentación técnica por proyecto",
+    "Gestión de partidas, mediciones, costes y precios",
+    "Base de conocimiento de elementos reutilizables",
+    "Comparación y gestión de ofertas de proveedores",
+    "Control de roles y permisos por equipo",
+    "Planes con créditos para el consumo de funcionalidades IA",
+    "Exportación de presupuestos y estimaciones",
+    "Colaboración en tiempo real entre miembros del equipo"
+  ],
+  "publicApiSurface": []
 }

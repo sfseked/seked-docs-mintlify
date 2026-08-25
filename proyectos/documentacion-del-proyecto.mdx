@@ -1,0 +1,139 @@
+---
+title: "Subir y organizar documentación en un proyecto Seked"
+sidebarTitle: "Documentación"
+description: "Sube planos, mediciones, pliegos y más a tu proyecto en Seked. Organiza los archivos en carpetas y vincula documentos a partidas del presupuesto."
+---
+
+La documentación del proyecto es la materia prima sobre la que trabaja la inteligencia artificial de Seked. Cuanto más completa y bien organizada esté, más preciso será el análisis automático y más tiempo ahorrarás en la elaboración del presupuesto. Esta guía te explica cómo subir, organizar y aprovechar al máximo los documentos de cada proyecto.
+
+## Formatos de archivo compatibles
+
+Seked admite los formatos más habituales en el entorno de la construcción y la industria:
+
+<CardGroup cols={3}>
+  <Card title="Planos y diseño" icon="drafting-compass">
+    **DWG, DXF** (AutoCAD), **PDF** con planos vectoriales o escaneados.
+  </Card>
+  <Card title="Documentos de texto" icon="file-word">
+    **Word** (.docx, .doc): memorias, pliegos, especificaciones técnicas.
+  </Card>
+  <Card title="Hojas de cálculo" icon="file-excel">
+    **Excel** (.xlsx, .xls, .csv): mediciones, listas de precios, comparativos.
+  </Card>
+  <Card title="Imágenes" icon="image">
+    **JPG, PNG, TIFF**: fotografías de campo, capturas de planos o detalles constructivos.
+  </Card>
+  <Card title="PDF genérico" icon="file-pdf">
+    Presupuestos, contratos, actas y cualquier documento en formato PDF.
+  </Card>
+  <Card title="BC3" icon="file-code">
+    Ficheros en formato **FIEBDC-3** (BC3) para intercambio de bases de precios.
+  </Card>
+</CardGroup>
+
+<Note>
+  El tamaño máximo por archivo es de **50 MB**. Si necesitas subir planos de gran formato o archivos de proyecto de AutoCAD pesados, comprímelos en ZIP antes de subirlos. Los archivos ZIP pueden contener múltiples ficheros y se descomprimirán automáticamente en la carpeta de destino.
+</Note>
+
+## Subir documentos al proyecto
+
+<Steps>
+  <Step title="Accede a la pestaña Documentación">
+    Abre el proyecto desde el listado y haz clic en la pestaña **Documentación** en el menú superior del panel de detalle del proyecto.
+  </Step>
+
+  <Step title="Elige la carpeta de destino">
+    En el panel izquierdo verás la estructura de carpetas del proyecto. Seked crea automáticamente las siguientes carpetas predeterminadas al crear el proyecto:
+
+    | Carpeta | Contenido habitual |
+    |---|---|
+    | **Planos** | Planos de arquitectura, estructura, instalaciones y urbanización. |
+    | **Mediciones** | Hojas de mediciones, cuadros de superficies, listados de elementos. |
+    | **Memoria** | Memoria descriptiva, memoria de calidades, especificaciones técnicas. |
+    | **Pliegos** | Pliego de condiciones técnicas y administrativas, prescripciones. |
+    | **Ofertas** | Ofertas de proveedores, comparativos y propuestas recibidas. |
+
+    Haz clic en la carpeta donde deseas subir los archivos para seleccionarla. También puedes crear subcarpetas pulsando el icono **+** junto al nombre de la carpeta.
+  </Step>
+
+  <Step title="Sube los archivos">
+    Tienes dos métodos para subir archivos:
+
+    <Tabs>
+      <Tab title="Arrastrar y soltar">
+        Arrastra los archivos desde el explorador de tu ordenador directamente al área central de la pantalla. Verás un recuadro azul punteado que confirma que puedes soltar los archivos. Puedes subir varios archivos a la vez.
+      </Tab>
+      <Tab title="Selector de archivos">
+        Haz clic en el botón **Subir archivos** (nube con flecha) en la parte superior del área de documentos. Se abrirá el explorador de archivos de tu sistema. Selecciona uno o varios archivos y pulsa **Abrir**.
+      </Tab>
+    </Tabs>
+
+    Seked mostrará una barra de progreso para cada archivo mientras se sube. Una vez completada la subida, los archivos aparecerán en la carpeta seleccionada.
+  </Step>
+
+  <Step title="Verifica los documentos subidos">
+    Cada archivo subido aparece en la lista con su nombre, formato, tamaño, fecha de subida y el usuario que lo cargó. Puedes previsualizarlo haciendo clic sobre su nombre, descargarlo o renombrarlo desde el menú de opciones (tres puntos).
+  </Step>
+</Steps>
+
+## Organizar documentos en carpetas
+
+Mantener los documentos bien estructurados es clave para que el equipo encuentre rápidamente lo que necesita y para maximizar la calidad del análisis de la IA.
+
+- **Crear una subcarpeta**: haz clic en el icono **+** junto a cualquier carpeta y asigna un nombre. Puedes anidar subcarpetas para mayor detalle (por ejemplo, `Planos > Planta Baja`, `Planos > Alzados`).
+- **Mover un archivo**: arrastra el archivo desde su ubicación actual a la carpeta de destino, o usa la opción **Mover a** en el menú de opciones del archivo.
+- **Renombrar carpeta**: haz doble clic sobre el nombre de la carpeta o selecciona **Renombrar** en su menú de opciones.
+- **Eliminar carpeta**: solo es posible si la carpeta está vacía. Mueve o elimina primero los archivos que contenga.
+
+## Vincular documentos a partidas del presupuesto
+
+Una vez que el presupuesto tiene partidas definidas, puedes vincular documentos específicos a cada una de ellas para dejar trazabilidad entre el precio y su justificación documental.
+
+<Steps>
+  <Step title="Abre la partida en el presupuesto">
+    Ve a la pestaña **Presupuesto** del proyecto y haz clic sobre la partida a la que quieres añadir referencias documentales.
+  </Step>
+  <Step title="Accede al panel de documentos de la partida">
+    En el panel de detalle de la partida, selecciona la pestaña **Documentos**. Verás los documentos ya vinculados (si los hay) y el botón **Vincular documento**.
+  </Step>
+  <Step title="Selecciona el documento">
+    Haz clic en **Vincular documento** y elige el archivo de entre los ya subidos al proyecto. También puedes indicar la página o el número de plano concreto que justifica esa partida. Pulsa **Vincular** para confirmar.
+  </Step>
+</Steps>
+
+## Cómo la IA de Seked procesa los documentos
+
+Cuando activas la estimación con IA, Seked analiza automáticamente los documentos del proyecto para extraer información relevante:
+
+<Accordion title="Lectura de planos (PDF y DWG)">
+  La IA identifica elementos gráficos, cotas, superficies y tipologías de elementos a partir de planos técnicos. Reconoce plantas, alzados, secciones y detalles, y extrae mediciones geométricas cuando los planos están acotados o tienen escala.
+</Accordion>
+
+<Accordion title="Extracción de mediciones (Excel y PDF)">
+  Seked lee hojas de mediciones en formato tabla, reconoce las columnas de descripción, unidad, cantidad y precio, e importa los datos directamente al presupuesto como partidas candidatas.
+</Accordion>
+
+<Accordion title="Análisis de pliegos y memorias (Word y PDF)">
+  La IA extrae los tipos de trabajo descritos en la memoria y el pliego de condiciones, e identifica especificaciones de materiales y calidades que pueden influir en la selección de precios unitarios.
+</Accordion>
+
+<Tip>
+  Para obtener los mejores resultados del análisis automático, sube los documentos **antes** de lanzar la estimación y asegúrate de incluir al menos: los planos en PDF con cotas visibles, la hoja de mediciones y el pliego de condiciones técnicas. Los proyectos con documentación completa generan un 60 % más de partidas útiles en la primera pasada de la IA.
+</Tip>
+
+## Próximos pasos
+
+<CardGroup cols={2}>
+  <Card title="Estimación inicial con IA" icon="wand-magic-sparkles" href="/presupuestacion/estimacion-inicial">
+    Lanza el análisis automático sobre los documentos que acabas de subir.
+  </Card>
+  <Card title="Partidas y mediciones" icon="list-check" href="/presupuestacion/partidas-y-mediciones">
+    Aprende a trabajar con las partidas generadas o a crearlas manualmente.
+  </Card>
+  <Card title="Colaboración en el proyecto" icon="users" href="/proyectos/colaboracion">
+    Comparte los documentos con tu equipo y trabaja de forma coordinada.
+  </Card>
+  <Card title="Proveedores y ofertas" icon="truck" href="/proveedores/solicitar-ofertas">
+    Solicita ofertas a proveedores vinculando los documentos del proyecto.
+  </Card>
+</CardGroup>

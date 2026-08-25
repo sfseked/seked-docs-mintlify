@@ -1,0 +1,112 @@
+---
+title: "Cómo comparar ofertas de proveedores en Seked"
+sidebarTitle: "Comparar Ofertas"
+description: "Accede al panel de comparativa, analiza las ofertas de tus proveedores lado a lado y acepta la mejor para actualizar el presupuesto del proyecto."
+---
+
+Cuando tienes varias ofertas de proveedores sobre la mesa, la comparativa manual en hojas de cálculo consume tiempo y es propensa a errores. Seked centraliza todas las respuestas en un panel de comparación visual que te permite evaluar precio, plazo y condiciones de cada proveedor en paralelo, marcar la oferta ganadora y actualizar el presupuesto del proyecto con un solo clic, conservando el historial de las ofertas descartadas para futuras referencias.
+
+## Acceder al panel de comparativa
+
+<Steps>
+  <Step title="Abre el proyecto y ve a la sección de ofertas">
+    Desde **Proyectos**, abre el proyecto correspondiente y haz clic en la pestaña **Ofertas y proveedores**.
+  </Step>
+  <Step title="Selecciona la solicitud de oferta a comparar">
+    En la tabla de solicitudes verás todas las enviadas. Localiza la que quieres comparar (aquellas con estado *Oferta recibida* de al menos un proveedor) y haz clic en **Ver comparativa**.
+  </Step>
+</Steps>
+
+## Visualizar las ofertas lado a lado
+
+El panel de comparativa muestra una tabla en la que cada columna corresponde a un proveedor y cada fila a una partida o material solicitado. Para cada celda verás:
+
+- **Precio unitario** propuesto por el proveedor.
+- **Precio total** para la cantidad solicitada.
+- **Plazo de entrega o ejecución** indicado por el proveedor.
+- **Condiciones** (forma de pago, garantías, portes, etc.).
+- **Notas** adicionales del proveedor.
+
+Seked resalta automáticamente en verde el precio más bajo de cada fila para facilitar la identificación de la oferta más competitiva.
+
+<Note>
+  Si un proveedor no ha respondido a alguna partida concreta, su celda aparecerá vacía. Puedes registrar una respuesta parcial manualmente haciendo clic en la celda correspondiente y rellenando los datos.
+</Note>
+
+## Marcar la mejor oferta
+
+<Steps>
+  <Step title="Revisa las diferencias">
+    Analiza columna a columna las diferencias de precio, plazo y condiciones. Recuerda que el precio más bajo no siempre es la mejor opción: un plazo de entrega más largo o unas condiciones de pago desfavorables pueden compensar el ahorro inicial.
+  </Step>
+  <Step title="Marca el proveedor favorito por partida">
+    Haz clic en el icono de estrella ⭐ en la celda del proveedor que prefieres para cada partida o material. Puedes marcar distintos proveedores para distintas partidas si vas a dividir el suministro o la subcontratación.
+  </Step>
+  <Step title="Añade notas de negociación">
+    Si has negociado condiciones mejoradas con un proveedor tras recibir su oferta inicial, actualiza los datos haciendo clic en **Editar oferta** junto a su nombre. Registra el precio negociado y los nuevos términos.
+  </Step>
+</Steps>
+
+<Tip>
+  Usa la comparativa como base para negociar. Comparte (o menciona verbalmente) que tienes varias ofertas sobre la mesa y pide a tu proveedor preferido que mejore su precio o condiciones de pago. Un descuento del 3-5% sobre partidas de alto importe puede suponer una mejora significativa en el margen del proyecto.
+</Tip>
+
+## Aceptar una oferta y actualizar el presupuesto
+
+<Steps>
+  <Step title="Selecciona la oferta ganadora">
+    Una vez decidida la adjudicación, haz clic en **Aceptar oferta** en la columna del proveedor seleccionado. Si has marcado distintos proveedores por partida, Seked te mostrará un resumen con cada adjudicación antes de confirmar.
+  </Step>
+  <Step title="Confirma la actualización del presupuesto">
+    Aparecerá un diálogo mostrando las partidas afectadas, el precio actual en el presupuesto y el nuevo precio de la oferta aceptada. Haz clic en **Confirmar y actualizar presupuesto**.
+  </Step>
+  <Step title="Revisa el presupuesto actualizado">
+    Seked actualizará automáticamente los costes unitarios de las partidas o materiales adjudicados en el presupuesto del proyecto y recalculará todos los totales. Ve a la pestaña **Presupuesto** para verificar el impacto.
+  </Step>
+</Steps>
+
+<Note>
+  Cuando aceptas una oferta, Seked registra el proveedor adjudicado, el precio acordado y la fecha de aceptación en el historial del proyecto. Esta información queda vinculada a la partida correspondiente en el presupuesto y puede incluirse en los informes de proyecto.
+</Note>
+
+## Gestionar las ofertas rechazadas
+
+Las ofertas no aceptadas no desaparecen: quedan almacenadas en el historial de la solicitud con el estado *No seleccionada*.
+
+- Para consultarlas en el futuro, abre la solicitud y activa la vista **Historial completo**.
+- Puedes añadir notas sobre el motivo del rechazo (precio elevado, plazo inadecuado, falta de referencias, etc.) para documentar la decisión.
+- Las ofertas almacenadas sirven como referencia de mercado en futuras licitaciones similares.
+
+<Tip>
+  Guardar el histórico de ofertas rechazadas te ayuda a construir una base de datos de precios de mercado propia. Con el tiempo, podrás estimar rangos de precio reales para cada tipo de partida antes de abrir una nueva ronda de licitación.
+</Tip>
+
+## Historial de comparativas del proyecto
+
+Desde la pestaña **Ofertas y proveedores** puedes acceder al historial completo de todas las rondas de solicitud y comparativa realizadas en el proyecto:
+
+- Fecha de cada solicitud y proveedores invitados.
+- Ofertas recibidas por ronda.
+- Proveedor adjudicado y precio aceptado en cada caso.
+- Impacto acumulado en el presupuesto del proyecto.
+
+Este historial es especialmente útil para auditorías internas, para justificar decisiones de adjudicación ante la dirección o para cumplir con requisitos de transparencia en licitaciones públicas.
+
+---
+
+<CardGroup cols={2}>
+  <Card
+    title="Solicitar ofertas"
+    icon="envelope"
+    href="/proveedores/solicitar-ofertas"
+  >
+    Vuelve al paso anterior para aprender a generar y enviar solicitudes de oferta desde un proyecto.
+  </Card>
+  <Card
+    title="Revisión y exportación del presupuesto"
+    icon="file-export"
+    href="/presupuestacion/revision-y-exportacion"
+  >
+    Una vez actualizado el presupuesto con los precios aceptados, aprende a revisarlo y exportarlo.
+  </Card>
+</CardGroup>

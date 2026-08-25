@@ -1,0 +1,144 @@
+---
+title: "Costes y precios: estructura y control del presupuesto"
+sidebarTitle: "Costes y Precios"
+description: "Gestiona los componentes del coste unitario en Seked, aplica márgenes y overhead, actualiza precios con ofertas de proveedores y recalcula totales al instante."
+---
+
+Un presupuesto competitivo y rentable no es solo una lista de cantidades: es el resultado de conocer con precisión qué cuesta cada unidad de obra, cómo se compone ese coste y qué márgenes necesitas aplicar para que el proyecto sea viable. Seked te da todas las herramientas para estructurar, controlar y actualizar los costes de cada partida de forma rigurosa y eficiente.
+
+## Componentes del coste unitario
+
+El coste unitario de cada partida en Seked se desglosa en cinco componentes. Este desglose te permite analizar qué parte del coste corresponde a cada recurso y tomar decisiones informadas sobre dónde optimizar.
+
+<CardGroup cols={3}>
+  <Card title="Materiales" icon="boxes-stacked">
+    Coste de los materiales necesarios para ejecutar la unidad de obra: hormigón, acero, aislamiento, carpintería, etc.
+  </Card>
+  <Card title="Mano de obra" icon="user-hard-hat">
+    Coste de las horas de trabajo directo: oficial, ayudante, especialista. Incluye cargas sociales según la categoría aplicada.
+  </Card>
+  <Card title="Maquinaria" icon="excavator">
+    Coste de los equipos y maquinaria empleados: excavadoras, grúas, compactadoras, herramienta especializada.
+  </Card>
+  <Card title="Subcontratación" icon="handshake">
+    Importe de los trabajos ejecutados por terceros cuando una partida se subcontrata en su totalidad o en parte.
+  </Card>
+  <Card title="Costes indirectos" icon="percent">
+    Porcentaje aplicado sobre el total de costes directos para cubrir gastos generales de obra: medios auxiliares, seguridad, organización de obra.
+  </Card>
+</CardGroup>
+
+Para ver o editar el desglose de coste unitario de una partida, ábrela desde el presupuesto y selecciona la pestaña **Coste**. Verás cada componente con su importe parcial y su porcentaje sobre el total del coste unitario.
+
+## Aplicar plantillas de coste desde la base de conocimiento
+
+La forma más rápida de asignar un coste unitario bien estructurado a una partida es cargarlo desde la **base de conocimiento**, donde tienes guardadas tus plantillas de coste o las del banco de precios de referencia de tu organización.
+
+<Steps>
+  <Step title="Abre la partida y accede a la pestaña Coste">
+    En la vista del presupuesto, haz clic sobre la partida para abrir su panel de detalle y selecciona la pestaña **Coste**.
+  </Step>
+  <Step title="Haz clic en Cargar desde base de conocimiento">
+    Pulsa el botón **Cargar plantilla de coste**. Se abrirá el buscador de la base de conocimiento. Puedes buscar por código de partida, descripción o categoría.
+  </Step>
+  <Step title="Selecciona la plantilla">
+    Elige la plantilla de coste que mejor se ajuste a la partida. Verás un resumen del desglose por componente antes de confirmar. Haz clic en **Aplicar plantilla**.
+  </Step>
+  <Step title="Revisa y ajusta los valores">
+    Los valores de la plantilla se aplicarán como punto de partida. Revisa cada componente y ajusta los importes si las condiciones de tu proyecto difieren de los valores de referencia (zona geográfica, condiciones de acceso, rendimientos específicos, etc.).
+  </Step>
+</Steps>
+
+<Tip>
+  Mantén tu base de conocimiento actualizada con los costes reales de tus obras ejecutadas. Cuanto más ajustadas estén tus plantillas a la realidad de tu empresa, más precisas serán tus estimaciones futuras y menos tiempo dedicarás a revisar cada partida manualmente.
+</Tip>
+
+## El panel de desglose de precios
+
+Además del coste unitario, Seked calcula el **precio de venta** de cada partida aplicando los márgenes que establezcas a nivel de presupuesto. El panel de desglose de precios te muestra la formación del precio en cuatro niveles:
+
+<Accordion title="Coste directo">
+  Suma de materiales + mano de obra + maquinaria + subcontratación. Es el coste de los recursos directamente consumidos en la ejecución de la unidad.
+</Accordion>
+
+<Accordion title="Coste de ejecución material (CEM)">
+  Coste directo + costes indirectos (expresados como porcentaje sobre el coste directo). Representa el coste total de producción de la unidad en obra.
+</Accordion>
+
+<Accordion title="Precio de ejecución por contrata (PEC)">
+  CEM + gastos generales (overhead) expresados como porcentaje. Cubre los costes de estructura de la empresa: dirección técnica, oficina central, seguros, etc. El porcentaje habitual en licitaciones públicas es el 13 %.
+</Accordion>
+
+<Accordion title="Precio de venta al cliente (PVP)">
+  PEC + beneficio industrial (porcentaje de margen comercial). Es el precio final que aparecerá en la oferta al cliente. En licitación pública, el beneficio industrial estándar es el 6 %.
+</Accordion>
+
+## Configurar márgenes a nivel de presupuesto
+
+Los porcentajes de costes indirectos, overhead y beneficio industrial se configuran a nivel de presupuesto completo y se aplican de forma homogénea a todas las partidas. Esto permite modificar la posición comercial del presupuesto de forma centralizada sin tocar partida por partida.
+
+<Steps>
+  <Step title="Accede a la configuración de márgenes">
+    En la vista del presupuesto, haz clic en el botón **Configuración del presupuesto** (engranaje) en la barra superior.
+  </Step>
+  <Step title="Ajusta los porcentajes">
+    Encontrarás tres campos editables:
+
+    - **% Costes indirectos** sobre coste directo (típicamente entre 3 % y 8 %).
+    - **% Gastos generales (overhead)** sobre CEM (referencia legal en licitación pública: 13 %).
+    - **% Beneficio industrial** sobre PEC (referencia legal en licitación pública: 6 %).
+
+    Puedes introducir valores personalizados en función de tu estrategia para cada licitación.
+  </Step>
+  <Step title="Aplica los cambios">
+    Haz clic en **Guardar configuración**. Seked recalculará automáticamente el precio de venta de todas las partidas del presupuesto en segundos.
+  </Step>
+</Steps>
+
+<Note>
+  Puedes configurar márgenes diferentes para cada presupuesto. Esto te permite, por ejemplo, ser más agresivo en precio en una licitación pública competida y aplicar un margen mayor en un proyecto de contratación directa.
+</Note>
+
+## Actualizar costes con ofertas de proveedores
+
+Cuando recibes ofertas de proveedores o subcontratistas para un proyecto concreto, puedes actualizar los costes de las partidas directamente a partir de esas ofertas, reflejando en el presupuesto los precios reales de mercado.
+
+<Steps>
+  <Step title="Accede a las ofertas del proyecto">
+    Ve a la sección **Proveedores** del proyecto y abre la oferta del proveedor que has recibido. Consulta la guía de [comparar ofertas](/proveedores/comparar-ofertas) para saber cómo evaluar y seleccionar la mejor.
+  </Step>
+  <Step title="Vincula la oferta a las partidas correspondientes">
+    Desde el panel de la oferta, selecciona las líneas de la oferta que corresponden a partidas de tu presupuesto y haz clic en **Aplicar al presupuesto**. Seked te mostrará un mapeo entre las líneas de la oferta y las partidas del presupuesto para que confirmes la correspondencia.
+  </Step>
+  <Step title="Confirma la actualización de costes">
+    Revisa los nuevos costes propuestos y pulsa **Confirmar actualización**. Los componentes de coste afectados (materiales o subcontratación, según el tipo de oferta) se actualizarán en cada partida vinculada y los importes totales se recalcularán de forma inmediata.
+  </Step>
+</Steps>
+
+## Recálculo automático de totales
+
+Cada vez que modificas el coste de una partida, su cantidad o los porcentajes de márgenes, Seked actualiza en tiempo real:
+
+- El importe total de la partida.
+- El subtotal del capítulo al que pertenece.
+- El total del presupuesto.
+- El desglose de costes y márgenes en el panel de resumen.
+
+No necesitas guardar manualmente ni esperar a que se procese ningún recálculo: los totales siempre reflejan el estado actual del presupuesto.
+
+## Próximos pasos
+
+<CardGroup cols={2}>
+  <Card title="Revisión y exportación" icon="file-export" href="/presupuestacion/revision-y-exportacion">
+    Valida el presupuesto finalizado y expórtalo en PDF, Excel o BC3.
+  </Card>
+  <Card title="Comparar ofertas de proveedores" icon="scale-balanced" href="/proveedores/comparar-ofertas">
+    Analiza y selecciona las mejores ofertas para actualizar tus costes.
+  </Card>
+  <Card title="Base de conocimiento" icon="book" href="/base-de-conocimiento/introduccion">
+    Gestiona tus plantillas de coste y banco de precios propio.
+  </Card>
+  <Card title="Partidas y mediciones" icon="list-check" href="/presupuestacion/partidas-y-mediciones">
+    Revisa cómo estructurar y editar las partidas del presupuesto.
+  </Card>
+</CardGroup>
