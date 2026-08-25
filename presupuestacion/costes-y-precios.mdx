@@ -14,15 +14,19 @@ El coste unitario de cada partida en Seked se desglosa en cinco componentes. Est
   <Card title="Materiales" icon="boxes-stacked">
     Coste de los materiales necesarios para ejecutar la unidad de obra: hormigón, acero, aislamiento, carpintería, etc.
   </Card>
+
   <Card title="Mano de obra" icon="user-hard-hat">
     Coste de las horas de trabajo directo: oficial, ayudante, especialista. Incluye cargas sociales según la categoría aplicada.
   </Card>
+
   <Card title="Maquinaria" icon="excavator">
     Coste de los equipos y maquinaria empleados: excavadoras, grúas, compactadoras, herramienta especializada.
   </Card>
+
   <Card title="Subcontratación" icon="handshake">
     Importe de los trabajos ejecutados por terceros cuando una partida se subcontrata en su totalidad o en parte.
   </Card>
+
   <Card title="Costes indirectos" icon="percent">
     Porcentaje aplicado sobre el total de costes directos para cubrir gastos generales de obra: medios auxiliares, seguridad, organización de obra.
   </Card>
@@ -30,16 +34,16 @@ El coste unitario de cada partida en Seked se desglosa en cinco componentes. Est
 
 Para ver o editar el desglose de coste unitario de una partida, ábrela desde el presupuesto y selecciona la pestaña **Coste**. Verás cada componente con su importe parcial y su porcentaje sobre el total del coste unitario.
 
-## Aplicar plantillas de coste desde la base de conocimiento
+## Aplicar plantillas de coste desde la base de precios
 
-La forma más rápida de asignar un coste unitario bien estructurado a una partida es cargarlo desde la **base de conocimiento**, donde tienes guardadas tus plantillas de coste o las del banco de precios de referencia de tu organización.
+La forma más rápida de asignar un coste unitario bien estructurado a una partida es cargarlo desde la **base de precios**, donde tienes guardadas tus plantillas de coste o las del banco de precios de referencia de tu organización.
 
 <Steps>
   <Step title="Abre la partida y accede a la pestaña Coste">
     En la vista del presupuesto, haz clic sobre la partida para abrir su panel de detalle y selecciona la pestaña **Coste**.
   </Step>
-  <Step title="Haz clic en Cargar desde base de conocimiento">
-    Pulsa el botón **Cargar plantilla de coste**. Se abrirá el buscador de la base de conocimiento. Puedes buscar por código de partida, descripción o categoría.
+  <Step title="Haz clic en Cargar desde base de precios">
+    Pulsa el botón **Cargar plantilla de coste**. Se abrirá el buscador de la base de precios. Puedes buscar por código de partida, descripción o categoría.
   </Step>
   <Step title="Selecciona la plantilla">
     Elige la plantilla de coste que mejor se ajuste a la partida. Verás un resumen del desglose por componente antes de confirmar. Haz clic en **Aplicar plantilla**.
@@ -50,7 +54,7 @@ La forma más rápida de asignar un coste unitario bien estructurado a una parti
 </Steps>
 
 <Tip>
-  Mantén tu base de conocimiento actualizada con los costes reales de tus obras ejecutadas. Cuanto más ajustadas estén tus plantillas a la realidad de tu empresa, más precisas serán tus estimaciones futuras y menos tiempo dedicarás a revisar cada partida manualmente.
+  Mantén tu base de precios actualizada con los costes reales de tus obras ejecutadas. Cuanto más ajustadas estén tus plantillas a la realidad de tu empresa, más precisas serán tus estimaciones futuras y menos tiempo dedicarás a revisar cada partida manualmente.
 </Tip>
 
 ## El panel de desglose de precios
@@ -58,19 +62,19 @@ La forma más rápida de asignar un coste unitario bien estructurado a una parti
 Además del coste unitario, Seked calcula el **precio de venta** de cada partida aplicando los márgenes que establezcas a nivel de presupuesto. El panel de desglose de precios te muestra la formación del precio en cuatro niveles:
 
 <Accordion title="Coste directo">
-  Suma de materiales + mano de obra + maquinaria + subcontratación. Es el coste de los recursos directamente consumidos en la ejecución de la unidad.
+  Suma de materiales \+ mano de obra \+ maquinaria \+ subcontratación. Es el coste de los recursos directamente consumidos en la ejecución de la unidad.
 </Accordion>
 
 <Accordion title="Coste de ejecución material (CEM)">
-  Coste directo + costes indirectos (expresados como porcentaje sobre el coste directo). Representa el coste total de producción de la unidad en obra.
+  Coste directo \+ costes indirectos (expresados como porcentaje sobre el coste directo). Representa el coste total de producción de la unidad en obra.
 </Accordion>
 
 <Accordion title="Precio de ejecución por contrata (PEC)">
-  CEM + gastos generales (overhead) expresados como porcentaje. Cubre los costes de estructura de la empresa: dirección técnica, oficina central, seguros, etc. El porcentaje habitual en licitaciones públicas es el 13 %.
+  CEM \+ gastos generales (overhead) expresados como porcentaje. Cubre los costes de estructura de la empresa: dirección técnica, oficina central, seguros, etc. El porcentaje habitual en licitaciones públicas es el 13 %.
 </Accordion>
 
 <Accordion title="Precio de venta al cliente (PVP)">
-  PEC + beneficio industrial (porcentaje de margen comercial). Es el precio final que aparecerá en la oferta al cliente. En licitación pública, el beneficio industrial estándar es el 6 %.
+  PEC \+ beneficio industrial (porcentaje de margen comercial). Es el precio final que aparecerá en la oferta al cliente. En licitación pública, el beneficio industrial estándar es el 6 %.
 </Accordion>
 
 ## Configurar márgenes a nivel de presupuesto
@@ -132,12 +136,15 @@ No necesitas guardar manualmente ni esperar a que se procese ningún recálculo:
   <Card title="Revisión y exportación" icon="file-export" href="/presupuestacion/revision-y-exportacion">
     Valida el presupuesto finalizado y expórtalo en PDF, Excel o BC3.
   </Card>
+
   <Card title="Comparar ofertas de proveedores" icon="scale-balanced" href="/proveedores/comparar-ofertas">
     Analiza y selecciona las mejores ofertas para actualizar tus costes.
   </Card>
-  <Card title="Base de conocimiento" icon="book" href="/base-de-conocimiento/introduccion">
+
+  <Card title="Base de precios" icon="book" href="/base-de-precios/introduccion">
     Gestiona tus plantillas de coste y banco de precios propio.
   </Card>
+
   <Card title="Partidas y mediciones" icon="list-check" href="/presupuestacion/partidas-y-mediciones">
     Revisa cómo estructurar y editar las partidas del presupuesto.
   </Card>

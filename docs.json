@@ -49,11 +49,11 @@
             ]
           },
           {
-            "group": "Base de Conocimiento",
+            "group": "Base de Precios",
             "pages": [
-              "base-de-conocimiento/introduccion",
-              "base-de-conocimiento/gestionar-elementos",
-              "base-de-conocimiento/importar-exportar"
+              "base-de-precios/introduccion",
+              "base-de-precios/gestionar-elementos",
+              "base-de-precios/importar-exportar"
             ]
           }
         ]
@@ -115,5 +115,22 @@
     "socials": {
       "linkedin": "https://linkedin.com/company/seked"
     }
-  }
+  },
+  "redirects": [
+    {
+      "source": "/base-de-conocimiento/introduccion",
+      "destination": "/base-de-precios/introduccion",
+      "permanent": true
+    },
+    {
+      "source": "/base-de-conocimiento/gestionar-elementos",
+      "destination": "/base-de-precios/gestionar-elementos",
+      "permanent": true
+    },
+    {
+      "source": "/base-de-conocimiento/importar-exportar",
+      "destination": "/base-de-precios/importar-exportar",
+      "permanent": true
+    }
+  ]
 }
