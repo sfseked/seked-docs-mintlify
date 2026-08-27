@@ -89,17 +89,37 @@ Las notas y comentarios no viven en un único hilo de conversación: se guardan 
 
 ## Registro de actividad e historial de cambios
 
-El **Registro de actividad** del proyecto te permite saber exactamente qué ha cambiado, cuándo y quién lo hizo. Es la herramienta de control y auditoría interna del proyecto.
+Seked funciona bajo un principio de trazabilidad total y reversibilidad: todo cambio queda registrado, y la mayoría se pueden auditar o deshacer sin afectar al resto del proyecto.
 
-Para consultarlo, accede a la pestaña **Actividad** dentro del proyecto. Verás una línea de tiempo con todas las acciones registradas:
+### Inmutabilidad del original
 
-- Creación y edición de partidas (con los valores anteriores y nuevos).
-- Cambios en cantidades, costes y precios.
-- Subida, renombrado y eliminación de documentos.
-- Incorporación o retirada de miembros del equipo.
-- Notas y comentarios añadidos.
+Todo archivo que sube el cliente o que se descarga de un organismo queda en modo solo lectura dentro de `00_RECIBIDO`. Nunca se sobrescribe un documento original: las modificaciones se hacen sobre copias de trabajo en `01_ESTUDIO` o mediante capas lógicas de datos que no tocan el fichero de origen.
 
-Puedes filtrar el registro por **tipo de acción**, **usuario** o **rango de fechas** para localizar cambios específicos con rapidez.
+### Historial de correcciones en mediciones, con opción de deshacer
+
+Cuando corriges una partida (unidad, cantidad, descripción o capítulo), Seked guarda el valor anterior exacto y el motivo del cambio. Puedes auditar todas las correcciones hechas y revertir cualquiera de ellas en cualquier momento, sin que afecte al resto de partidas.
+
+### Versionado de presupuestos y cierres económicos
+
+Cada vez que validas o publicas un presupuesto, Seked genera una versión congelada de ese momento. Los precios de una versión antigua no cambian aunque más adelante actualices el catálogo de precios o ajustes los márgenes.
+
+### Registro de decisiones técnicas y emparejamientos
+
+Cada vez que validas un precio o corriges una correspondencia con el catálogo, queda registrado quién lo decidió, cuándo y por qué. Seked usa este historial de decisiones para que el estimativo aprenda de tu criterio en futuras obras.
+
+### Trazabilidad en el circuito de compras y tareas
+
+<Accordion title="Comunicaciones">
+  Cada petición de oferta a un industrial, el envío de correos, la recepción de archivos adjuntos y los cambios de estado de cada solicitud quedan registrados cronológicamente en el buzón y en el tablero del día.
+</Accordion>
+
+<Accordion title="Acciones críticas">
+  Las acciones con impacto exterior o económico (enviar peticiones a proveedores, borrar lotes o eliminar mediciones) requieren tu aprobación explícita y dejan constancia firmada de esa decisión.
+</Accordion>
+
+<Accordion title="Plan de trabajo">
+  El avance de las 13 fases del estudio se refleja en el documento `Plan de trabajo.md`, dentro de la carpeta `.seked`, cada vez que cambia el estado de la obra.
+</Accordion>
 
 ## Notificaciones de actividad
 
