@@ -1,7 +1,7 @@
 ---
 title: "Cómo invitar a tu equipo al espacio de trabajo en Seked"
 sidebarTitle: "Invitar Equipo"
-description: "Aprende a invitar compañeros a Seked, asignar roles de Administrador, Presupuestador o Visualizador y gestionar los permisos de tu equipo."
+description: "Aprende a invitar compañeros a Seked, asignar roles de Administrador, Editor o Lector y gestionar los permisos de tu equipo."
 ---
 
 Seked está diseñado para el trabajo en equipo. Cuando invitas a tus compañeros al espacio de trabajo, todos pueden colaborar en los proyectos en tiempo real: uno elabora las mediciones mientras otro revisa precios, y un tercero consulta el avance sin interferir en el proceso. La gestión de roles garantiza que cada persona tiene exactamente el nivel de acceso que necesita. Sigue los pasos a continuación para añadir a tu equipo.
@@ -14,16 +14,18 @@ Antes de enviar invitaciones, es útil entender qué puede hacer cada rol para a
   <Card title="Administrador" icon="shield-halved" href="/equipo/usuarios-y-roles">
     Acceso completo al espacio de trabajo. Puede gestionar la configuración de la empresa, los planes de suscripción, los usuarios y todos los proyectos. Asígnalo solo a los responsables del equipo o de la cuenta.
   </Card>
-  <Card title="Presupuestador" icon="pen-ruler" href="/equipo/usuarios-y-roles">
+
+  <Card title="Editor" icon="calculator" href="/equipo/usuarios-y-roles">
     Puede crear y editar proyectos, gestionar partidas, subir documentos, solicitar ofertas a proveedores y exportar presupuestos. Es el rol habitual para técnicos y estimadores.
   </Card>
-  <Card title="Visualizador" icon="eye" href="/equipo/usuarios-y-roles">
-    Solo puede consultar los proyectos y presupuestos a los que tiene acceso, sin posibilidad de editar ni exportar. Ideal para directores de obra, gerencia o clientes internos que necesitan seguimiento sin intervenir.
+
+  <Card title="Lector" icon="eye" href="/equipo/usuarios-y-roles">
+    Puede consultar los proyectos y presupuestos a los que tiene acceso y dejar comentarios, pero no editar. Ideal para directores de obra, gerencia o clientes internos que necesitan seguimiento sin intervenir.
   </Card>
 </CardGroup>
 
 <Note>
-El número máximo de usuarios que puedes invitar depende del plan contratado. Consulta los límites de tu plan actual en [Planes disponibles](/planes/planes-disponibles) o en [Usuarios y roles](/equipo/usuarios-y-roles). Si necesitas ampliar el equipo, puedes actualizar tu plan en cualquier momento desde [Facturación](/planes/facturacion).
+  El número máximo de usuarios que puedes invitar depende del plan contratado. Consulta los límites de tu plan actual en [Planes disponibles](/planes/planes-disponibles) o en [Usuarios y roles](/equipo/usuarios-y-roles). Si necesitas ampliar el equipo, puedes actualizar tu plan en cualquier momento desde [Facturación](/planes/facturacion).
 </Note>
 
 ---
@@ -36,37 +38,32 @@ El número máximo de usuarios que puedes invitar depende del plan contratado. C
 
     También puedes acceder directamente desde [Usuarios y roles](/equipo/usuarios-y-roles).
   </Step>
-
   <Step title="Haz clic en 'Invitar miembro'">
     En la parte superior de la lista de miembros del equipo, encontrarás el botón **Invitar miembro**. Haz clic en él para abrir el formulario de invitación.
   </Step>
-
   <Step title="Introduce la dirección de correo electrónico">
     Escribe la dirección de correo electrónico corporativa de la persona que quieres invitar. Puedes invitar a varias personas a la vez separando las direcciones con comas o escribiéndolas en líneas separadas.
 
     <Tip>
-    Pide a tus compañeros que usen su correo corporativo al aceptar la invitación. Usar cuentas personales puede complicar la gestión del equipo y limitar las opciones de acceso único (SSO) en el futuro.
+      Pide a tus compañeros que usen su correo corporativo al aceptar la invitación. Usar cuentas personales puede complicar la gestión del equipo y limitar las opciones de acceso único (SSO) en el futuro.
     </Tip>
   </Step>
-
   <Step title="Selecciona el rol para cada usuario">
     Para cada dirección de correo que hayas introducido, selecciona el rol que le corresponde en el menú desplegable:
 
-    - **Administrador**: para responsables de equipo y gestores de la cuenta.
-    - **Presupuestador**: para técnicos, estimadores y cualquier persona que vaya a crear o editar presupuestos.
-    - **Visualizador**: para directivos, clientes internos u otras personas que solo necesitan consultar el trabajo.
+    - **Administrador**: para responsables de equipo y gestores de la cuenta. Es el único rol que puede tocar los ajustes: configuración de empresa, planes, facturación y gestión de las personas del equipo.
+    - **Editor**: para técnicos, estimadores y cualquier persona que vaya a crear o editar presupuestos.
+    - **Lector**: para  personas que solo necesitan consultar el trabajo y comentar, sin editar.
 
     Puedes cambiar el rol de un usuario en cualquier momento desde la misma sección de **Usuarios y roles**, sin necesidad de volver a invitarlo.
   </Step>
-
   <Step title="Envía las invitaciones">
     Haz clic en **Enviar invitaciones**. Seked enviará automáticamente un correo electrónico a cada dirección con un enlace de invitación personalizado. El enlace es válido durante **7 días**.
 
     Si el plazo expira antes de que el destinatario acepte, puedes reenviar la invitación desde la lista de miembros pendientes haciendo clic en el icono de reenvío junto a su nombre.
   </Step>
-
   <Step title="El invitado acepta la invitación">
-    La persona invitada recibirá un correo con el asunto **«Te han invitado a unirse a [nombre de tu empresa] en Seked»**. Al hacer clic en el botón del correo:
+    La persona invitada recibirá un correo con el asunto **«Te han invitado a unirse a \[nombre de tu empresa\] en Seked»**. Al hacer clic en el botón del correo:
 
     - Si ya tiene una cuenta en Seked con esa dirección, accederá directamente al espacio de trabajo de tu empresa.
     - Si no tiene cuenta, se le pedirá que cree una contraseña y complete un breve proceso de registro antes de acceder.
@@ -74,7 +71,7 @@ El número máximo de usuarios que puedes invitar depende del plan contratado. C
     Una vez que acepte, aparecerá como miembro activo en tu lista de **Usuarios y roles** y podrá empezar a trabajar de inmediato según el rol que le hayas asignado.
 
     <Note>
-    El invitado solo verá los proyectos a los que tenga acceso según su rol y los permisos específicos de cada proyecto. Los administradores pueden ajustar el acceso por proyecto desde [Permisos](/equipo/permisos).
+      El invitado solo verá los proyectos a los que tenga acceso según su rol y los permisos específicos de cada proyecto. Los administradores pueden ajustar el acceso por proyecto desde [Permisos](/equipo/permisos).
     </Note>
   </Step>
 </Steps>
@@ -93,6 +90,7 @@ Una vez que tu equipo esté incorporado, puedes gestionar los miembros desde **E
   <Card title="Permisos por proyecto" icon="lock" href="/equipo/permisos">
     Configura permisos específicos por proyecto para controlar quién puede ver, editar o exportar cada presupuesto.
   </Card>
+
   <Card title="Configuración de cuenta" icon="circle-user" href="/equipo/configuracion-de-cuenta">
     Cada miembro puede personalizar su perfil, idioma y notificaciones desde la configuración de su propia cuenta.
   </Card>

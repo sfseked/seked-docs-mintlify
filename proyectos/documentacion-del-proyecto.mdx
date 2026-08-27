@@ -47,17 +47,22 @@ Seked admite los formatos más habituales en el entorno de la construcción y la
     Abre el proyecto desde el listado y haz clic en la pestaña **Documentación** en el menú superior del panel de detalle del proyecto.
   </Step>
   <Step title="Elige la carpeta de destino">
-    En el panel izquierdo verás la estructura de carpetas del proyecto. Seked crea automáticamente las siguientes carpetas predeterminadas al crear el proyecto:
+    En el panel izquierdo verás la estructura de carpetas del proyecto. Seked crea automáticamente estas carpetas al crear el proyecto, siguiendo el flujo de trabajo de estudio a obra:
 
-    | Carpeta | Contenido habitual |
+    | Carpeta | Para qué sirve |
     | --- | --- |
-    | **Planos** | Planos de arquitectura, estructura, instalaciones y urbanización. |
-    | **Mediciones** | Hojas de mediciones, cuadros de superficies, listados de elementos. |
-    | **Memoria** | Memoria descriptiva, memoria de calidades, especificaciones técnicas. |
-    | **Pliegos** | Pliego de condiciones técnicas y administrativas, prescripciones. |
-    | **Ofertas** | Ofertas de proveedores, comparativos y propuestas recibidas. |
+    | **00\_RECIBIDO** _(solo lectura)_ | Repositorio inmutable de la documentación original que entrega el organismo o el cliente: pliegos, proyecto en PDF, planos originales, mediciones en TCQ, BC3 o Excel. |
+    | **01\_ESTUDIO** | Espacio de trabajo del equipo de estudios durante el análisis y la valoración técnica: análisis del expediente (requisitos, riesgos, plazos), mediciones interpretadas y presupuesto estimado o validado. |
+    | **02\_COMPRAS** | Salida a mercado y subcontratación con industriales: paquetes de compra troceados por lotes (partidas y planos por gremio), peticiones de oferta y cuadros comparativos de precios. |
+    | **03\_ENTREGA** | Documentación final para la mesa de contratación o el cliente: hoja de cierre económico definitiva (costes directos, indirectos, gastos generales, beneficio industrial y baja final) y oferta económica lista para registro. |
+    | **04\_OBRA** | Fase de ejecución si resultas adjudicatario: seguimiento de compras en obra, contratos con industriales, certificaciones y control de desviaciones. |
+    | **.seked** _(interno)_ | Registro interno de la plataforma y del jefe de estudios: plan de trabajo del proyecto, notas de seguimiento, estado de las tareas y acuerdos internos que no van destinados ni al cliente ni a los industriales. |
 
-    Haz clic en la carpeta donde deseas subir los archivos para seleccionarla. También puedes crear subcarpetas pulsando el icono **\+** junto al nombre de la carpeta.
+    <Note>
+      **00\_RECIBIDO** no se modifica nunca: es la prueba exacta de lo que publicó la administración o entregó el cliente. Si necesitas editar o trabajar sobre un archivo original, genera una copia de trabajo en **01\_ESTUDIO**.
+    </Note>
+
+    Haz clic en la carpeta donde deseas subir los archivos para seleccionarla.
   </Step>
   <Step title="Sube los archivos">
     Tienes dos métodos para subir archivos:
@@ -78,30 +83,37 @@ Seked admite los formatos más habituales en el entorno de la construcción y la
   </Step>
 </Steps>
 
-## Organizar documentos en carpetas
+## La estructura de carpetas sigue el flujo del proyecto
 
-Mantener los documentos bien estructurados es clave para que el equipo encuentre rápidamente lo que necesita y para maximizar la calidad del análisis de la IA.
+Las seis carpetas (`00_RECIBIDO`, `01_ESTUDIO`, `02_COMPRAS`, `03_ENTREGA`, `04_OBRA` y `.seked`) no las creas tú ni son configurables: Seked las genera automáticamente al crear el proyecto y reflejan las fases del proceso, de la documentación recibida a la ejecución en obra. Sube cada documento a la carpeta que corresponda a la fase en la que se genera, en lugar de organizarlas a tu criterio.
 
-- **Crear una subcarpeta**: haz clic en el icono **\+** junto a cualquier carpeta y asigna un nombre. Puedes anidar subcarpetas para mayor detalle (por ejemplo, `Planos > Planta Baja`, `Planos > Alzados`).
-- **Mover un archivo**: arrastra el archivo desde su ubicación actual a la carpeta de destino, o usa la opción **Mover a** en el menú de opciones del archivo.
-- **Renombrar carpeta**: haz doble clic sobre el nombre de la carpeta o selecciona **Renombrar** en su menú de opciones.
-- **Eliminar carpeta**: solo es posible si la carpeta está vacía. Mueve o elimina primero los archivos que contenga.
+<Note>
+  **00\_RECIBIDO** es de solo lectura y **.seked** es de uso interno de la plataforma y del jefe de estudios (no va destinado ni al cliente ni a los industriales). El resto de carpetas son el espacio de trabajo habitual del equipo.
+</Note>
 
 ## Vincular documentos a partidas del presupuesto
 
-Una vez que el presupuesto tiene partidas definidas, puedes vincular documentos específicos a cada una de ellas para dejar trazabilidad entre el precio y su justificación documental.
+La vinculación entre la documentación y las partidas del presupuesto no es una única acción, sino que se gestiona en varios niveles según el tipo de documento:
 
-<Steps>
-  <Step title="Abre la partida en el presupuesto">
-    Ve a la pestaña **Presupuesto** del proyecto y haz clic sobre la partida a la que quieres añadir referencias documentales.
-  </Step>
-  <Step title="Accede al panel de documentos de la partida">
-    En el panel de detalle de la partida, selecciona la pestaña **Documentos**. Verás los documentos ya vinculados (si los hay) y el botón **Vincular documento**.
-  </Step>
-  <Step title="Selecciona el documento">
-    Haz clic en **Vincular documento** y elige el archivo de entre los ya subidos al proyecto. También puedes indicar la página o el número de plano concreto que justifica esa partida. Pulsa **Vincular** para confirmar.
-  </Step>
-</Steps>
+<Accordion title="Planos vinculados a partidas (vía lotes de compra)">
+  Al organizar la obra en **lotes de compra**, cada partida se asigna a su lote y se le vinculan las páginas exactas de plano que le corresponden. Al generar el paquete para el industrial, Seked extrae automáticamente un PDF con únicamente las láminas que afectan a esas partidas, sin que tengas que recortarlas a mano.
+
+  👉 Más información en [Solicitar ofertas](/proveedores/solicitar-ofertas).
+</Accordion>
+
+<Accordion title="Notas y observaciones sobre filas del presupuesto">
+  Puedes añadir notas técnicas o advertencias sobre una partida o fila concreta del archivo de mediciones. La nota queda guardada en la plataforma asociada a esa línea, sin alterar el fichero original del cliente.
+</Accordion>
+
+<Accordion title="Evidencias de precio y catálogo">
+  Cada partida se vincula con su homóloga en el catálogo de tu empresa (tu base de precios) o en BEDEC (ITeC). Esto le asocia automáticamente su descompuesto técnico, el historial de compras anteriores y las evidencias de precio que respaldan ese importe.
+
+  👉 Más información en [Base de Precios](/base-de-precios/introduccion).
+</Accordion>
+
+<Accordion title="Trazabilidad con pliegos y memoria técnica">
+  Cuando Seked analiza el proyecto o le preguntas al chat sobre la documentación, cada especificación técnica, material exigido o criterio de ejecución que te devuelve queda citado con el documento original y su número de página, para que puedas verificarlo directamente en la fuente.
+</Accordion>
 
 ## Cómo la IA de Seked procesa los documentos
 

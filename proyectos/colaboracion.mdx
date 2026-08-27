@@ -20,7 +20,7 @@ Los roles dentro de un proyecto son los mismos que a nivel de organización: **A
   </Card>
 
   <Card title="Lector" icon="book-open">
-    Solo consulta la información del proyecto. Puede ver partidas, documentos y estado, pero no editar. Ideal para compras, jefes de obra o cualquier stakeholder que necesita seguir el proyecto sin intervenir.
+    Consulta la información del proyecto y puede comentar, pero no editar. Ve partidas, documentos y estado. Ideal para compras, jefes de obra o cualquier stakeholder que necesita seguir el proyecto sin intervenir.
   </Card>
 </CardGroup>
 
@@ -57,65 +57,92 @@ Los roles dentro de un proyecto son los mismos que a nivel de organización: **A
 
 ## Dejar comentarios en partidas y documentos
 
-Los comentarios permiten mantener conversaciones contextuales directamente sobre los elementos del presupuesto o sobre los archivos, sin necesidad de usar el correo electrónico.
+Las notas y comentarios no viven en un único hilo de conversación: se guardan en el contexto concreto donde los añades, según en qué momento del proceso estés.
 
 ### Comentarios en partidas
 
-<Steps>
-  <Step title="Abre el detalle de la partida">
-    En la vista del presupuesto, haz clic sobre la partida en la que quieres dejar un comentario.
-  </Step>
-  <Step title="Escribe tu comentario">
-    En el panel lateral derecho, selecciona la pestaña **Comentarios**. Escribe tu mensaje en el campo de texto. Puedes mencionar a un compañero escribiendo `@` seguido de su nombre para que reciba una notificación directa.
-  </Step>
-  <Step title="Envía y consulta respuestas">
-    Pulsa **Enviar**. Los comentarios se muestran en orden cronológico y cualquier miembro con acceso al proyecto puede responder. Los comentarios resueltos pueden marcarse como **Cerrado** para limpiar la vista.
-  </Step>
-</Steps>
+<Accordion title="Sobre las filas del presupuesto original">
+  Puedes añadir notas a cualquier fila de la hoja de mediciones. El comentario queda guardado en la plataforma asociado a esa línea, sin modificar el archivo original del cliente.
+</Accordion>
 
-### Comentarios en documentos
+<Accordion title="En el cuadro comparativo de compras">
+  Al comparar ofertas de industriales, cada partida permite registrar una nota técnica o un objetivo de precio. Al exportar el comparativo a Excel, estas notas se incluyen automáticamente en una pestaña dedicada.
+</Accordion>
 
-Abre un documento desde la pestaña **Documentación** y usa la barra lateral de comentarios para añadir anotaciones. En documentos PDF, puedes anclar el comentario a una zona concreta del documento usando la herramienta de selección de área.
+<Accordion title="En decisiones de estimación y emparejado">
+  Al fijar o cambiar el precio de una partida, puedes registrar el motivo o la justificación de la decisión. Queda archivado para auditoría y para que el catálogo aprenda de tus criterios.
+</Accordion>
+
+### Comentarios y notas en documentos
+
+<Accordion title="En el análisis técnico del expediente">
+  El documento de análisis técnico (requisitos, riesgos y dudas) se puede editar añadiendo bloques de texto, observaciones y notas del técnico.
+</Accordion>
+
+<Accordion title="En las ofertas de industriales">
+  Al registrar la respuesta o el presupuesto de un proveedor, puedes adjuntar una nota explicativa sobre inclusiones, exclusiones o condiciones comerciales.
+</Accordion>
+
+<Accordion title="En partidas de tu base de precios">
+  Puedes añadir comentarios internos y advertencias de ejecución a nivel de partida del catálogo propio.
+</Accordion>
 
 ## Registro de actividad e historial de cambios
 
-El **Registro de actividad** del proyecto te permite saber exactamente qué ha cambiado, cuándo y quién lo hizo. Es la herramienta de control y auditoría interna del proyecto.
+Seked funciona bajo un principio de trazabilidad total y reversibilidad: todo cambio queda registrado, y la mayoría se pueden auditar o deshacer sin afectar al resto del proyecto.
 
-Para consultarlo, accede a la pestaña **Actividad** dentro del proyecto. Verás una línea de tiempo con todas las acciones registradas:
+### Inmutabilidad del original
 
-- Creación y edición de partidas (con los valores anteriores y nuevos).
-- Cambios en cantidades, costes y precios.
-- Subida, renombrado y eliminación de documentos.
-- Incorporación o retirada de miembros del equipo.
-- Cambios de estado del proyecto.
-- Comentarios añadidos o resueltos.
+Todo archivo que sube el cliente o que se descarga de un organismo queda en modo solo lectura dentro de `00_RECIBIDO`. Nunca se sobrescribe un documento original: las modificaciones se hacen sobre copias de trabajo en `01_ESTUDIO` o mediante capas lógicas de datos que no tocan el fichero de origen.
 
-Puedes filtrar el registro por **tipo de acción**, **usuario** o **rango de fechas** para localizar cambios específicos con rapidez.
+### Historial de correcciones en mediciones, con opción de deshacer
+
+Cuando corriges una partida (unidad, cantidad, descripción o capítulo), Seked guarda el valor anterior exacto y el motivo del cambio. Puedes auditar todas las correcciones hechas y revertir cualquiera de ellas en cualquier momento, sin que afecte al resto de partidas.
+
+### Versionado de presupuestos y cierres económicos
+
+Cada vez que validas o publicas un presupuesto, Seked genera una versión congelada de ese momento. Los precios de una versión antigua no cambian aunque más adelante actualices el catálogo de precios o ajustes los márgenes.
+
+### Registro de decisiones técnicas y emparejamientos
+
+Cada vez que validas un precio o corriges una correspondencia con el catálogo, queda registrado quién lo decidió, cuándo y por qué. Seked usa este historial de decisiones para que el estimativo aprenda de tu criterio en futuras obras.
+
+### Trazabilidad en el circuito de compras y tareas
+
+<Accordion title="Comunicaciones">
+  Cada petición de oferta a un industrial, el envío de correos, la recepción de archivos adjuntos y los cambios de estado de cada solicitud quedan registrados cronológicamente en el buzón y en el tablero del día.
+</Accordion>
+
+<Accordion title="Acciones críticas">
+  Las acciones con impacto exterior o económico (enviar peticiones a proveedores, borrar lotes o eliminar mediciones) requieren tu aprobación explícita y dejan constancia firmada de esa decisión.
+</Accordion>
 
 ## Notificaciones de actividad
 
-Seked te notifica de los cambios relevantes que ocurren en los proyectos en los que participas, para que siempre estés al día sin necesidad de revisar manualmente cada proyecto.
+Seked no solo te avisa de que algo ha pasado: te dice qué necesita tu atención ahora mismo, para que no tengas que ir a buscarlo tú.
 
-<Note>
-  Puedes personalizar qué notificaciones recibes desde **Equipo \> Configuración de cuenta**, en la sección **Notificaciones**. Puedes activar o desactivar notificaciones por tipo de evento (menciones, cambios en partidas, nuevos documentos, cambios de estado) y elegir si las recibes solo en la aplicación o también por correo electrónico.
-</Note>
+<Accordion title="Tablero diario y decisiones pendientes">
+  Centraliza en una única pantalla los eventos que requieren tu acción:
 
-Los eventos que generan notificación son:
-
-<Accordion title="Menciones directas">
-  Recibes una notificación siempre que alguien te mencione con `@tu_nombre` en un comentario de partida o de documento.
+  - **Avisos de eventos externos**: entrada de un correo o de una oferta de un industrial.
+  - **Decisiones que esperan firma**: acciones críticas preparadas que necesitan tu autorización explícita para ejecutarse, como lanzar una tanda de correos a subcontratistas.
+  - **Tareas pendientes**: lo que quedó sin resolver de días anteriores. El sistema nunca lo oculta por haber vencido.
 </Accordion>
 
-<Accordion title="Cambios en partidas que editas">
-  Si otro miembro modifica una partida que tú has creado o editado recientemente, recibirás un aviso para que puedas revisar el cambio.
+<Accordion title="Alertas de plazos y retrasos en compras">
+  El plan de compras monitoriza automáticamente las tres fechas clave de cada lote (contactar, cerrar precio, entrada en obra) y te avisa en cuanto uno va con retraso: la fecha límite de petición ha pasado sin enviarse, o el lote debe cerrarse y todavía no tiene ofertas completas.
 </Accordion>
 
-<Accordion title="Nuevos documentos subidos">
-  Cuando se sube un nuevo archivo al proyecto, los miembros del proyecto reciben una notificación con el nombre del archivo y la carpeta de destino.
+<Accordion title="Avisos de discrepancias técnicas y riesgos">
+  Agrupa por gravedad todo lo que necesita aclaración antes de presentar oferta: riesgos contractuales o penalizaciones detectadas en los pliegos, descuadres entre el plano y la medición (partidas sin respaldo en plano, errores de medición) e incidencias en partidas (falta de unidades, cotas no acotadas).
 </Accordion>
 
-<Accordion title="Cambios de estado del proyecto">
-  Cualquier transición de estado del proyecto (por ejemplo, de En licitación a Adjudicado) genera una notificación para todos los miembros del equipo.
+<Accordion title="Estado del buzón y turnos de respuesta">
+  Cada hilo de conversación con un industrial indica de quién es el turno de responder: en espera de ti (el industrial ha respondido o preguntado algo) o en espera del industrial (le enviaste el paquete y toca que entregue oferta).
+</Accordion>
+
+<Accordion title="Procesos en segundo plano">
+  Los trabajos largos, como descargar un expediente, leer mediciones masivamente o analizar pliegos, informan de su progreso en tiempo real y te avisan en cuanto terminan.
 </Accordion>
 
 ## Próximos pasos
@@ -134,6 +161,6 @@ Los eventos que generan notificación son:
   </Card>
 
   <Card title="Gestionar proyectos" icon="folder-open" href="/proyectos/gestionar-proyectos">
-    Consulta, edita y organiza todos los proyectos de tu cartera.
+    Consulta el listado de tus proyectos, sus sesiones de chat y la última actividad.
   </Card>
 </CardGroup>
