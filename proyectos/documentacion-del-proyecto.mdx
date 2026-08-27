@@ -93,19 +93,27 @@ Las seis carpetas (`00_RECIBIDO`, `01_ESTUDIO`, `02_COMPRAS`, `03_ENTREGA`, `04_
 
 ## Vincular documentos a partidas del presupuesto
 
-Una vez que el presupuesto tiene partidas definidas, puedes vincular documentos específicos a cada una de ellas para dejar trazabilidad entre el precio y su justificación documental.
+La vinculación entre la documentación y las partidas del presupuesto no es una única acción, sino que se gestiona en varios niveles según el tipo de documento:
 
-<Steps>
-  <Step title="Abre la partida en el presupuesto">
-    Ve a la pestaña **Presupuesto** del proyecto y haz clic sobre la partida a la que quieres añadir referencias documentales.
-  </Step>
-  <Step title="Accede al panel de documentos de la partida">
-    En el panel de detalle de la partida, selecciona la pestaña **Documentos**. Verás los documentos ya vinculados (si los hay) y el botón **Vincular documento**.
-  </Step>
-  <Step title="Selecciona el documento">
-    Haz clic en **Vincular documento** y elige el archivo de entre los ya subidos al proyecto. También puedes indicar la página o el número de plano concreto que justifica esa partida. Pulsa **Vincular** para confirmar.
-  </Step>
-</Steps>
+<Accordion title="Planos vinculados a partidas (vía lotes de compra)">
+  Al organizar la obra en **lotes de compra**, cada partida se asigna a su lote y se le vinculan las páginas exactas de plano que le corresponden. Al generar el paquete para el industrial, Seked extrae automáticamente un PDF con únicamente las láminas que afectan a esas partidas, sin que tengas que recortarlas a mano.
+
+  👉 Más información en [Solicitar ofertas](/proveedores/solicitar-ofertas).
+</Accordion>
+
+<Accordion title="Notas y observaciones sobre filas del presupuesto">
+  Puedes añadir notas técnicas o advertencias sobre una partida o fila concreta del archivo de mediciones. La nota queda guardada en la plataforma asociada a esa línea, sin alterar el fichero original del cliente.
+</Accordion>
+
+<Accordion title="Evidencias de precio y catálogo">
+  Cada partida se vincula con su homóloga en el catálogo de tu empresa (tu base de precios) o en BEDEC (ITeC). Esto le asocia automáticamente su descompuesto técnico, el historial de compras anteriores y las evidencias de precio que respaldan ese importe.
+
+  👉 Más información en [Base de Precios](/base-de-precios/introduccion).
+</Accordion>
+
+<Accordion title="Trazabilidad con pliegos y memoria técnica">
+  Cuando Seked analiza el proyecto o le preguntas al chat sobre la documentación, cada especificación técnica, material exigido o criterio de ejecución que te devuelve queda citado con el documento original y su número de página, para que puedas verificarlo directamente en la fuente.
+</Accordion>
 
 ## Cómo la IA de Seked procesa los documentos
 
