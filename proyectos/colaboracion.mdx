@@ -57,25 +57,35 @@ Los roles dentro de un proyecto son los mismos que a nivel de organización: **A
 
 ## Dejar comentarios en partidas y documentos
 
-Los comentarios permiten mantener conversaciones contextuales directamente sobre los elementos del presupuesto o sobre los archivos, sin necesidad de usar el correo electrónico.
+Las notas y comentarios no viven en un único hilo de conversación: se guardan en el contexto concreto donde los añades, según en qué momento del proceso estés.
 
 ### Comentarios en partidas
 
-<Steps>
-  <Step title="Abre el detalle de la partida">
-    En la vista del presupuesto, haz clic sobre la partida en la que quieres dejar un comentario.
-  </Step>
-  <Step title="Escribe tu comentario">
-    En el panel lateral derecho, selecciona la pestaña **Comentarios**. Escribe tu mensaje en el campo de texto. Puedes mencionar a un compañero escribiendo `@` seguido de su nombre para que reciba una notificación directa.
-  </Step>
-  <Step title="Envía y consulta respuestas">
-    Pulsa **Enviar**. Los comentarios se muestran en orden cronológico y cualquier miembro con acceso al proyecto puede responder. Los comentarios resueltos pueden marcarse como **Cerrado** para limpiar la vista.
-  </Step>
-</Steps>
+<Accordion title="Sobre las filas del presupuesto original">
+  Puedes añadir notas a cualquier fila de la hoja de mediciones. El comentario queda guardado en la plataforma asociado a esa línea, sin modificar el archivo original del cliente.
+</Accordion>
 
-### Comentarios en documentos
+<Accordion title="En el cuadro comparativo de compras">
+  Al comparar ofertas de industriales, cada partida permite registrar una nota técnica o un objetivo de precio. Al exportar el comparativo a Excel, estas notas se incluyen automáticamente en una pestaña dedicada.
+</Accordion>
 
-Abre un documento desde la pestaña **Documentación** y usa la barra lateral de comentarios para añadir anotaciones. En documentos PDF, puedes anclar el comentario a una zona concreta del documento usando la herramienta de selección de área.
+<Accordion title="En decisiones de estimación y emparejado">
+  Al fijar o cambiar el precio de una partida, puedes registrar el motivo o la justificación de la decisión. Queda archivado para auditoría y para que el catálogo aprenda de tus criterios.
+</Accordion>
+
+### Comentarios y notas en documentos
+
+<Accordion title="En el análisis técnico del expediente">
+  El documento de análisis técnico (requisitos, riesgos y dudas) se puede editar añadiendo bloques de texto, observaciones y notas del técnico.
+</Accordion>
+
+<Accordion title="En las ofertas de industriales">
+  Al registrar la respuesta o el presupuesto de un proveedor, puedes adjuntar una nota explicativa sobre inclusiones, exclusiones o condiciones comerciales.
+</Accordion>
+
+<Accordion title="En partidas de tu base de precios">
+  Puedes añadir comentarios internos y advertencias de ejecución a nivel de partida del catálogo propio.
+</Accordion>
 
 ## Registro de actividad e historial de cambios
 
@@ -87,8 +97,7 @@ Para consultarlo, accede a la pestaña **Actividad** dentro del proyecto. Verás
 - Cambios en cantidades, costes y precios.
 - Subida, renombrado y eliminación de documentos.
 - Incorporación o retirada de miembros del equipo.
-- Cambios de estado del proyecto.
-- Comentarios añadidos o resueltos.
+- Notas y comentarios añadidos.
 
 Puedes filtrar el registro por **tipo de acción**, **usuario** o **rango de fechas** para localizar cambios específicos con rapidez.
 
@@ -97,14 +106,10 @@ Puedes filtrar el registro por **tipo de acción**, **usuario** o **rango de fec
 Seked te notifica de los cambios relevantes que ocurren en los proyectos en los que participas, para que siempre estés al día sin necesidad de revisar manualmente cada proyecto.
 
 <Note>
-  Puedes personalizar qué notificaciones recibes desde **Equipo \> Configuración de cuenta**, en la sección **Notificaciones**. Puedes activar o desactivar notificaciones por tipo de evento (menciones, cambios en partidas, nuevos documentos, cambios de estado) y elegir si las recibes solo en la aplicación o también por correo electrónico.
+  Puedes personalizar qué notificaciones recibes desde **Equipo \> Configuración de cuenta**, en la sección **Notificaciones**. Puedes activar o desactivar notificaciones por tipo de evento (cambios en partidas, nuevos documentos) y elegir si las recibes solo en la aplicación o también por correo electrónico.
 </Note>
 
 Los eventos que generan notificación son:
-
-<Accordion title="Menciones directas">
-  Recibes una notificación siempre que alguien te mencione con `@tu_nombre` en un comentario de partida o de documento.
-</Accordion>
 
 <Accordion title="Cambios en partidas que editas">
   Si otro miembro modifica una partida que tú has creado o editado recientemente, recibirás un aviso para que puedas revisar el cambio.
@@ -112,10 +117,6 @@ Los eventos que generan notificación son:
 
 <Accordion title="Nuevos documentos subidos">
   Cuando se sube un nuevo archivo al proyecto, los miembros del proyecto reciben una notificación con el nombre del archivo y la carpeta de destino.
-</Accordion>
-
-<Accordion title="Cambios de estado del proyecto">
-  Cualquier transición de estado del proyecto (por ejemplo, de En licitación a Adjudicado) genera una notificación para todos los miembros del equipo.
 </Accordion>
 
 ## Próximos pasos
@@ -134,6 +135,6 @@ Los eventos que generan notificación son:
   </Card>
 
   <Card title="Gestionar proyectos" icon="folder-open" href="/proyectos/gestionar-proyectos">
-    Consulta, edita y organiza todos los proyectos de tu cartera.
+    Consulta el listado de tus proyectos, sus sesiones de chat y la última actividad.
   </Card>
 </CardGroup>
