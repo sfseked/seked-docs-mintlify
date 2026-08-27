@@ -55,7 +55,12 @@
               "base-de-precios/gestionar-elementos",
               "base-de-precios/importar-exportar"
             ]
-          },
+          }
+        ]
+      },
+      {
+        "tab": "Gestión",
+        "groups": [
           {
             "group": "Compras",
             "pages": [
@@ -63,12 +68,7 @@
               "proveedores/solicitar-ofertas",
               "proveedores/comparar-ofertas"
             ]
-          }
-        ]
-      },
-      {
-        "tab": "Gestión",
-        "groups": [
+          },
           {
             "group": "Equipo y Cuenta",
             "pages": [
