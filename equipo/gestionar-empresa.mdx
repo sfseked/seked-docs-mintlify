@@ -1,10 +1,10 @@
 ---
 title: "Gestionar la configuración de tu empresa en Seked"
 sidebarTitle: "Empresa"
-description: "Aprende a configurar los datos de tu empresa, la moneda, las unidades de medida y las notificaciones para todos tus proyectos en Seked."
+description: "Aprende a configurar los datos de tu empresa y las notificaciones para todos tus proyectos en Seked."
 ---
 
-La configuración de empresa es el punto central desde el que controlas la información corporativa que aparece en tus presupuestos, las preferencias globales de moneda y medida, y las notificaciones que recibe todo el equipo. Cualquier cambio que realices aquí se aplica de forma predeterminada a todos los proyectos nuevos, aunque cada proyecto puede personalizar algunas de estas opciones de forma independiente.
+La configuración de empresa es el punto central desde el que controlas la información corporativa que aparece en tus presupuestos y las notificaciones que recibe todo el equipo. Cualquier cambio que realices aquí se aplica de forma predeterminada a todos los proyectos nuevos.
 
 <Note>
   Solo los usuarios con el rol **Administrador** pueden acceder y modificar la configuración de empresa. Si no ves esta sección, contacta con tu administrador.
@@ -46,28 +46,13 @@ Mantén siempre actualizada la información corporativa para que aparezca correc
   </Step>
 </Steps>
 
-## Configurar moneda y unidades de medida
+## Moneda, unidades y formato de fecha
 
-Estas preferencias se aplican automáticamente a todos los proyectos nuevos que crees desde este momento.
+De momento estos valores son fijos en Seked y no se pueden configurar: euro (**€**) como moneda, la coma (**,**) como separador decimal, el **sistema métrico** (m, m², m³, kg) y el formato de fecha **día/mes/año** (DD/MM/AAAA).
 
-<Steps>
-  <Step title="Accede a la pestaña Preferencias">
-    En **Configuración de empresa**, selecciona **Preferencias**.
-  </Step>
-  <Step title="Elige la moneda predeterminada">
-    Despliega el selector **Moneda** y elige la divisa que utilizas habitualmente (por ejemplo, **EUR — Euro**, **USD — Dólar estadounidense**, **MXN — Peso mexicano**). Esta selección determinará el símbolo que aparece en todos los precios de tus presupuestos.
-  </Step>
-  <Step title="Selecciona el sistema de medidas">
-    Elige entre el **Sistema métrico decimal (SI)** y el **Sistema imperial**. La elección afecta a las unidades predeterminadas de las partidas y mediciones (m², m³, kg, etc.).
-  </Step>
-  <Step title="Guarda las preferencias">
-    Haz clic en **Guardar preferencias** para que los cambios surtan efecto en los nuevos proyectos.
-  </Step>
-</Steps>
-
-<Tip>
-  Si trabajas con clientes en distintos países, recuerda que puedes cambiar la moneda de un proyecto concreto desde la configuración del propio proyecto, sin alterar la moneda predeterminada de la empresa.
-</Tip>
+<Note>
+  Iremos añadiendo la posibilidad de personalizar estos valores más adelante.
+</Note>
 
 ## Configurar notificaciones a nivel de empresa
 
@@ -95,10 +80,10 @@ Las notificaciones de empresa afectan a todos los miembros del equipo. Cada usua
 
 ## Relación entre la configuración de empresa y los proyectos
 
-La configuración de empresa actúa como plantilla predeterminada. Cuando creas un proyecto nuevo, este hereda automáticamente la moneda, las unidades de medida y las preferencias de notificación definidas aquí. Sin embargo, puedes **sobrescribir** cualquiera de estos valores dentro de la configuración individual de cada proyecto sin que ello afecte al resto de proyectos ni a la configuración global de la empresa.
+La configuración de empresa actúa como plantilla predeterminada. Cuando creas un proyecto nuevo, este hereda automáticamente las preferencias de notificación definidas aquí, aunque puedes **sobrescribirlas** dentro de la configuración individual de cada proyecto sin que ello afecte al resto de proyectos ni a la configuración global de la empresa.
 
 <Info>
-  Los datos de la empresa (nombre, CIF, logotipo y dirección) no se pueden personalizar por proyecto: siempre se usa la información corporativa registrada en esta sección.
+  Los datos de la empresa (nombre, CIF, logotipo y dirección) y los valores de moneda, unidades y formato de fecha no se pueden personalizar por proyecto: siempre se usa la misma configuración para toda la organización.
 </Info>
 
 ## Gestionar facturación, créditos y plan
