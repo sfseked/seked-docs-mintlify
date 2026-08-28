@@ -1,7 +1,7 @@
 ---
 title: "Costes y precios: estructura y control del presupuesto"
 sidebarTitle: "Costes y Precios"
-description: "Desglosa y controla el coste unitario en Seked, aplica márgenes y overhead, e incorpora precios reales de proveedores al presupuesto."
+description: "Desglosa y controla el coste unitario en Seked, entiende el papel del rendimiento, aplica márgenes y overhead, e incorpora precios reales de proveedores al presupuesto."
 ---
 
 Un presupuesto competitivo y rentable no es solo una lista de cantidades: es el resultado de conocer con precisión qué cuesta cada unidad de obra, cómo se compone ese coste y qué márgenes necesitas aplicar para que el proyecto sea viable. Seked te da todas las herramientas para estructurar, controlar y actualizar los costes de cada partida de forma rigurosa y eficiente.
@@ -32,29 +32,20 @@ El coste unitario de cada partida en Seked se desglosa en cinco componentes. Est
   </Card>
 </CardGroup>
 
+<Card title="Rendimiento" icon="gauge-high">
+  No es un componente del coste en sí, sino la variable que lo condiciona: determina cuántas unidades de obra se ejecutan por unidad de tiempo o de recurso. A menor rendimiento, más horas de mano de obra y maquinaria hacen falta para completar la misma cantidad, y por tanto mayor coste unitario.
+</Card>
+
 Para ver o editar el desglose de coste unitario de una partida, ábrela desde el presupuesto y selecciona la pestaña **Coste**. Verás cada componente con su importe parcial y su porcentaje sobre el total del coste unitario.
 
-## Aplicar plantillas de coste desde la base de precios
+## Alimentar el coste de una partida desde la base de precios
 
-La forma más rápida de asignar un coste unitario bien estructurado a una partida es cargarlo desde la **base de precios**, donde tienes guardadas tus plantillas de coste o las del banco de precios de referencia de tu organización.
+En Seked no hay plantillas de coste que elegir y aplicar a una partida. Los costes llegan a tu base de precios subiendo los documentos que ya manejas —facturas, albaranes, presupuestos de proveedores...— y dejando que Seked los procese: te va guiando documento a documento, mostrándote las asociaciones que detecta (por ejemplo, que la descripción de una partida corresponda con el elemento correcto de tu base de precios, o que el proveedor indicado haga referencia real a ese proveedor) para que las valides antes de que se guarden.
 
-<Steps>
-  <Step title="Abre la partida y accede a la pestaña Coste">
-    En la vista del presupuesto, haz clic sobre la partida para abrir su panel de detalle y selecciona la pestaña **Coste**.
-  </Step>
-  <Step title="Haz clic en Cargar desde base de precios">
-    Pulsa el botón **Cargar plantilla de coste**. Se abrirá el buscador de la base de precios. Puedes buscar por código de partida, descripción o categoría.
-  </Step>
-  <Step title="Selecciona la plantilla">
-    Elige la plantilla de coste que mejor se ajuste a la partida. Verás un resumen del desglose por componente antes de confirmar. Haz clic en **Aplicar plantilla**.
-  </Step>
-  <Step title="Revisa y ajusta los valores">
-    Los valores de la plantilla se aplicarán como punto de partida. Revisa cada componente y ajusta los importes si las condiciones de tu proyecto difieren de los valores de referencia (zona geográfica, condiciones de acceso, rendimientos específicos, etc.).
-  </Step>
-</Steps>
+👉 Más información en [Importar y exportar la base de precios](/base-de-precios/importar-exportar).
 
 <Tip>
-  Mantén tu base de precios actualizada con los costes reales de tus obras ejecutadas. Cuanto más ajustadas estén tus plantillas a la realidad de tu empresa, más precisos serán tus estimativos futuros y menos tiempo dedicarás a revisar cada partida manualmente.
+  Cuanto más completos sean los documentos que subas (proveedor, ubicación, fecha, unidades...), mejor será la asociación y más precisos los costes que Seked pueda proponerte en futuras partidas.
 </Tip>
 
 ## El panel de desglose de precios
@@ -142,7 +133,7 @@ No necesitas guardar manualmente ni esperar a que se procese ningún recálculo:
   </Card>
 
   <Card title="Base de precios" icon="book" href="/base-de-precios/introduccion">
-    Gestiona tus plantillas de coste y banco de precios propio.
+    Gestiona tu banco de precios propio y descubre cómo se alimenta con tu trabajo diario.
   </Card>
 
   <Card title="Partidas y mediciones" icon="list-check" href="/presupuestacion/partidas-y-mediciones">
