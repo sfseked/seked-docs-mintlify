@@ -1,7 +1,7 @@
 ---
 title: "Estimativo inicial: genera tu presupuesto automático"
 sidebarTitle: "Estimativo Inicial"
-description: "Lanza el análisis de IA de Seked sobre los documentos del proyecto y obtén un borrador de presupuesto en minutos. Revisa, ajusta y acepta las partidas."
+description: "Genera automáticamente un borrador de presupuesto a partir de los documentos del proyecto: revisa el emparejado con tu base de precios y ajusta las partidas."
 ---
 
 El estimativo inicial es una de las funcionalidades más potentes de Seked. En lugar de empezar un presupuesto desde cero, la inteligencia artificial analiza los documentos que has subido al proyecto (planos, mediciones, pliegos y memorias) y los contrasta con el conocimiento acumulado de tu empresa en la base de precios, para generar automáticamente un borrador con las partidas de obra identificadas, sus mediciones y sus costes unitarios de referencia. Lo que antes podía llevar días, ahora lo tienes en minutos. Y tú siempre tienes la última palabra: revisas, ajustas y decides qué se incorpora al presupuesto.
@@ -12,25 +12,23 @@ Para obtener los mejores resultados, asegúrate de haber completado estos pasos 
 
 <CardGroup cols={2}>
   <Card title="Proyecto creado" icon="folder-plus" href="/proyectos/crear-proyecto">
-    El proyecto debe existir en Seked con su tipo de obra definido correctamente.
+    El proyecto debe existir ya creado en Seked.
   </Card>
 
   <Card title="Documentación subida" icon="file-arrow-up" href="/proyectos/documentacion-del-proyecto">
-    Sube planos, mediciones y pliegos antes de lanzar el análisis para mejores resultados.
+    Sube planos, mediciones y pliegos antes de lanzar el estimativo para mejores resultados.
   </Card>
 </CardGroup>
 
 <Tip>
-  Sube siempre la documentación más completa posible antes de lanzar el estimativo. Los proyectos con planos acotados en PDF, hoja de mediciones en Excel y pliego de condiciones técnicas generan resultados significativamente más precisos. Puedes relanzar el análisis en cualquier momento si añades documentos nuevos.
+  Sube siempre la documentación más completa posible antes de lanzar el estimativo. Los proyectos con planos acotados en PDF, hoja de mediciones en Excel y pliego de condiciones técnicas generan resultados significativamente más precisos. Puedes relanzar el estimativo en cualquier momento si añades documentos nuevos.
 </Tip>
 
 ## Lanzar el estimativo
 
 <Steps>
-  <Step title="Abre el proyecto y accede al presupuesto">
-    En el listado de proyectos, haz clic sobre el proyecto para abrir su panel de detalle. Luego selecciona la pestaña **Presupuesto** en el menú superior.
-
-    Si es la primera vez que accedes al presupuesto de este proyecto, verás la pantalla de bienvenida con la opción de comenzar manualmente o con ayuda de la IA.
+  <Step title="Abre el proyecto y accede a la vista Estimativos">
+    En el listado de proyectos, abre el proyecto en el que quieras trabajar y accede a la vista **Estimativos**.
   </Step>
   <Step title="Pide que se lance el estimativo">
     Con la documentación técnica ya subida al proyecto, pídeselo directamente al chat o lánzalo desde la vista correspondiente.
@@ -47,18 +45,24 @@ Para obtener los mejores resultados, asegúrate de haber completado estos pasos 
     - **La partida original**: la descripción tal como te la envía el cliente.
     - **El item emparejado**: la partida equivalente de tu base de precios, si Seked la ha encontrado, junto con la fiabilidad de ese emparejado.
     - **El precio seleccionado (evidencia)**: cuando hay varias evidencias de precio posibles para ese item, Seked elige la más adecuada según variables como el proveedor, la cantidad o la ubicación.
+
+    Si no encuentra el item, te deja crear uno nuevo a partir de la partida original: la toma como descripción y tú añades los parámetros que falten, o buscas directamente el item en tu base de precios.
+
+    <Tip>
+      El emparejado no es una simple comparación semántica: Seked hace un análisis técnico que tiene en cuenta qué necesitas realmente (por ejemplo, instalación de sanitario o movimiento de tierras), la marca, las unidades y las dimensiones. Además, cada decisión que tomas se guarda como feedback y mejora las siguientes interacciones.
+    </Tip>
+
+    Si Seked no consigue emparejarte un item, te da la opción de emparejarlo contra una base de datos genérica (BEDEC, CYPE...) o de pedir precio directamente a tus industriales.
   </Step>
-  <Step title="Acepta o rechaza cada sugerencia">
-    Para cada partida sugerida tienes tres opciones:
+  <Step title="Valida o invalida cada emparejado">
+    Para cada partida emparejada tienes tres opciones:
 
-    - **Aceptar**: la partida pasa al presupuesto tal como la ha generado la IA.
-    - **Aceptar y editar**: la partida pasa al presupuesto pero se abre el formulario de edición para que puedas ajustar cualquier campo antes de confirmar.
-    - **Rechazar**: la partida se descarta. Puedes indicar el motivo (medición incorrecta, partida duplicada, no aplica al proyecto) para mejorar el modelo.
-
-    También puedes usar **Aceptar todas** para incorporar de golpe todas las sugerencias y revisar los detalles después en la vista completa del presupuesto.
+    - **Validar**: confirmas que el item y el precio seleccionados son correctos, y la partida pasa al presupuesto tal cual.
+    - **Invalidar**: el emparejado no es correcto, así que lo descartas y ajustas el item o el precio.
+    - **Leer el razonamiento**: consulta por qué Seked ha elegido ese item y ese precio antes de decidir.
   </Step>
   <Step title="Ajusta las cantidades y costes">
-    Una vez aceptadas las partidas, revisa las cantidades que no procedan directamente de las mediciones documentadas. Haz clic sobre cualquier partida para abrir su panel de detalle y modifica la cantidad, la unidad de medida o el precio unitario según tu criterio técnico.
+    Una vez validadas las partidas, revisa las cantidades que no procedan directamente de las mediciones documentadas. Haz clic sobre cualquier partida para abrir su panel de detalle y modifica la cantidad, la unidad de medida o el precio unitario según tu criterio técnico.
 
     Consulta la guía de [partidas y mediciones](/presupuestacion/partidas-y-mediciones) para saber cómo desglosar las cantidades por ubicación o elemento.
   </Step>
@@ -67,7 +71,7 @@ Para obtener los mejores resultados, asegúrate de haber completado estos pasos 
   </Step>
 </Steps>
 
-## Relanzar el análisis
+## Relanzar el estimativo
 
 Puedes relanzar el estimativo en cualquier momento, por ejemplo, si has subido nueva documentación o si quieres comparar con una pasada anterior. Cada relanzamiento genera una nueva versión del borrador y consume créditos adicionales. Las versiones anteriores se conservan en el historial del presupuesto.
 
