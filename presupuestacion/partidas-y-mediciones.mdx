@@ -1,14 +1,14 @@
 ---
 title: "Partidas y mediciones: gestiona las líneas del presupuesto"
 sidebarTitle: "Partidas y Mediciones"
-description: "Descubre qué es una partida en Seked: sus campos, cómo se relaciona con los capítulos del presupuesto y cómo se calcula su importe total."
+description: "Descubre qué es una partida en Seked: sus campos (coste unitario, rendimiento, cantidad...), cómo se relaciona con los capítulos del presupuesto y cómo se calcula su importe total."
 ---
 
 El presupuesto en Seked se construye sobre dos elementos fundamentales: las **partidas** y las **mediciones**. Las partidas son las unidades básicas de trabajo —cada línea del presupuesto— y las mediciones son el desglose detallado de las cantidades que justifican el total de cada partida. Dominar estos dos elementos te dará un control total sobre la precisión y la trazabilidad de tus presupuestos.
 
 ## ¿Qué es una partida?
 
-Una partida (también llamada unidad de obra) representa una unidad de trabajo concreto dentro del proyecto. Tiene un coste unitario, una cantidad y, por tanto, un importe total. Cada partida pertenece a un capítulo o sección del presupuesto.
+Una partida (también llamada unidad de obra) representa una unidad de trabajo concreto dentro del proyecto. Tiene un coste unitario, un rendimiento, una cantidad y, por tanto, un importe total. Cada partida pertenece a un capítulo o sección del presupuesto.
 
 ### Campos de una partida
 
@@ -19,6 +19,7 @@ Una partida (también llamada unidad de obra) representa una unidad de trabajo c
 | **Unidad** | Unidad de medida en la que se mide la cantidad de esta partida. | m², m³, ml, ud, kg, h |
 | **Cantidad** | Número total de unidades. Puede ser un valor directo o la suma de las líneas de medición. | 245,60 |
 | **Coste unitario** | Coste de ejecución por unidad, sin márgenes comerciales. | 87,50 €/m² |
+| **Rendimiento** | Cantidad de unidades de obra que se ejecutan por unidad de tiempo (o de recurso), clave para calcular el coste de mano de obra y maquinaria de la partida. | 1,25 m²/h |
 | **Precio de venta** | Precio unitario final al cliente, incluyendo costes indirectos, overhead y beneficio industrial. | 112,30 €/m² |
 | **Importe total** | Resultado de multiplicar cantidad × precio de venta. | 27.600,88 € |
 
