@@ -1,14 +1,14 @@
 ---
 title: "Partidas y mediciones: gestiona las líneas del presupuesto"
 sidebarTitle: "Partidas y Mediciones"
-description: "Aprende qué es una partida en Seked, cómo crearla, organizarla en capítulos y desglosar sus mediciones por ubicación o elemento constructivo."
+description: "Descubre qué es una partida en Seked: sus campos (coste unitario, rendimiento, cantidad...), cómo se relaciona con los capítulos del presupuesto y cómo se calcula su importe total."
 ---
 
 El presupuesto en Seked se construye sobre dos elementos fundamentales: las **partidas** y las **mediciones**. Las partidas son las unidades básicas de trabajo —cada línea del presupuesto— y las mediciones son el desglose detallado de las cantidades que justifican el total de cada partida. Dominar estos dos elementos te dará un control total sobre la precisión y la trazabilidad de tus presupuestos.
 
 ## ¿Qué es una partida?
 
-Una partida (también llamada unidad de obra) representa una unidad de trabajo concreto dentro del proyecto. Tiene un coste unitario, una cantidad y, por tanto, un importe total. Cada partida pertenece a un capítulo o sección del presupuesto.
+Una partida (también llamada unidad de obra) representa una unidad de trabajo concreto dentro del proyecto. Tiene un coste unitario, un rendimiento, una cantidad y, por tanto, un importe total. Cada partida pertenece a un capítulo o sección del presupuesto.
 
 ### Campos de una partida
 
@@ -19,95 +19,13 @@ Una partida (también llamada unidad de obra) representa una unidad de trabajo c
 | **Unidad** | Unidad de medida en la que se mide la cantidad de esta partida. | m², m³, ml, ud, kg, h |
 | **Cantidad** | Número total de unidades. Puede ser un valor directo o la suma de las líneas de medición. | 245,60 |
 | **Coste unitario** | Coste de ejecución por unidad, sin márgenes comerciales. | 87,50 €/m² |
+| **Rendimiento** | Cantidad de unidades de obra que se ejecutan por unidad de tiempo (o de recurso), clave para calcular el coste de mano de obra y maquinaria de la partida. | 1,25 m²/h |
 | **Precio de venta** | Precio unitario final al cliente, incluyendo costes indirectos, overhead y beneficio industrial. | 112,30 €/m² |
 | **Importe total** | Resultado de multiplicar cantidad × precio de venta. | 27.600,88 € |
 
 <Tip>
   Mantén las descripciones de las partidas claras y completas: incluye el material, el método de ejecución y las condiciones de puesta en obra. Una buena descripción evita disputas contractuales y facilita la comparación con ofertas de subcontratistas.
 </Tip>
-
-## Organizar el presupuesto en capítulos
-
-Antes de crear partidas, organiza el presupuesto en **capítulos** (también llamados secciones o títulos). Los capítulos agrupan partidas relacionadas y permiten obtener subtotales por área de trabajo.
-
-Para crear un capítulo:
-
-1. En la vista del presupuesto, haz clic en **Añadir capítulo** en la barra superior o en el botón `+` al final de la lista.
-2. Escribe el nombre del capítulo (por ejemplo, `01 - Movimiento de tierras`) y pulsa **Intro** o **Guardar**.
-3. Arrastra los capítulos para reordenarlos según la estructura que necesites.
-4. Puedes anidar capítulos creando **subcapítulos** haciendo clic en el icono de anidación dentro de un capítulo existente.
-
-<Note>
-  Seked numera los capítulos automáticamente, pero puedes editar la numeración para adaptarla a la estructura del pliego o a tu convenio interno de codificación.
-</Note>
-
-## Crear una partida manualmente
-
-<Steps>
-  <Step title="Selecciona el capítulo donde añadir la partida">
-    En la vista del presupuesto, haz clic sobre el capítulo al que pertenecerá la nueva partida para expandirlo. Si el capítulo está vacío, verás directamente el botón **Añadir partida**. Si ya tiene partidas, el botón aparece al final de la lista del capítulo.
-  </Step>
-  <Step title="Haz clic en Añadir partida">
-    Pulsa **Añadir partida**. Se abrirá el formulario de creación de partida en el panel lateral derecho.
-  </Step>
-  <Step title="Rellena los datos de la partida">
-    Completa los campos del formulario:
-
-    - **Código**: puedes escribirlo manualmente o buscarlo en la **base de precios** pulsando el icono de búsqueda. Si seleccionas una partida de la base de precios, la descripción y el coste unitario se rellenarán automáticamente.
-    - **Descripción**: escribe o edita el texto descriptivo de la unidad de obra.
-    - **Unidad**: selecciona la unidad de medida del desplegable (m², m³, ml, ud, kg, h, pa, etc.).
-    - **Cantidad**: introduce el valor total. Si vas a usar la tabla de mediciones, deja este campo en blanco por ahora; se calculará automáticamente.
-    - **Coste unitario**: introduce el coste de ejecución por unidad o cárgalo desde la base de precios.
-  </Step>
-  <Step title="Guarda la partida">
-    Haz clic en **Guardar partida**. La partida aparecerá en el capítulo seleccionado y el importe total del capítulo y del presupuesto se actualizarán automáticamente.
-  </Step>
-</Steps>
-
-## Editar una partida existente
-
-Haz clic sobre cualquier partida en la vista del presupuesto para abrir su panel de detalle. Desde allí puedes editar cualquier campo directamente. Los cambios se guardan automáticamente al salir del campo (autoguardado) o puedes pulsar **Guardar** para confirmar todos los cambios a la vez.
-
-Para **mover una partida** de un capítulo a otro, arrástrala con el icono de arrastre (seis puntos) a la izquierda de su fila, o usa la opción **Mover a capítulo** en el menú de opciones (tres puntos).
-
-Para **duplicar una partida**, selecciona **Duplicar** en el menú de opciones. Seked crea una copia exacta de la partida en el mismo capítulo, lista para que la edites.
-
-## Mediciones: desglose de cantidades
-
-La tabla de mediciones te permite justificar la cantidad total de una partida mediante un desglose por ubicación, planta, elemento o cualquier criterio que uses en tu metodología de medición. Es especialmente útil en proyectos de edificación o cuando el pliego exige la justificación detallada de cada unidad.
-
-### Acceder a la tabla de mediciones
-
-Abre el detalle de una partida y selecciona la pestaña **Mediciones**. Verás la tabla de desglose con las siguientes columnas:
-
-| Columna | Descripción |
-| --- | --- |
-| **Descripción** | Elemento o zona a la que corresponde esta línea de medición (ej: _Planta baja - Módulo A_). |
-| **Nº** | Número de veces que se repite la geometría descrita. |
-| **Longitud (a)** | Primera dimensión en metros. |
-| **Anchura (b)** | Segunda dimensión en metros. |
-| **Altura/Fondo (c)** | Tercera dimensión en metros (opcional). |
-| **Parcial** | Resultado calculado automáticamente: Nº × a × b × c. |
-| **Subtracción** | Marcar la fila como negativa para descontar huecos o solapamientos. |
-
-La columna **Total** al pie de la tabla suma todos los parciales y se traslada automáticamente al campo **Cantidad** de la partida.
-
-### Añadir líneas de medición
-
-<Steps>
-  <Step title="Abre la tabla de mediciones de la partida">
-    En el detalle de la partida, selecciona la pestaña **Mediciones** y haz clic en **Añadir línea**.
-  </Step>
-  <Step title="Rellena los datos de la línea">
-    Escribe la descripción de la zona o elemento, el número de repeticiones y las dimensiones que correspondan. Seked calculará el parcial automáticamente.
-  </Step>
-  <Step title="Añade líneas de sustracción si es necesario">
-    Para descontar huecos (ventanas, puertas, vaciados), añade una nueva línea y marca la casilla **Sustracción**. El valor de esta fila se restará del total.
-  </Step>
-  <Step title="Verifica el total">
-    El total calculado se muestra en negrita al pie de la tabla y se actualiza en tiempo real. Una vez que estés conforme, haz clic en **Aplicar** para trasladar el total al campo cantidad de la partida.
-  </Step>
-</Steps>
 
 ## Próximos pasos
 
