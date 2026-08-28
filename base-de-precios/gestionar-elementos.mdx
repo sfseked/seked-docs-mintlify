@@ -1,40 +1,71 @@
 ---
 title: "Cómo gestionar elementos en la base de precios"
 sidebarTitle: "Gestionar Elementos"
-description: "Crea, edita, organiza y busca partidas, materiales, mano de obra, maquinaria y subcontratas en la biblioteca compartida de tu empresa en Seked."
+description: "Crea, edita, organiza y busca partidas, materiales y mano de obra en los tres menús de la base de precios compartida de tu empresa en Seked."
 ---
 
 La base de precios de Seked está compuesta por elementos de distintos tipos que, combinados, te permiten construir presupuestos completos y coherentes. Saber crear, mantener y organizar bien esos elementos es la clave para que todo el equipo gane velocidad y precise menos correcciones. En esta guía encontrarás todo lo que necesitas para gestionar el catálogo de tu empresa.
 
 ## Tipos de elementos
 
-Seked distingue seis tipos de elementos que puedes almacenar en la base de precios:
+La base de precios se organiza en tres menús:
 
-<CardGroup cols={2}>
+<CardGroup cols={3}>
   <Card title="Partidas" icon="list-check">
-    Unidades de trabajo completas: incluyen descripción técnica, criterio de medición, unidad y descomposición de costes (materiales, mano de obra, maquinaria).
+    Los conjuntos listos para presupuestar que ya has trabajado alguna vez: el descompuesto completo de una unidad de obra, propia o subcontratada.
   </Card>
 
   <Card title="Materiales" icon="boxes-stacked">
-    Productos y suministros con referencia, unidad de medida, precio unitario y proveedor habitual. Son la base de la descomposición de cualquier partida.
+    La unidad mínima de la base de precios. El descompuesto de una partida es un sumatorio de materiales.
   </Card>
 
   <Card title="Mano de obra" icon="helmet-safety">
-    Categorías laborales (oficial, peón, encargado, etc.) con tarifa horaria o por rendimiento, incluyendo cargas sociales si procede.
-  </Card>
-
-  <Card title="Maquinaria" icon="truck-monster">
-    Equipos y vehículos con coste de uso por hora o por jornada, factor de amortización y rendimiento estándar.
-  </Card>
-
-  <Card title="Recursos compuestos" icon="cubes">
-    Agrupaciones de materiales, mano de obra y maquinaria que forman una unidad de rendimiento reutilizable (p. ej., un equipo de hormigonado o un módulo de encofrado).
-  </Card>
-
-  <Card title="Subcontratas" icon="handshake">
-    Precios de servicios contratados a terceros (empresas o autónomos), con unidad, importe pactado y proveedor asociado. Útil para reutilizar precios históricos de subcontratas en futuros presupuestos.
+    El listado de oficios de tu empresa, cada uno asociado a su rendimiento.
   </Card>
 </CardGroup>
+
+### Campos de una partida
+
+| Campo | Descripción |
+| --- | --- |
+| **Partida** | Descripción de la unidad de obra. |
+| **Tipo** | Si el precio corresponde a un descompuesto propio (materiales) o a una subcontrata. |
+| **Capítulo** | Sección o categoría a la que pertenece según la clasificación de tu empresa. |
+| **Precio base** | Coste unitario de referencia. |
+| **Rendimiento** | Unidades de obra que se ejecutan por unidad de tiempo o de recurso. |
+| **Confianza** | Nivel de fiabilidad del precio, según cuántas veces se ha validado y su antigüedad. |
+| **Precio de referencia** | Precio equivalente en bancos de precios externos (BEDEC, CYPE...) para contraste. |
+| **Histórico** | Evolución del precio de la partida a lo largo del tiempo. |
+| **Veces usada** | Número de veces que se ha utilizado esta partida. |
+| **Aprendizajes** | Notas o ajustes acumulados de usos anteriores. |
+| **Última vez usada** | Fecha del uso más reciente. |
+| **Estado** | Situación de la partida (por ejemplo, validada o pendiente de revisión). |
+| **Comentarios** | Anotaciones libres del equipo. |
+
+### Campos de un material
+
+| Campo | Descripción |
+| --- | --- |
+| **Material** | Descripción del producto o suministro. |
+| **Capítulo** | Categoría a la que pertenece. |
+| **Precio base** | Coste unitario de referencia. |
+| **Precio de referencia** | Precio equivalente en bancos de precios externos. |
+| **Evidencia** | Documento (factura, albarán, oferta) que respalda el precio. |
+| **Veces usado** | Número de veces que se ha utilizado este material. |
+| **Última vez usado** | Fecha del uso más reciente. |
+| **Estado** | Situación del material (por ejemplo, validado o pendiente de revisión). |
+| **Comentarios** | Anotaciones libres del equipo. |
+
+### Campos de mano de obra
+
+| Campo | Descripción |
+| --- | --- |
+| **Oficio** | Categoría laboral (oficial, peón, encargado...). |
+| **Precio base** | Tarifa de referencia asociada al oficio. |
+| **Veces usado** | Número de partidas en las que se ha utilizado este oficio. |
+| **Última vez** | Fecha del uso más reciente. |
+| **Estado** | Situación del oficio (por ejemplo, validado o pendiente de revisión). |
+| **Comentarios** | Anotaciones libres del equipo. |
 
 ## Crear un nuevo elemento
 
@@ -64,7 +95,7 @@ Seked distingue seis tipos de elementos que puedes almacenar en la base de preci
 
 <Steps>
   <Step title="Localiza el elemento">
-    Usa el buscador o los filtros (capítulo, oficio o categoría, según el tipo) para encontrar el elemento que quieres modificar.
+    Usa el buscador o los filtros (capítulo para partidas y materiales, oficio para mano de obra) para encontrar el elemento que quieres modificar.
   </Step>
   <Step title="Abre el detalle">
     Haz clic sobre el nombre del elemento para abrir su ficha completa.
@@ -85,10 +116,9 @@ Seked distingue seis tipos de elementos que puedes almacenar en la base de preci
 
 La base de precios agrupa los elementos según su naturaleza y cada bloque se organiza con su propia jerarquía:
 
-- **Partidas** — organizadas por **capítulo** (p. ej., _Estructura_, _Instalaciones_, _Acabados_). Cada partida puede tener asociadas varias **evidencias** (PDF, facturas, albaranes) y **precios** históricos, y se compone del sumatorio de la **mano de obra** y los **materiales** que la forman.
+- **Partidas** — organizadas por **capítulo** (p. ej., _Estructura_, _Instalaciones_, _Acabados_). Cada partida se compone del sumatorio de sus **materiales** y lleva asociado un **oficio de mano de obra** a través de su rendimiento.
+- **Materiales** — organizados por **capítulo**, con su precio base y su precio de referencia. Al ser la unidad mínima, cualquier cambio en un material se refleja en todas las partidas que lo incluyen.
 - **Mano de obra** — contiene todos los **oficios** (oficial, peón, encargado, ferrallista, fontanero, pintor, etc.) con su tarifa correspondiente.
-- **Materiales** — catálogo de productos y suministros con precio unitario, unidad de medida y proveedor habitual.
-- **Maquinaria**, **Recursos compuestos** y **Subcontratas** — se clasifican por categoría según el tipo de recurso o servicio.
 
 ## Buscar y filtrar elementos
 
@@ -96,11 +126,11 @@ Desde el panel principal de la base de precios dispones de varias herramientas d
 
 - **Buscador de texto libre** — busca por nombre, código o cualquier palabra en la descripción.
 - **Filtro por tipo** — filtra solo materiales, partidas o mano de obra.
-- **Filtro por capítulo (partidas), oficio (mano de obra) o categoría (materiales)** — navega por la jerarquía de clasificación del bloque correspondiente.
+- **Filtro por capítulo (partidas y materiales) u oficio (mano de obra)** — navega por la jerarquía de clasificación del bloque correspondiente.
 - **Filtro por etiqueta** — encuentra todos los elementos con una misma etiqueta.
 
 <Tip>
-  Combina el filtro de capítulo con el buscador de texto para encontrar un elemento concreto dentro de un capítulo extenso. Por ejemplo, filtra por _Instalaciones \> Fontanería_ y busca «tubo cobre» para ver solo las referencias de ese material en ese oficio.
+  Combina el filtro de capítulo con el buscador de texto para encontrar un elemento concreto dentro de un capítulo extenso. Por ejemplo, filtra materiales por el capítulo _Instalaciones_ y busca «tubo cobre» para ver solo las referencias de ese producto.
 </Tip>
 
 ---
