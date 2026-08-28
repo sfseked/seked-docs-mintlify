@@ -1,10 +1,10 @@
 ---
-title: "Estimación inicial con IA: genera tu presupuesto automático"
-sidebarTitle: "Estimación Inicial"
+title: "Estimativo inicial: genera tu presupuesto automático"
+sidebarTitle: "Estimativo Inicial"
 description: "Lanza el análisis de IA de Seked sobre los documentos del proyecto y obtén un borrador de presupuesto en minutos. Revisa, ajusta y acepta las partidas."
 ---
 
-La estimación inicial es una de las funcionalidades más potentes de Seked. En lugar de empezar un presupuesto desde cero, la inteligencia artificial analiza los documentos que has subido al proyecto (planos, mediciones, pliegos y memorias) y los contrasta con el conocimiento acumulado de tu empresa en la base de precios, para generar automáticamente un borrador con las partidas de obra identificadas, sus mediciones y sus costes unitarios de referencia. Lo que antes podía llevar días, ahora lo tienes en minutos. Y tú siempre tienes la última palabra: revisas, ajustas y decides qué se incorpora al presupuesto.
+El estimativo inicial es una de las funcionalidades más potentes de Seked. En lugar de empezar un presupuesto desde cero, la inteligencia artificial analiza los documentos que has subido al proyecto (planos, mediciones, pliegos y memorias) y los contrasta con el conocimiento acumulado de tu empresa en la base de precios, para generar automáticamente un borrador con las partidas de obra identificadas, sus mediciones y sus costes unitarios de referencia. Lo que antes podía llevar días, ahora lo tienes en minutos. Y tú siempre tienes la última palabra: revisas, ajustas y decides qué se incorpora al presupuesto.
 
 ## Antes de empezar
 
@@ -21,10 +21,10 @@ Para obtener los mejores resultados, asegúrate de haber completado estos pasos 
 </CardGroup>
 
 <Tip>
-  Sube siempre la documentación más completa posible antes de lanzar la estimación. Los proyectos con planos acotados en PDF, hoja de mediciones en Excel y pliego de condiciones técnicas generan resultados significativamente más precisos. Puedes relanzar el análisis en cualquier momento si añades documentos nuevos.
+  Sube siempre la documentación más completa posible antes de lanzar el estimativo. Los proyectos con planos acotados en PDF, hoja de mediciones en Excel y pliego de condiciones técnicas generan resultados significativamente más precisos. Puedes relanzar el análisis en cualquier momento si añades documentos nuevos.
 </Tip>
 
-## Lanzar la estimación con IA
+## Lanzar el estimativo
 
 <Steps>
   <Step title="Abre el proyecto y accede al presupuesto">
@@ -32,49 +32,21 @@ Para obtener los mejores resultados, asegúrate de haber completado estos pasos 
 
     Si es la primera vez que accedes al presupuesto de este proyecto, verás la pantalla de bienvenida con la opción de comenzar manualmente o con ayuda de la IA.
   </Step>
-  <Step title="Selecciona los documentos a analizar">
-    Haz clic en el botón **Generar estimación con IA**. Seked mostrará un panel con todos los documentos subidos al proyecto. Puedes seleccionar todos o marcar únicamente los que son relevantes para el análisis (por ejemplo, excluir fotografías de campo que no aportan datos al presupuesto).
+  <Step title="Pide que se lance el estimativo">
+    Con la documentación técnica ya subida al proyecto, pídeselo directamente al chat o lánzalo desde la vista correspondiente.
 
     <Note>
-      Cada análisis de estimación consume **créditos de IA**. El número de créditos depende del volumen de documentación procesada (número de páginas y archivos). Puedes consultar tu saldo de créditos en **Planes \> Créditos y uso** antes de lanzar el análisis. Si los créditos son insuficientes, Seked te avisará y podrás adquirir más desde el mismo panel.
+      Cada estimativo consume **créditos de IA**. El número de créditos depende del volumen de documentación procesada (número de páginas y archivos). Puedes consultar tu saldo de créditos en **Planes \> Créditos y uso** antes de lanzarlo. Si los créditos son insuficientes, Seked te avisará y podrás adquirir más desde el mismo panel.
     </Note>
+
+    Puedes cerrar la ventana y seguir trabajando: te avisaremos en cuanto el estimativo esté listo.
   </Step>
-  <Step title="Confirma y lanza el análisis">
-    Revisa la selección de documentos y haz clic en **Iniciar análisis**. Seked comenzará a procesar la documentación. Dependiendo del volumen de archivos, el proceso puede tardar entre **30 segundos y varios minutos**.
+  <Step title="Revisa el resultado del emparejado">
+    Seked te devuelve el resultado en tres columnas:
 
-    Puedes cerrar la ventana y seguir trabajando: cuando el análisis finalice recibirás una notificación en la campana de Seked y, si lo tienes activado, también por correo electrónico.
-  </Step>
-  <Step title="Entiende qué ha hecho la IA">
-    Una vez completado el análisis, la IA habrá realizado las siguientes tareas sobre tu documentación:
-
-    <Accordion title="Lectura e interpretación de planos">
-      Ha identificado los elementos constructivos representados en los planos (muros, forjados, cubiertas, instalaciones, etc.) y ha intentado extraer sus dimensiones y superficies a partir de las cotas y escalas indicadas.
-    </Accordion>
-
-    <Accordion title="Extracción de mediciones">
-      Ha leído las hojas de mediciones en formato tabla y ha importado las cantidades directamente como partidas, respetando la descripción, la unidad de medida y la cantidad indicadas en el documento.
-    </Accordion>
-
-    <Accordion title="Identificación de tipos de trabajo">
-      Ha analizado el texto de la memoria y el pliego de condiciones para identificar los capítulos de obra y las tipologías de trabajo presentes en el proyecto (movimiento de tierras, cimentación, estructura, instalaciones, etc.).
-    </Accordion>
-
-    <Accordion title="Sugerencia de precios unitarios">
-      Para cada partida identificada, la IA ha buscado en tu **base de precios** y en las referencias del sector el precio unitario más adecuado, teniendo en cuenta el tipo de obra y la ubicación del proyecto.
-    </Accordion>
-  </Step>
-  <Step title="Revisa las partidas sugeridas">
-    Verás el borrador de presupuesto organizado en capítulos. Cada partida sugerida por la IA aparece marcada con un indicador de **confianza** (alta, media o baja) que refleja la seguridad con la que la IA ha identificado esa partida y su medición.
-
-    Para cada partida puedes ver:
-
-    - La descripción generada automáticamente.
-    - La unidad de medida.
-    - La cantidad propuesta y su origen (extraída del documento o estimada).
-    - El precio unitario de referencia y su fuente.
-    - El importe total calculado.
-
-    Usa los filtros **Confianza alta / media / baja** para priorizar tu revisión. Empieza siempre revisando las partidas de confianza baja, que son las que más necesitan tu criterio.
+    - **La partida original**: la descripción tal como te la envía el cliente.
+    - **El item emparejado**: la partida equivalente de tu base de precios, si Seked la ha encontrado, junto con la fiabilidad de ese emparejado.
+    - **El precio seleccionado (evidencia)**: cuando hay varias evidencias de precio posibles para ese item, Seked elige la más adecuada según variables como el proveedor, la cantidad o la ubicación.
   </Step>
   <Step title="Acepta o rechaza cada sugerencia">
     Para cada partida sugerida tienes tres opciones:
@@ -97,7 +69,7 @@ Para obtener los mejores resultados, asegúrate de haber completado estos pasos 
 
 ## Relanzar el análisis
 
-Puedes relanzar la estimación con IA en cualquier momento, por ejemplo, si has subido nueva documentación o si quieres comparar con una pasada anterior. Cada relanzamiento genera una nueva versión del borrador y consume créditos adicionales. Las versiones anteriores se conservan en el historial del presupuesto.
+Puedes relanzar el estimativo en cualquier momento, por ejemplo, si has subido nueva documentación o si quieres comparar con una pasada anterior. Cada relanzamiento genera una nueva versión del borrador y consume créditos adicionales. Las versiones anteriores se conservan en el historial del presupuesto.
 
 ## Próximos pasos
 

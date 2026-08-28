@@ -1,7 +1,7 @@
 ---
 title: "Subir y organizar documentación en un proyecto Seked"
 sidebarTitle: "Documentación"
-description: "Sube planos, mediciones, pliegos y más a tu proyecto en Seked. Organiza los archivos en carpetas y vincula documentos a partidas del presupuesto."
+description: "Sube documentos al chat de tu proyecto en Seked: se clasifican automáticamente en la estructura de carpetas fija del proyecto y quedan vinculados a las partidas del presupuesto."
 ---
 
 Sube la documentación del proyecto para que Seked pueda analizarla y utilizar su contenido en las siguientes tareas: cuanto más completa y bien organizada esté, más preciso será el análisis automático y más tiempo ahorrarás en la elaboración del presupuesto. Esta guía te explica cómo subir, organizar y aprovechar al máximo los documentos de cada proyecto.
@@ -40,55 +40,27 @@ Seked admite los formatos más habituales en el entorno de la construcción y la
   El tamaño máximo por archivo es de **50 MB**. Si necesitas subir planos de gran formato o archivos de proyecto de AutoCAD pesados, comprímelos en ZIP antes de subirlos. Los archivos ZIP pueden contener múltiples ficheros y se descomprimirán automáticamente en la carpeta de destino.
 </Note>
 
-## Subir documentos al proyecto
+## Sube documentos al proyecto
 
-<Steps>
-  <Step title="Accede a la pestaña Documentación">
-    Abre el proyecto desde el listado y haz clic en la pestaña **Documentación** en el menú superior del panel de detalle del proyecto.
-  </Step>
-  <Step title="Elige la carpeta de destino">
-    En el panel izquierdo verás la estructura de carpetas del proyecto. Seked crea automáticamente estas carpetas al crear el proyecto, siguiendo el flujo de trabajo de estudio a obra:
+Los documentos se suben desde el propio chat del proyecto: haz clic en el icono **\+** para adjuntarlos o arrástralos directamente a la conversación, igual que harías con cualquier otro archivo en Seked.
 
-    | Carpeta | Para qué sirve |
-    | --- | --- |
-    | **00\_RECIBIDO** _(solo lectura)_ | Repositorio inmutable de la documentación original que entrega el organismo o el cliente: pliegos, proyecto en PDF, planos originales, mediciones en TCQ, BC3 o Excel. |
-    | **01\_ESTUDIO** | Espacio de trabajo del equipo de estudios durante el análisis y la valoración técnica: análisis del expediente (requisitos, riesgos, plazos), mediciones interpretadas y presupuesto estimado o validado. |
-    | **02\_COMPRAS** | Salida a mercado y subcontratación con industriales: paquetes de compra troceados por lotes (partidas y planos por gremio), peticiones de oferta y cuadros comparativos de precios. |
-    | **03\_ENTREGA** | Documentación final para la mesa de contratación o el cliente: hoja de cierre económico definitiva (costes directos, indirectos, gastos generales, beneficio industrial y baja final) y oferta económica lista para registro. |
-    | **04\_OBRA** | Fase de ejecución si resultas adjudicatario: seguimiento de compras en obra, contratos con industriales, certificaciones y control de desviaciones. |
-    | **.seked** _(interno)_ | Registro interno de la plataforma y del jefe de estudios: plan de trabajo del proyecto, notas de seguimiento, estado de las tareas y acuerdos internos que no van destinados ni al cliente ni a los industriales. |
+Tú no eliges dónde se guarda cada archivo. Seked lo clasifica automáticamente en la carpeta que le corresponde según su naturaleza — no hay un paso de "elegir carpeta de destino": cada una de las seis carpetas del proyecto tiene ya definido de antemano qué tipo de información recibe. Después puedes consultarlos, ya organizados, en la vista **Archivos**.
 
-    <Note>
-      **00\_RECIBIDO** no se modifica nunca: es la prueba exacta de lo que publicó la administración o entregó el cliente. Si necesitas editar o trabajar sobre un archivo original, genera una copia de trabajo en **01\_ESTUDIO**.
-    </Note>
+## La estructura de carpetas es fija y automática
 
-    Haz clic en la carpeta donde deseas subir los archivos para seleccionarla.
-  </Step>
-  <Step title="Sube los archivos">
-    Tienes dos métodos para subir archivos:
+Seked genera automáticamente estas seis carpetas al crear el proyecto, y no son configurables ni las creas tú. Reflejan las fases del proceso, de la documentación recibida a la ejecución en obra, y cada una recibe únicamente el tipo de contenido que tiene preestablecido:
 
-    <Tabs>
-      <Tab title="Arrastrar y soltar">
-        Arrastra los archivos desde el explorador de tu ordenador directamente al área central de la pantalla. Verás un recuadro azul punteado que confirma que puedes soltar los archivos. Puedes subir varios archivos a la vez.
-      </Tab>
-      <Tab title="Selector de archivos">
-        Haz clic en el botón **Subir archivos** (nube con flecha) en la parte superior del área de documentos. Se abrirá el explorador de archivos de tu sistema. Selecciona uno o varios archivos y pulsa **Abrir**.
-      </Tab>
-    </Tabs>
-
-    Seked mostrará una barra de progreso para cada archivo mientras se sube. Una vez completada la subida, los archivos aparecerán en la carpeta seleccionada.
-  </Step>
-  <Step title="Verifica los documentos subidos">
-    Cada archivo subido aparece en la lista con su nombre, formato, tamaño, fecha de subida y el usuario que lo cargó. Puedes previsualizarlo haciendo clic sobre su nombre, descargarlo o renombrarlo desde el menú de opciones (tres puntos).
-  </Step>
-</Steps>
-
-## La estructura de carpetas sigue el flujo del proyecto
-
-Las seis carpetas (`00_RECIBIDO`, `01_ESTUDIO`, `02_COMPRAS`, `03_ENTREGA`, `04_OBRA` y `.seked`) no las creas tú ni son configurables: Seked las genera automáticamente al crear el proyecto y reflejan las fases del proceso, de la documentación recibida a la ejecución en obra. Sube cada documento a la carpeta que corresponda a la fase en la que se genera, en lugar de organizarlas a tu criterio.
+| Carpeta | Para qué sirve |
+| --- | --- |
+| **00\_RECIBIDO** _(solo lectura)_ | Repositorio inmutable de la documentación original que entrega el organismo o el cliente: pliegos, proyecto en PDF, planos originales, mediciones en TCQ, BC3 o Excel. |
+| **01\_ESTUDIO** | Espacio de trabajo del equipo de estudios durante el análisis y la valoración técnica: análisis del expediente (requisitos, riesgos, plazos), mediciones interpretadas y presupuesto estimado o validado. |
+| **02\_COMPRAS** | Salida a mercado y subcontratación con industriales: paquetes de compra troceados por lotes (partidas y planos por gremio), peticiones de oferta y cuadros comparativos de precios. |
+| **03\_ENTREGA** | Documentación final para la mesa de contratación o el cliente: hoja de cierre económico definitiva (costes directos, indirectos, gastos generales, beneficio industrial y baja final) y oferta económica lista para registro. |
+| **04\_OBRA** | Fase de ejecución si resultas adjudicatario: seguimiento de compras en obra, contratos con industriales, certificaciones y control de desviaciones. |
+| **.seked** _(interno)_ | Registro interno de la plataforma y del jefe de estudios: plan de trabajo del proyecto, notas de seguimiento, estado de las tareas y acuerdos internos que no van destinados ni al cliente ni a los industriales. |
 
 <Note>
-  **00\_RECIBIDO** es de solo lectura y **.seked** es de uso interno de la plataforma y del jefe de estudios (no va destinado ni al cliente ni a los industriales). El resto de carpetas son el espacio de trabajo habitual del equipo.
+  **00\_RECIBIDO** no se modifica nunca: es la prueba exacta de lo que publicó la administración o entregó el cliente. Si necesitas trabajar sobre un archivo original, Seked genera una copia de trabajo en **01\_ESTUDIO**. **.seked** es de uso interno de la plataforma y del jefe de estudios: no va destinado ni al cliente ni a los industriales.
 </Note>
 
 ## Vincular documentos a partidas del presupuesto
@@ -117,7 +89,7 @@ La vinculación entre la documentación y las partidas del presupuesto no es una
 
 ## Cómo la IA de Seked procesa los documentos
 
-Cuando activas la estimación con IA, Seked analiza automáticamente los documentos del proyecto para extraer información relevante:
+Cuando activas el estimativo con IA, Seked analiza automáticamente los documentos del proyecto para extraer información relevante:
 
 <Accordion title="Lectura de planos (PDF y DWG)">
   La IA identifica elementos gráficos, cotas, superficies y tipologías de elementos a partir de planos técnicos. Reconoce plantas, alzados, secciones y detalles, y extrae mediciones geométricas cuando los planos están acotados o tienen escala.
@@ -132,13 +104,13 @@ Cuando activas la estimación con IA, Seked analiza automáticamente los documen
 </Accordion>
 
 <Tip>
-  Para obtener los mejores resultados del análisis automático, sube los documentos **antes** de lanzar la estimación y asegúrate de incluir al menos: los planos en PDF con cotas visibles, la hoja de mediciones y el pliego de condiciones técnicas. Los proyectos con documentación completa generan un 60 % más de partidas útiles en la primera pasada de la IA.
+  Para obtener los mejores resultados del análisis automático, sube los documentos **antes** de lanzar el estimativo y asegúrate de incluir al menos: los planos en PDF con cotas visibles, la hoja de mediciones y el pliego de condiciones técnicas.
 </Tip>
 
 ## Próximos pasos
 
 <CardGroup cols={2}>
-  <Card title="Estimación inicial con IA" icon="wand-magic-sparkles" href="/presupuestacion/estimacion-inicial">
+  <Card title="Estimativo inicial" icon="wand-magic-sparkles" href="/presupuestacion/estimacion-inicial">
     Lanza el análisis automático sobre los documentos que acabas de subir.
   </Card>
 
