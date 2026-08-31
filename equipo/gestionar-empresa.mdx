@@ -1,142 +1,54 @@
 ---
-title: "Gestionar la configuración de tu empresa en Seked"
+title: "Ajustes de tu empresa en Seked"
 sidebarTitle: "Empresa"
-description: "Aprende a configurar los datos de tu empresa y las notificaciones para todos tus proyectos en Seked."
+description: "Descubre los 7 bloques del panel de Ajustes de Seked: cuenta personal, mail, uso, facturación, equipo, base de precios e industriales."
 ---
 
-La configuración de empresa es el punto central desde el que controlas la información corporativa que aparece en tus presupuestos y las notificaciones que recibe todo el equipo. Cualquier cambio que realices aquí se aplica de forma predeterminada a todos los proyectos nuevos.
+El panel de **Ajustes** es el punto central desde el que gestionas tu cuenta y tu empresa en Seked. Se organiza en 7 bloques, cada uno con su propia pantalla: **Cuenta personal**, **Mail**, **Uso**, **Facturación**, **Equipo**, **Base de precios** e **Industriales**.
 
 <Note>
-  Solo los usuarios con el rol **Administrador** pueden acceder y modificar la configuración de empresa. Si no ves esta sección, contacta con tu administrador.
+  Los bloques de empresa (Facturación, Equipo, Base de precios e Industriales) pueden estar restringidos a los usuarios con el rol **Administrador**. Cuenta personal y Mail son siempre personales: cada usuario gestiona los suyos.
 </Note>
 
-## Acceder a la configuración de empresa
+## Acceder al panel de Ajustes
 
-<Steps>
-  <Step title="Abre el panel de configuración">
-    En la barra lateral izquierda, haz clic en tu nombre de empresa o en el icono de engranaje situado en la parte inferior. A continuación, selecciona **Configuración de empresa**.
-  </Step>
-  <Step title="Navega por las secciones disponibles">
-    Encontrarás varias pestañas organizadas por categoría: **Información general**, **Preferencias** y **Notificaciones**. Haz clic en la pestaña que corresponda a lo que deseas editar.
-  </Step>
-</Steps>
+En la barra lateral izquierda, haz clic en tu nombre o en el icono de ajustes para abrir el panel de **Ajustes**. Desde ahí puedes navegar entre los 7 bloques.
 
-## Editar la información de empresa
+## Los 7 bloques de Ajustes
 
-Mantén siempre actualizada la información corporativa para que aparezca correctamente en los encabezados de tus presupuestos y documentos exportados.
+<CardGroup cols={2}>
+  <Card title="Cuenta personal" icon="circle-user" href="/equipo/configuracion-de-cuenta">
+    Tu correo, nombre, apellido y foto de perfil. Cambia tu contraseña o elimina tu cuenta.
+  </Card>
 
-<Steps>
-  <Step title="Ve a la pestaña Información general">
-    Dentro de **Configuración de empresa**, selecciona la pestaña **Información general**.
-  </Step>
-  <Step title="Actualiza el nombre de empresa">
-    Haz clic en el campo **Nombre de empresa** y escribe la denominación oficial de tu organización. Este nombre aparecerá en todas las exportaciones PDF y en las comunicaciones con proveedores.
-  </Step>
-  <Step title="Introduce el CIF / NIF">
-    En el campo **CIF / NIF**, introduce el número de identificación fiscal de tu empresa. Este dato es necesario para que las facturas y presupuestos sean válidos legalmente.
-  </Step>
-  <Step title="Sube el logotipo">
-    Haz clic en **Subir logotipo** y selecciona un archivo en formato PNG o SVG con fondo transparente. El tamaño recomendado es **300 × 100 px**. El logotipo aparecerá en la esquina superior de los documentos exportados.
-  </Step>
-  <Step title="Rellena la dirección y el teléfono">
-    Completa los campos de **Dirección**, **Código postal**, **Ciudad**, **Provincia** y **Teléfono de contacto**. Puedes añadir también un correo electrónico de contacto corporativo distinto al de tu cuenta personal.
-  </Step>
-  <Step title="Guarda los cambios">
-    Haz clic en el botón **Guardar cambios** situado al final del formulario. Verás una confirmación en pantalla cuando los datos se hayan guardado correctamente.
-  </Step>
-</Steps>
+  <Card title="Mail" icon="envelope" href="/equipo/configuracion-de-cuenta">
+    Las cuentas de correo conectadas para enviar solicitudes a industriales, y los correos que quieres excluir de la lectura automática.
+  </Card>
 
-## Moneda, unidades y formato de fecha
+  <Card title="Uso" icon="chart-simple" href="/planes/creditos-y-uso">
+    Tu plan, el periodo de facturación, las personas dentro de la cuenta, la opción de subir o bajar de plan y los créditos de IA consumidos en el mes.
+  </Card>
 
-De momento estos valores son fijos en Seked y no se pueden configurar: euro (**€**) como moneda, la coma (**,**) como separador decimal, el **sistema métrico** (m, m², m³, kg) y el formato de fecha **día/mes/año** (DD/MM/AAAA).
+  <Card title="Facturación" icon="credit-card" href="/planes/facturacion">
+    Plan y suscripción, datos fiscales de la empresa, método de pago e historial de facturas.
+  </Card>
 
-<Note>
-  Iremos añadiendo la posibilidad de personalizar estos valores más adelante.
-</Note>
+  <Card title="Equipo" icon="users" href="/equipo/usuarios-y-roles">
+    Foto y nombre del equipo, roles de cada miembro, e invitaciones a nuevas personas.
+  </Card>
 
-## Configurar notificaciones a nivel de empresa
+  <Card title="Base de precios" icon="database" href="/base-de-precios/introduccion">
+    El total de partidas en tu base de datos, la cantidad de evidencias y las bases de precio activas: tus precios internos y las bases de datos genéricas.
+  </Card>
 
-Las notificaciones de empresa afectan a todos los miembros del equipo. Cada usuario puede además ajustar sus preferencias personales desde su cuenta.
+  <Card title="Industriales" icon="truck" href="/proveedores/gestionar-proveedores">
+    Cuántos industriales tienes asociados y sus datos: nombre, correo, teléfono, provincia... Añade nuevos desde aquí.
+  </Card>
+</CardGroup>
 
-<Steps>
-  <Step title="Ve a la pestaña Notificaciones">
-    En **Configuración de empresa**, selecciona **Notificaciones**.
-  </Step>
-  <Step title="Activa o desactiva los tipos de notificación">
-    Verás una lista de eventos disponibles. Activa o desactiva cada uno según las necesidades de tu equipo:
+## Relación entre Ajustes y los proyectos
 
-    - **Nuevos comentarios en proyectos**
-    - **Cambios de estado en ofertas de proveedores**
-    - **Proyectos próximos a su fecha límite**
-    - **Resumen semanal de actividad**
-  </Step>
-  <Step title="Define los destinatarios por defecto">
-    Para cada tipo de notificación puedes elegir si se envía a **todos los miembros del proyecto**, solo a los **administradores** o a una lista personalizada de correos electrónicos.
-  </Step>
-  <Step title="Guarda la configuración de notificaciones">
-    Pulsa **Guardar** para aplicar los cambios.
-  </Step>
-</Steps>
-
-## Relación entre la configuración de empresa y los proyectos
-
-La configuración de empresa actúa como plantilla predeterminada. Cuando creas un proyecto nuevo, este hereda automáticamente las preferencias de notificación definidas aquí, aunque puedes **sobrescribirlas** dentro de la configuración individual de cada proyecto sin que ello afecte al resto de proyectos ni a la configuración global de la empresa.
-
-<Info>
-  Los datos de la empresa (nombre, CIF, logotipo y dirección) y los valores de moneda, unidades y formato de fecha no se pueden personalizar por proyecto: siempre se usa la misma configuración para toda la organización.
-</Info>
-
-## Gestionar facturación, créditos y plan
-
-Desde la sección **Facturación** de la configuración de empresa puedes consultar tu plan actual, revisar el consumo de créditos, actualizar tus datos de facturación y descargar tus facturas. Solo los usuarios con rol de **administrador** tienen acceso a este apartado.
-
-### Consultar tu plan y el consumo de créditos
-
-<Steps>
-  <Step title="Accede a Facturación">
-    Ve a **Configuración → Empresa → Facturación**. Verás el plan contratado (Essential, Pro o Scale), el número de usuarios incluidos y el consumo de créditos del ciclo actual.
-  </Step>
-  <Step title="Revisa el uso">
-    En el panel de **Consumo** puedes ver cuántos créditos has utilizado, cuántos te quedan y la fecha de renovación del ciclo.
-  </Step>
-</Steps>
-
-### Aumentar la cantidad de créditos
-
-Si prevés que vas a superar los créditos incluidos en tu plan durante el ciclo, tienes dos opciones para ampliarlos:
-
-- **Recargar con un pack predefinido:** compra un paquete de créditos adicionales de los que ofrece Seked. Los créditos se suman al ciclo actual y se activan de inmediato.
-- **Pago por consumo:** activa el consumo bajo demanda. Cuando superes los créditos incluidos en tu plan, Seked seguirá funcionando con normalidad y al final del ciclo se te cobrará únicamente por los créditos adicionales que hayas consumido.
-
-<Tip>
-  Si tu equipo consume regularmente más créditos de los incluidos en tu plan, suele salir más rentable subir de plan que comprar packs puntuales o pagar por consumo. Consulta [Planes disponibles](/planes/planes-disponibles) para comparar.
-</Tip>
-
-### Cambiar de plan
-
-Puedes subir o bajar de plan en cualquier momento para ajustar el número de usuarios, funcionalidades y créditos mensuales a las necesidades de tu empresa.
-
-<Steps>
-  <Step title="Accede a Facturación → Plan">
-    Haz clic en **Cambiar de plan**. Verás una comparativa de **Essential**, **Pro** y **Scale**.
-  </Step>
-  <Step title="Selecciona el nuevo plan">
-    Elige el plan que quieres contratar. Seked te mostrará la diferencia de precio prorrateada respecto a tu ciclo actual.
-  </Step>
-  <Step title="Confirma el cambio">
-    Revisa los cambios (usuarios incluidos, créditos, funcionalidades) y confirma. Si subes de plan, los nuevos límites se aplican inmediatamente. Si bajas de plan, el cambio se hace efectivo al inicio del siguiente ciclo de facturación.
-  </Step>
-</Steps>
-
-<Note>
-  Para el plan **Scale**, la cantidad de usuarios y créditos es personalizable. Contacta con [info@seked.co](mailto:info@seked.co) para configurar el plan a medida de tu empresa.
-</Note>
-
-### Datos de facturación y facturas
-
-- **Datos fiscales:** actualiza razón social, CIF/NIF, dirección fiscal y país desde **Facturación → Datos de empresa**.
-- **Método de pago:** añade o cambia la tarjeta vinculada en **Facturación → Método de pago**.
-- **Descargar facturas:** consulta el histórico y descarga cada factura en PDF desde **Facturación → Historial de facturas**.
+Los bloques de empresa (Facturación, Equipo, Base de precios e Industriales) son compartidos por toda la organización: cualquier cambio que hagas ahí, como dar de alta un nuevo industrial o añadir una partida a la base de precios, queda disponible para todos los proyectos.
 
 <CardGroup cols={2}>
   <Card title="Invitar a tu equipo" icon="user-plus" href="/primeros-pasos/invitar-equipo">
@@ -147,11 +59,11 @@ Puedes subir o bajar de plan en cualquier momento para ajustar el número de usu
     Consulta qué puede hacer cada rol dentro de Seked.
   </Card>
 
-  <Card title="Facturación" icon="credit-card" href="/planes/facturacion">
-    Gestiona el método de pago y consulta tus facturas.
+  <Card title="Base de precios" icon="database" href="/base-de-precios/introduccion">
+    Descubre cómo funciona la memoria operacional de tu empresa.
   </Card>
 
-  <Card title="Planes disponibles" icon="star" href="/planes/planes-disponibles">
-    Compara los planes y descubre cuál se adapta mejor a tu empresa.
+  <Card title="Créditos y uso" icon="coins" href="/planes/creditos-y-uso">
+    Entiende cómo funcionan los créditos de IA y consulta tu consumo.
   </Card>
 </CardGroup>
