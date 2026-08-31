@@ -1,7 +1,7 @@
 ---
 title: "Glosario de términos clave de Seked y presupuestación"
 sidebarTitle: "Glosario"
-description: "Definiciones claras de los términos más importantes usados en Seked, desde partida y medición hasta BC3, BEDEC, overhead y beneficio industrial."
+description: "Definiciones claras de los términos más importantes usados en Seked, desde partida y cuadre de mediciones hasta PBL, PEM, gastos generales y beneficio industrial."
 hidden: true
 ---
 
@@ -15,9 +15,15 @@ Margen económico que añade la empresa constructora o contratista sobre el cost
 
 ---
 
+**Baja (ofertada)**
+
+Porcentaje de descuento que aplicas sobre el Presupuesto Base de Licitación (PBL) al presentar tu oferta económica. Es el resultado final del cierre económico en licitación pública: cuanto más baja sea tu oferta respecto al PBL, más competitiva resulta, siempre que siga siendo viable con tus costes y márgenes reales.
+
+---
+
 **Base de Precios**
 
-En Seked, la Base de Precios es el repositorio privado de tu organización donde se almacenan partidas, precios unitarios, recursos y capítulos reutilizables. Te permite aprovechar el histórico de proyectos anteriores para presupuestar de forma más rápida y consistente. Es equivalente a lo que en el sector se denomina a veces «banco de precios propio» o «base de datos de precios».
+En Seked, la Base de Precios es el repositorio privado de tu organización, organizado en tres menús —**Partidas**, **Materiales** y **Mano de obra**— donde se acumulan los precios y el histórico reutilizable de tus proyectos anteriores. Te permite presupuestar de forma más rápida y consistente. Es equivalente a lo que en el sector se denomina a veces «banco de precios propio» o «base de datos de precios».
 
 ---
 
@@ -39,6 +45,30 @@ Agrupación lógica de partidas dentro de un presupuesto. Los capítulos permite
 
 ---
 
+**Coeficiente de paso**
+
+En obra privada (sin presupuesto base de licitación de referencia), es el multiplicador que aplicas sobre el coste directo o el PEM del proyecto para obtener tu precio de venta, una vez incorporados indirectos, gastos generales y beneficio industrial. Cumple la misma función que la baja en licitación pública, pero como coeficiente en lugar de porcentaje de descuento.
+
+---
+
+**Costes Directos e Indirectos (CD / CI)**
+
+El **Coste Directo (CD)** es la suma de materiales, mano de obra, maquinaria y subcontratación de todas las partidas del presupuesto: los recursos que se consumen directamente en la ejecución. Los **Costes Indirectos (CI)** son los medios auxiliares y la estructura de obra que no pertenecen a ninguna partida concreta (grúa torre, casetas, acometidas, personal de obra, seguridad y salud, control de calidad...). CD \+ CI = PEM.
+
+---
+
+**Cuadre (de mediciones)**
+
+Comprobación de que un archivo de mediciones es matemáticamente e internamente coherente: que el sumatorio total coincide con el Presupuesto Base de Licitación del pliego, que precio × cantidad = importe en cada línea, y que no hay partidas a cero, unidades incoherentes o descripciones truncadas. En Seked, el cuadre se completa contrastando además las mediciones con los planos del proyecto.
+
+---
+
+**Curva de Pareto (Análisis ABC)**
+
+Técnica que identifica las partidas que concentran el 80 % del importe de un presupuesto, para priorizar el esfuerzo de revisión y compra en las que más pesan económicamente en lugar de dedicar el mismo tiempo a todas por igual.
+
+---
+
 **Crédito**
 
 Unidad de consumo de las funciones de inteligencia artificial de Seked. Cada plan incluye una dotación mensual de créditos. Acciones como analizar documentos o generar estimativos automáticos consumen créditos. Las acciones manuales (crear partidas, exportar presupuestos) no consumen créditos.
@@ -51,9 +81,27 @@ Cálculo aproximado del coste de un proyecto elaborado en fases tempranas, cuand
 
 ---
 
+**Expediente**
+
+Conjunto de la documentación oficial de una obra o licitación: pliegos, memoria, planos y mediciones. En licitación pública suele incluir el Pliego de Cláusulas Administrativas (PCA) y el Pliego de Prescripciones Técnicas (PPT). En Seked, el expediente se archiva intacto en la carpeta **00\_RECIBIDO** del proyecto y es la base sobre la que se hace el análisis técnico inicial.
+
+---
+
+**Gastos Generales (GG)**
+
+Costes de estructura de la empresa que no son imputables a un proyecto concreto pero deben repercutirse sobre los presupuestos para asegurar la viabilidad del negocio: dirección técnica, oficina central, seguros, administración, etc. Se aplican como un porcentaje sobre el PEM (habitualmente en torno al 13 % en licitación pública). También se conoce como «overhead».
+
+---
+
 **Licitación**
 
 Proceso formal mediante el cual una entidad pública o privada solicita ofertas económicas a varias empresas para la adjudicación de un contrato de obra, suministro o servicios. En Seked, el módulo de proveedores y solicitudes de oferta está diseñado para apoyar el proceso de licitación, tanto en el lado del contratista como en el de la empresa que solicita las ofertas.
+
+---
+
+**Lámina**
+
+Cada una de las hojas o páginas que componen el juego de planos de un proyecto (una planta, un alzado, una sección, un detalle...). Seked indexa cada lámina con su escala y los elementos dibujados en ella, para poder localizarla y asignarla al lote de compra que corresponda.
 
 ---
 
@@ -71,7 +119,7 @@ Recurso humano necesario para ejecutar una partida de obra. En los presupuestos,
 
 **Maquinaria**
 
-Equipos y vehículos utilizados en la ejecución de una obra o proceso industrial. Al igual que la mano de obra, se valoriza como recurso dentro de las partidas (por ejemplo, horas de grúa, días de excavadora). Seked permite gestionar un catálogo de maquinaria con su coste horario o diario.
+Equipos y vehículos utilizados en la ejecución de una obra o proceso industrial (por ejemplo, horas de grúa o días de excavadora). En Seked, la maquinaria no tiene un menú propio en la base de precios: es uno de los componentes del coste unitario de cada partida, junto con materiales, mano de obra, subcontratación y costes indirectos.
 
 ---
 
@@ -89,7 +137,7 @@ Propuesta económica de un proveedor o subcontratista en respuesta a una solicit
 
 **Overhead**
 
-Costes indirectos de la empresa que no son imputables directamente a un proyecto concreto, pero que deben repercutirse sobre los presupuestos para asegurar la viabilidad del negocio. Incluyen gastos de estructura, administración, alquileres de oficina, seguros, etc. En presupuestación, el overhead se aplica generalmente como un porcentaje sobre los costes directos del proyecto.
+Sinónimo de gastos generales. Consulta **Gastos Generales (GG)**.
 
 ---
 
@@ -99,9 +147,21 @@ Unidad básica de un presupuesto. Cada partida describe una unidad de obra o tra
 
 ---
 
+**Partidas flojas**
+
+Partidas cuyo emparejado con la base de precios tiene baja fiabilidad, o que Seked no ha conseguido emparejar en absoluto. Requieren revisión técnica: validar el emparejado propuesto, asignar manualmente un item del catálogo o fijar un precio unitario cerrado.
+
+---
+
+**PBL, PEM y PEC**
+
+Tres importes encadenados del cierre económico de un estudio. El **Presupuesto Base de Licitación (PBL)** es el importe de referencia, sin IVA, que fija el organismo en una licitación pública. El **Presupuesto de Ejecución Material (PEM)** es la suma de los costes directos e indirectos de tu propio estudio (CD \+ CI). El **Precio de Ejecución por Contrata (PEC)** es el PEM más los gastos generales y el beneficio industrial: el precio que ofertas, y el que se compara contra el PBL para calcular tu baja.
+
+---
+
 **Precio de Venta**
 
-Precio final que se cobra al cliente por una partida o por el presupuesto completo. El precio de venta se obtiene sumando al coste de ejecución los gastos generales, el overhead y el beneficio industrial. En Seked, puedes configurar el precio de venta con los márgenes que apliques en tu empresa.
+Precio final que se cobra al cliente por una partida o por el presupuesto completo. El precio de venta se obtiene sumando al coste de ejecución los gastos generales y el beneficio industrial. En Seked, puedes configurar el precio de venta con los márgenes que apliques en tu empresa.
 
 ---
 
@@ -113,7 +173,7 @@ Coste de ejecutar una unidad de una partida determinada (por ejemplo, el coste p
 
 **Presupuesto**
 
-Documento técnico y económico que detalla el coste estimado de ejecutar un proyecto o una parte de él. El presupuesto está formado por capítulos, partidas y mediciones, y arroja un importe total de ejecución material, al que se añaden gastos generales, beneficio industrial e IVA para obtener el **Presupuesto de Contrata** o precio final para el cliente.
+Documento técnico y económico que detalla el coste estimado de ejecutar un proyecto o una parte de él. El presupuesto está formado por capítulos, partidas y mediciones, y arroja un Presupuesto de Ejecución Material (PEM), al que se añaden gastos generales y beneficio industrial para obtener el Precio de Ejecución por Contrata (PEC), y el IVA para obtener el precio final para el cliente. Consulta **PBL, PEM y PEC**.
 
 ---
 
