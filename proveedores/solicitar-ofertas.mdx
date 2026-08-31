@@ -1,76 +1,35 @@
 ---
 title: "Cómo solicitar ofertas a tus proveedores desde Seked"
 sidebarTitle: "Solicitar Ofertas"
-description: "Genera y envía solicitudes de oferta a tus proveedores directamente desde un proyecto en Seked, con seguimiento del estado de cada respuesta."
+description: "Organiza la documentación técnica por industrial en lotes, pide al chat que envíe las solicitudes de oferta y haz seguimiento de las respuestas centralizadas en la vista Mail."
 ---
 
-Solicitar presupuestos a proveedores suele ser uno de los cuellos de botella del proceso de licitación: correos dispersos, ficheros adjuntos sin estandarizar y un seguimiento manual que consume horas. Seked resuelve este problema integrando el proceso de solicitud de oferta dentro del propio proyecto, de forma que puedes seleccionar las partidas o materiales que necesitas cotizar, elegir los proveedores adecuados y enviarles una solicitud estructurada en pocos clics, sin salir de la plataforma.
+Solicitar presupuestos a proveedores suele ser uno de los cuellos de botella del proceso de licitación: correos dispersos, ficheros adjuntos sin estandarizar y un seguimiento manual que consume horas. Seked resuelve este problema separando la documentación técnica por industrial y dejando que sea el propio chat quien gestione el envío, sin salir de la plataforma.
 
-## Iniciar una solicitud de oferta
+## Separa la documentación por industrial (lotificación)
 
-<Steps>
-  <Step title="Abre el proyecto y accede a la sección de ofertas">
-    Desde el menú lateral, ve a **Proyectos** y abre el proyecto para el que necesitas solicitar precios. Dentro del proyecto, haz clic en la pestaña **Ofertas y proveedores**.
-  </Step>
-  <Step title="Selecciona las partidas o materiales a cotizar">
-    Haz clic en **\+ Nueva solicitud de oferta**. Se abrirá el selector de elementos del presupuesto. Marca las partidas, materiales o recursos para los que necesitas precios de proveedor.
+Antes de enviar nada, separa la documentación técnica del proyecto por industrial: agrupa los planos, las mediciones y, si tiene sentido, la parte de ejecución del proyecto, en un **lote** por cada gremio (por ejemplo, un lote de _Albañilería_ con sus planos y mediciones, otro de _Carpintería_, otro de _Climatización_...).
 
-    Puedes seleccionar:
+<Tip>
+  Enviar a cada industrial solo la documentación que le corresponde, en lugar del proyecto completo, aumenta la tasa de respuesta y reduce los tiempos de respuesta.
+</Tip>
 
-    - **Partidas completas** — el proveedor cotizará la unidad de trabajo al completo.
-    - **Materiales individuales** — útil cuando quieres comparar precios de suministro.
-    - **Capítulos enteros** — marca un capítulo para incluir todos sus elementos de golpe.
-  </Step>
-  <Step title="Selecciona los proveedores">
-    En el paso siguiente, elige uno o más proveedores del directorio. Puedes filtrar por gremio o buscar por nombre. Seked te mostrará solo los proveedores activos.
+Puedes consultar los lotes existentes del proyecto en la vista **Archivos**, dentro de la carpeta **02\_COMPRAS**.
 
-    <Tip>
-      Envía la misma solicitud a varios proveedores a la vez para obtener varias ofertas comparables con un mínimo esfuerzo. Tres o cuatro ofertas por partida suelen ser suficientes para negociar con garantías.
-    </Tip>
-  </Step>
-  <Step title="Revisa y completa la información de la solicitud">
-    Seked genera automáticamente el contenido de la solicitud con los datos del proyecto y los elementos seleccionados. Puedes completar o ajustar:
+## Enviar las solicitudes
 
-    | Campo | Descripción |
-    | --- | --- |
-    | **Descripción del alcance** | Texto libre explicando el trabajo o suministro requerido. |
-    | **Cantidades** | Las cantidades se toman del presupuesto; puedes ajustarlas manualmente si es necesario. |
-    | **Fecha límite de respuesta** | Fecha hasta la que el proveedor puede enviar su oferta. |
-    | **Documentación adjunta** | Planos, especificaciones técnicas, condiciones particulares, etc. |
-    | **Notas adicionales** | Instrucciones especiales para el proveedor. |
-  </Step>
-  <Step title="Envía la solicitud">
-    Haz clic en **Enviar solicitud**. Seked enviará un correo electrónico a cada proveedor seleccionado con un resumen en PDF de la solicitud y un enlace para responder desde la plataforma (si el proveedor tiene acceso) o instrucciones para responder por correo.
-  </Step>
-</Steps>
+Con los lotes preparados y los industriales a los que quieres enviar cada uno, pídele al chat que haga el envío de las solicitudes.
 
-<Note>
-  El proveedor recibe un correo electrónico con un PDF adjunto que incluye: el nombre y descripción del proyecto, el listado de partidas o materiales a cotizar con sus unidades y cantidades, la fecha límite de respuesta y los datos de contacto del responsable del proyecto en tu empresa. No necesita tener cuenta en Seked para recibir la solicitud.
-</Note>
+Las solicitudes pendientes de envío aparecen como **tareas** del día en la vista **Tareas** (por ejemplo, «Enviar petición de climatización y ventilación a \[industrial\]»). Desde ahí decides, solicitud por solicitud, si se envía o no.
 
 ## Seguimiento de respuestas
 
-Una vez enviadas las solicitudes, puedes controlar el estado de cada una desde la pestaña **Ofertas y proveedores** del proyecto.
+Las respuestas de los industriales quedan centralizadas en la vista **Mail**, asociadas automáticamente al lote correspondiente. Cuando tengas varias ofertas de un mismo lote, ábrelas en la vista **Comparativo** para verlas enfrentadas y seleccionar la mejor.
 
-<Steps>
-  <Step title="Consulta el panel de seguimiento">
-    El panel muestra una tabla con todas las solicitudes enviadas, el proveedor destinatario, la fecha de envío, la fecha límite y el estado actual:
-
-    - 🟡 **Enviada** — la solicitud fue enviada pero aún no hay respuesta.
-    - 🟢 **Oferta recibida** — el proveedor ha enviado su precio.
-    - 🔴 **Sin respuesta** — la fecha límite ha pasado sin contestación.
-    - ⚫ **Descartada** — la solicitud fue anulada manualmente.
-  </Step>
-  <Step title="Registra una oferta recibida por email o teléfono">
-    Si el proveedor te envía la oferta fuera de Seked (por correo, teléfono o en papel), puedes registrarla manualmente. Haz clic en **Registrar oferta** junto a la solicitud correspondiente e introduce el precio, las condiciones y cualquier nota relevante.
-  </Step>
-  <Step title="Realiza el seguimiento de las solicitudes sin respuesta">
-    Para los proveedores que no han contestado antes del plazo, haz clic en **Enviar recordatorio**. Seked generará y enviará automáticamente un correo de recordatorio con los detalles originales de la solicitud.
-  </Step>
-</Steps>
+👉 Más información en [Comparar ofertas](/proveedores/comparar-ofertas).
 
 <Tip>
-  Incluye siempre la documentación técnica completa (planos, especificaciones, condiciones particulares) cuando generes la solicitud. Los proveedores que reciben información clara y completa tardan menos en responder y presentan ofertas más precisas, lo que reduce las rondas de aclaración y acorta el tiempo de licitación.
+  Incluye siempre la documentación técnica completa (planos, mediciones, condiciones particulares) en el lote de cada industrial. Cuanta más información clara reciben, menos tardan en responder y más precisas son sus ofertas.
 </Tip>
 
 ## Buenas prácticas al solicitar ofertas
@@ -80,11 +39,11 @@ Una vez enviadas las solicitudes, puedes controlar el estado de cada una desde l
 </Accordion>
 
 <Accordion title="¿Puedo solicitar oferta para partidas de subcontratación completa?">
-  Sí. Puedes seleccionar capítulos enteros del presupuesto y enviárselos a subcontratistas para que coticen el trabajo llave en mano. En ese caso, es especialmente importante adjuntar los planos y las especificaciones técnicas completas.
+  Sí. Incluye en el lote del gremio correspondiente toda la documentación técnica del proyecto (planos, mediciones y, si aplica, la parte de ejecución) para que el industrial pueda cotizar el trabajo llave en mano con la información completa.
 </Accordion>
 
 <Accordion title="¿Qué pasa si el proveedor responde con condiciones distintas a las solicitadas?">
-  Puedes registrar cualquier variación de alcance, precio o plazo en el campo de notas al registrar la oferta. Esto quedará disponible en la comparativa para que puedas evaluar las diferencias con claridad.
+  Su respuesta llega igualmente a la vista **Mail**, asociada al lote correspondiente. Al compararla con el resto de ofertas en la vista **Comparativo**, podrás valorar las diferencias de alcance, precio o plazo frente a lo solicitado.
 </Accordion>
 
 ---
