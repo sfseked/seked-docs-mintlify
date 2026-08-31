@@ -48,45 +48,19 @@ En Seked no hay plantillas de coste que elegir y aplicar a una partida. Los cost
   Cuanto más completos sean los documentos que subas (proveedor, ubicación, fecha, unidades...), mejor será la asociación y más precisos los costes que Seked pueda proponerte en futuras partidas.
 </Tip>
 
-## El panel de desglose de precios
+## Del coste unitario al cierre del estudio
 
-Además del coste unitario, Seked calcula el **precio de venta** de cada partida aplicando los márgenes que establezcas a nivel de presupuesto. El panel de desglose de precios te muestra la formación del precio en cuatro niveles:
+El coste unitario de cada partida (lo que ves en esta página) es la base sobre la que se calcula, ya a nivel de todo el presupuesto, el cierre económico del estudio: costes indirectos, gastos generales, beneficio industrial y la baja o el coeficiente de paso finales.
 
-<Accordion title="Coste directo">
-  Suma de materiales \+ mano de obra \+ maquinaria \+ subcontratación. Es el coste de los recursos directamente consumidos en la ejecución de la unidad.
-</Accordion>
+👉 Más información en [Cierre y exportación del estudio](/presupuestacion/revision-y-exportacion).
 
-<Accordion title="Coste de ejecución material (CEM)">
-  Coste directo \+ costes indirectos (expresados como porcentaje sobre el coste directo). Representa el coste total de producción de la unidad en obra.
-</Accordion>
+Los costes de materiales y subcontratación también se actualizan con los precios reales que ofrecen tus industriales: cuando aceptas una oferta en la vista **Comparativo**, las partidas vinculadas a ese lote se actualizan automáticamente.
 
-<Accordion title="Precio de ejecución por contrata (PEC)">
-  CEM \+ gastos generales (overhead) expresados como porcentaje. Cubre los costes de estructura de la empresa: dirección técnica, oficina central, seguros, etc. El porcentaje habitual en licitaciones públicas es el 13 %.
-</Accordion>
-
-<Accordion title="Precio de venta al cliente (PVP)">
-  PEC \+ beneficio industrial (porcentaje de margen comercial). Es el precio final que aparecerá en la oferta al cliente. En licitación pública, el beneficio industrial estándar es el 6 %.
-</Accordion>
-
-## Actualizar costes con ofertas de proveedores
-
-Cuando recibes ofertas de proveedores o subcontratistas para un proyecto concreto, puedes actualizar los costes de las partidas directamente a partir de esas ofertas, reflejando en el presupuesto los precios reales de mercado.
-
-<Steps>
-  <Step title="Accede a las ofertas del proyecto">
-    Ve a la sección **Proveedores** del proyecto y abre la oferta del proveedor que has recibido. Consulta la guía de [comparar ofertas](/proveedores/comparar-ofertas) para saber cómo evaluar y seleccionar la mejor.
-  </Step>
-  <Step title="Vincula la oferta a las partidas correspondientes">
-    Desde el panel de la oferta, selecciona las líneas de la oferta que corresponden a partidas de tu presupuesto y haz clic en **Aplicar al presupuesto**. Seked te mostrará un mapeo entre las líneas de la oferta y las partidas del presupuesto para que confirmes la correspondencia.
-  </Step>
-  <Step title="Confirma la actualización de costes">
-    Revisa los nuevos costes propuestos y pulsa **Confirmar actualización**. Los componentes de coste afectados (materiales o subcontratación, según el tipo de oferta) se actualizarán en cada partida vinculada y los importes totales se recalcularán de forma inmediata.
-  </Step>
-</Steps>
+👉 Más información en [Comparar ofertas](/proveedores/comparar-ofertas).
 
 ## Recálculo automático de totales
 
-Cada vez que modificas el coste de una partida, su cantidad o los porcentajes de márgenes, Seked actualiza en tiempo real:
+Cada vez que modificas el coste, el rendimiento o la cantidad de una partida, Seked actualiza en tiempo real:
 
 - El importe total de la partida.
 - El subtotal del capítulo al que pertenece.
@@ -98,8 +72,8 @@ No necesitas guardar manualmente ni esperar a que se procese ningún recálculo:
 ## Próximos pasos
 
 <CardGroup cols={2}>
-  <Card title="Revisión y exportación" icon="file-export" href="/presupuestacion/revision-y-exportacion">
-    Valida el presupuesto finalizado y expórtalo en PDF, Excel o BC3.
+  <Card title="Cierre y exportación" icon="file-export" href="/presupuestacion/revision-y-exportacion">
+    Calcula el cierre económico del estudio (indirectos, márgenes, baja) y genera los entregables finales.
   </Card>
 
   <Card title="Comparar ofertas de proveedores" icon="scale-balanced" href="/proveedores/comparar-ofertas">

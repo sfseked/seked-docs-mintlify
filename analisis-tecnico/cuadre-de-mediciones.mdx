@@ -1,0 +1,51 @@
+---
+title: "Cuadre de mediciones y contraste con planos"
+sidebarTitle: "Cuadre de Mediciones"
+description: "Aprende cómo Seked extrae las partidas del archivo de mediciones, las cuadra contra el presupuesto base de licitación y las contrasta con los planos del proyecto."
+---
+
+Antes de valorar económicamente un proyecto conviene asegurarse de que las mediciones que has recibido son correctas y completas: que las cantidades cuadran, que no hay errores aritméticos y que lo medido coincide con lo dibujado en los planos. Seked hace esta comprobación automáticamente sobre el archivo de mediciones del proyecto.
+
+## Extracción de las líneas de medición
+
+Seked lee el archivo de mediciones del proyecto —en formato BC3, TCQ o Excel— y extrae cada línea conservando sus códigos, capítulos, descripciones, unidades y cantidades, vinculándolas al proyecto como partidas de trabajo.
+
+## Cuadre de las mediciones
+
+Seked comprueba la coherencia interna del archivo:
+
+- Que el sumatorio total cuadre contra el **Presupuesto Base de Licitación (PBL)** indicado en el pliego, cuando lo hay.
+- Errores aritméticos: que precio × cantidad coincida con el importe de cada línea.
+- Partidas con cantidad a cero, unidades incoherentes o descripciones truncadas.
+
+Cualquier discrepancia detectada queda señalada para que la revises antes de seguir adelante con el estimativo.
+
+<Tip>
+  Si Seked detecta partidas que llegan sin unidad o con datos desplazados en el archivo original, te propone la corrección para que la confirmes; el historial de estos cambios queda guardado y es reversible en cualquier momento.
+</Tip>
+
+## Contraste con los planos
+
+Seked verifica que lo medido en el presupuesto coincide con lo dibujado en los planos ya indexados del proyecto (consulta [Análisis del expediente](/analisis-tecnico/analisis-del-expediente)).
+
+<Tip>
+  El plano manda: si una medición no concuerda con el plano, o directamente falta en el presupuesto, Seked identifica la desviación.
+</Tip>
+
+Cuando detecta partidas que faltan en el presupuesto pero sí están dibujadas en los planos, Seked redacta una propuesta de medición complementaria en borrador a partir del propio plano, para que la revises y la valides. Si faltan datos que no constan acotados en el plano (por ejemplo, una altura libre o un criterio de descuento de huecos), puédele indicárselo directamente al chat para que los aplique.
+
+## Próximos pasos
+
+<CardGroup cols={2}>
+  <Card title="Análisis del expediente" icon="file-magnifying-glass" href="/analisis-tecnico/analisis-del-expediente">
+    Revisa los riesgos, plazos y preguntas abiertas detectados en pliegos y memoria.
+  </Card>
+
+  <Card title="Estimativo inicial" icon="wand-magic-sparkles" href="/presupuestacion/estimacion-inicial">
+    Genera el borrador de presupuesto a partir de las mediciones ya cuadradas.
+  </Card>
+
+  <Card title="Partidas y mediciones" icon="list-check" href="/presupuestacion/partidas-y-mediciones">
+    Descubre los campos de una partida y cómo se relacionan con los capítulos del presupuesto.
+  </Card>
+</CardGroup>

@@ -40,6 +40,13 @@
             ]
           },
           {
+            "group": "Análisis Técnico",
+            "pages": [
+              "analisis-tecnico/analisis-del-expediente",
+              "analisis-tecnico/cuadre-de-mediciones"
+            ]
+          },
+          {
             "group": "Estimativos",
             "pages": [
               "presupuestacion/estimacion-inicial",
