@@ -1,163 +1,59 @@
 ---
-title: "Revisar y exportar el presupuesto finalizado en Seked"
-sidebarTitle: "Revisión y Exportación"
-description: "Valida tu presupuesto en Seked, compara versiones, aprueba el documento final y expórtalo en PDF, Excel o formato BC3 para licitaciones públicas."
+title: "Cierre del estudio: costes indirectos, márgenes y entregables"
+sidebarTitle: "Cierre y Exportación"
+description: "Calcula el cierre económico del estudio en Seked: costes indirectos, gastos generales, beneficio industrial y la baja o el coeficiente de paso, y genera los entregables finales."
 ---
 
-Antes de entregar un presupuesto a un cliente o presentar una oferta a una licitación, Seked te ofrece un proceso estructurado de revisión y validación que te ayuda a detectar errores, comparar con versiones anteriores y garantizar que el documento esté completo y coherente. Una vez aprobado, puedes exportarlo en los formatos que necesites con un solo clic.
+Con las partidas valoradas y las ofertas de tus industriales ya adjudicadas, el último paso del estudio es cerrarlo económicamente: sumar los costes indirectos, aplicar tus márgenes de empresa y comprobar cómo queda tu oferta frente al presupuesto base o al coeficiente que apliques en obra privada. Seked estructura este cierre en tres bloques.
 
-## El panel de revisión del presupuesto
+## Tipo de estudio
 
-El panel de revisión centraliza toda la información relevante para evaluar el presupuesto antes de su aprobación. Accede a él haciendo clic en **Revisar presupuesto** en la barra superior de la vista del presupuesto.
+Antes de calcular el cierre, el estudio queda definido como **licitación** (obra pública, con un presupuesto base de licitación fijado por el organismo) o **obra privada** (sin presupuesto base, donde tu referencia es un coeficiente de paso sobre el coste). Este tipo determina cómo se interpreta el resultado final del cierre.
 
-El panel está organizado en tres bloques:
+## Costes indirectos
 
-### Resumen de totales por capítulo
+Los costes indirectos son los medios auxiliares y la estructura de obra que no pertenecen a ninguna partida concreta pero forman parte del coste de ejecutar el proyecto: grúa torre, casetas de obra, acometidas provisionales, personal de obra, seguridad y salud (PRL) y control de calidad, entre otros. Puedes fijarlos por importe cerrado o como porcentaje sobre el coste directo del presupuesto.
 
-Una tabla que muestra, para cada capítulo del presupuesto:
+## Cálculo del cierre económico
 
-| Columna | Descripción |
-|---|---|
-| **Capítulo** | Nombre y código del capítulo. |
-| **Importe** | Suma de los importes de venta de todas las partidas del capítulo. |
-| **% sobre total** | Peso relativo del capítulo sobre el presupuesto total. |
-| **Coste** | Suma de los costes de ejecución material de las partidas del capítulo. |
-| **Margen** | Diferencia entre importe de venta y coste, en € y en %. |
+El cierre combina los costes directos de las partidas (materiales, mano de obra, maquinaria y subcontratación) con los indirectos y tus márgenes de empresa:
 
-### Desglose de costes global
+- **Coste Directo (CD) \+ Costes Indirectos (CI) = Presupuesto de Ejecución Material (PEM).**
+- Sobre el PEM se aplican los **Gastos Generales** (GG, habitualmente en torno al 13 % en licitación pública) y el **Beneficio Industrial** (BI, en torno al 6 %).
+- En licitación, el resultado se compara con el **Presupuesto Base de Licitación (PBL)** del pliego para determinar la **baja** que estás ofertando. En obra privada, el resultado se traduce en el **coeficiente de paso** que aplicas sobre el coste.
 
-Un gráfico circular y una tabla resumen con el peso de cada componente sobre el total del presupuesto:
-- Materiales
-- Mano de obra
-- Maquinaria
-- Subcontratación
-- Costes indirectos
-- Gastos generales
-- Beneficio industrial
+<Tip>
+  Los porcentajes de GG y BI son ajustables: los valores del 13 % y el 6 % son de referencia habitual en licitación pública, pero cada empresa y cada obra privada pueden manejar márgenes distintos.
+</Tip>
 
-### Resumen de márgenes
+## Genera los entregables finales
 
-Muestra el margen bruto total del presupuesto en términos absolutos (€) y porcentuales (%), con una indicación visual de si el margen está dentro del rango objetivo configurado para tu organización.
+Cuando el cierre esté cerrado, pídele al chat que genere los entregables del estudio:
 
-## Ejecutar la validación automática
+- La **hoja de cierre económica**, con el desglose completo de costes, indirectos, márgenes y baja o coeficiente de paso.
+- El **presupuesto final**, en Excel y en formato **BC3** (el estándar de intercambio FIEBDC-3, exigido en la mayoría de licitaciones públicas y compatible con Presto, Arquímedes o TCQ).
+- El **informe técnico** del estudio.
 
-Seked incluye un verificador automático que comprueba la integridad del presupuesto antes de aprobarlo. Para ejecutarlo, haz clic en **Validar presupuesto** dentro del panel de revisión.
+Estos documentos se publican en las carpetas **01\_ESTUDIO** y **03\_ENTREGA** del proyecto, listos para licitar o presentar al cliente.
 
-El verificador detecta y clasifica los problemas encontrados en tres niveles:
-
-<Accordion title="Errores críticos (bloquean la exportación)">
-  - Partidas con cantidad igual a cero o negativa.
-  - Partidas sin unidad de medida asignada.
-  - Capítulos vacíos sin ninguna partida.
-  - Precio de venta igual a cero en partidas con cantidad mayor que cero.
-</Accordion>
-
-<Accordion title="Advertencias (requieren revisión)">
-  - Partidas con coste unitario igual a cero pero precio de venta mayor que cero (margen del 100 %, posible error).
-  - Partidas sin descripción o con descripción muy corta (menos de 10 caracteres).
-  - Capítulos con un único nivel de desagregación cuando el resto tienen subcapítulos.
-  - Mediciones con más de un 20 % de variación respecto a la versión anterior del presupuesto.
-</Accordion>
-
-<Accordion title="Sugerencias (informativas)">
-  - Partidas que no tienen documentos vinculados como justificación.
-  - Partidas con costes sin desglose por componente (solo coste global).
-  - Capítulos cuyo peso relativo supera el 40 % del total (podría indicar que falta desagregar).
-</Accordion>
-
-Haz clic sobre cualquier error o advertencia de la lista para que Seked te lleve directamente a la partida o capítulo afectado.
-
-## Comparar con versiones anteriores
-
-<Note>
-  Seked guarda automáticamente una nueva versión del presupuesto cada vez que pulsas **Guardar borrador** o cuando apruebas el presupuesto. Puedes acceder al historial completo de versiones desde el icono de **Historial** (reloj) en la barra superior del presupuesto. Cada versión queda identificada con fecha, hora y usuario que la generó.
-</Note>
-
-Para comparar dos versiones del presupuesto:
-
-<Steps>
-  <Step title="Abre el historial de versiones">
-    Haz clic en el icono de **Historial** en la barra del presupuesto. Verás la lista de todas las versiones guardadas en orden cronológico descendente.
-  </Step>
-  <Step title="Selecciona las versiones a comparar">
-    Marca la versión actual y la versión con la que quieres comparar. Haz clic en **Comparar versiones**.
-  </Step>
-  <Step title="Analiza las diferencias">
-    Seked mostrará una vista diferencial con las partidas añadidas (en verde), eliminadas (en rojo) y modificadas (en amarillo), indicando el cambio en cantidad, coste o precio. También verás el impacto total en el importe del presupuesto entre ambas versiones.
-  </Step>
-</Steps>
-
-## Aprobar el presupuesto
-
-Una vez que has completado la revisión y la validación no muestra errores críticos, puedes aprobar formalmente el presupuesto.
-
-<Steps>
-  <Step title="Inicia el proceso de aprobación">
-    En el panel de revisión, haz clic en **Aprobar presupuesto**. Si hay errores críticos pendientes, el botón estará deshabilitado hasta que los resuelvas.
-  </Step>
-  <Step title="Añade un comentario de aprobación (opcional)">
-    Puedes añadir una nota para el registro de actividad explicando el contexto de la aprobación (por ejemplo: *"Versión final para licitación pública REF-2025-0342"*).
-  </Step>
-  <Step title="Confirma la aprobación">
-    Haz clic en **Confirmar aprobación**. El presupuesto cambia de estado **Borrador** a **Aprobado**. A partir de este momento, el presupuesto queda bloqueado para edición directa. Si necesitas realizar cambios, deberás crear una nueva revisión desde el botón **Nueva versión**.
-  </Step>
-</Steps>
-
-## Exportar el presupuesto
-
-Una vez aprobado (o incluso en estado borrador para revisiones internas), puedes exportar el presupuesto en varios formatos.
-
-<Steps>
-  <Step title="Abre el menú de exportación">
-    Haz clic en el botón **Exportar** en la barra superior del presupuesto. Se abrirá el panel de opciones de exportación.
-  </Step>
-
-  <Step title="Elige el formato de exportación">
-    Seked ofrece los siguientes formatos:
-
-    <Tabs>
-      <Tab title="PDF">
-        Genera un documento PDF presentable, con portada, índice, resumen por capítulos y listado completo de partidas. Puedes configurar:
-        - Incluir o excluir el desglose de costes y márgenes (para no mostrar la estructura de costes al cliente).
-        - Incluir el cuadro de mediciones detallado.
-        - Añadir logo, datos de empresa y datos del cliente en la portada.
-        - Seleccionar el idioma del documento (castellano, catalán, euskera, gallego, inglés).
-      </Tab>
-      <Tab title="Excel / CSV">
-        Exporta el presupuesto como hoja de cálculo. El archivo Excel incluye una hoja de resumen por capítulos y una hoja con el detalle de todas las partidas. El formato CSV es útil para importar los datos en otros sistemas de gestión o ERP.
-      </Tab>
-      <Tab title="BC3 (FIEBDC-3)">
-        Exporta el presupuesto en formato **BC3**, el estándar de intercambio de presupuestos de construcción en España. Este formato es obligatorio en muchas licitaciones públicas y es compatible con los principales programas de presupuestación del sector (Presto, Arquímedes, TCQ, etc.).
-
-        <Tip>
-          Si vas a presentarte a una licitación pública, exporta siempre en formato BC3 además del PDF. La mayoría de las administraciones públicas españolas exigen la presentación del presupuesto en este formato para facilitar la comparación automatizada de ofertas. El BC3 de Seked cumple con la especificación FIEBDC-3 vigente.
-        </Tip>
-      </Tab>
-    </Tabs>
-  </Step>
-
-  <Step title="Configura las opciones de exportación">
-    Según el formato elegido, ajusta las opciones disponibles (campos a incluir, nivel de detalle, datos de portada, etc.) y haz clic en **Generar archivo**.
-  </Step>
-
-  <Step title="Descarga el archivo">
-    Seked procesará la exportación en segundos. Una vez generado, el archivo estará disponible para descarga directa. También quedará guardado en la carpeta **Ofertas** de la documentación del proyecto para que puedas acceder a él más adelante.
-  </Step>
-</Steps>
+👉 Más información sobre la estructura de carpetas en [Documentación del proyecto](/proyectos/documentacion-del-proyecto).
 
 ## Próximos pasos
 
 <CardGroup cols={2}>
   <Card title="Costes y precios" icon="calculator" href="/presupuestacion/costes-y-precios">
-    Revisa la estructura de costes y márgenes antes de aprobar el presupuesto.
+    Revisa la estructura de costes de las partidas antes de cerrar el estudio.
   </Card>
-  <Card title="Partidas y mediciones" icon="list-check" href="/presupuestacion/partidas-y-mediciones">
-    Edita partidas o mediciones antes de cerrar la versión final.
-  </Card>
+
   <Card title="Comparar ofertas" icon="scale-balanced" href="/proveedores/comparar-ofertas">
-    Actualiza los costes con las mejores ofertas de proveedores antes de exportar.
+    Adjudica las ofertas de tus industriales antes de calcular el cierre.
   </Card>
+
+  <Card title="Partidas y mediciones" icon="list-check" href="/presupuestacion/partidas-y-mediciones">
+    Revisa las partidas y mediciones que sostienen el coste directo del estudio.
+  </Card>
+
   <Card title="Preguntas frecuentes" icon="circle-question" href="/ayuda/preguntas-frecuentes">
-    Consulta las dudas más habituales sobre presupuestación y exportación en Seked.
+    Consulta las dudas más habituales sobre presupuestación y cierre en Seked.
   </Card>
 </CardGroup>
